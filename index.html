@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Engineering Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+    
+    <div class="container">
+        <header>
+            <h1>Amit's Engineering Portfolio</h1>
+            <p class="subtitle">Controls, IoT, and Mechatronics Engineering</p>
+        </header>
+
+        <!-- Navigation Tabs -->
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="openTab(event, 'about-me')">About Me & CV</button>
+            <button class="tab-btn" onclick="openTab(event, 'drone-vision')">Drone Vision & Control</button>
+            <button class="tab-btn" onclick="openTab(event, 'desktop-multimeter')">Desktop Multimeter</button>
+            <button class="tab-btn" onclick="openTab(event, 'pet-feeder')">Smart Pet Feeder</button>
+            <button class="tab-btn" onclick="openTab(event, 'imeche-rover')">IMechE Autonomous Rover</button>
+        </nav>
+
+        <main class="projects-container">
+
+            <!-- About Me & CV Tab -->
+            <div id="about-me" class="tab-content active">
+                <div class="project-card large">
+                    <div class="card-content">
+                        <h2>About Me & CV</h2>
+                        <div class="project-details">
+                            <div class="text-section bio-container">
+                                <div class="profile-header">
+                                    <img src="Profile Photo.jpeg" alt="Amit Chandran" class="profile-img">
+                                    <div>
+                                        <h3>Amit Chandran</h3>
+                                        <p class="subtitle" style="text-align: left; margin: 0;">MEng Mechanical Engineering @ UCL</p>
+                                    </div>
+                                </div>
+                                <div class="bio-text">
+                                    <p>I am a Mechanical Engineering student at UCL (expected graduation June 2028), specializing in robotics, control systems, and mechatronic design.</p>
+                                    <p>My work spans across high-level control algorithm design in MATLAB/Simulink, embedded C++ firmware (ESP32/Arduino), custom PCB layout, and physical prototyping with 3D printers and CNC machines.</p>
+                                </div>
+                                <div class="cv-download-container" style="margin-top: 2rem;">
+                                    <a href="main.pdf" target="_blank" class="download-btn">Open CV in New Tab</a>
+                                    <a href="main.pdf" download class="download-btn">Download CV (PDF)</a>
+                                </div>
+                            </div>
+                            
+                            <div class="media-section cv-preview-container">
+                                <h3>CV Preview</h3>
+                                <div class="cv-iframe-wrapper">
+                                    <iframe src="main.pdf" width="100%" height="500px" style="border: none; border-radius: 12px; background: white;"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Drone Vision Tab -->
+            <div id="drone-vision" class="tab-content">
+                <div class="project-card large">
+                    <div class="card-content">
+                        <h2>Drone Vision & Control System</h2>
+                        <span class="badge ucl">UCL Rover Team</span>
+                        <p class="summary">End-to-end integration of a Raspberry Pi vision pipeline with MATLAB/Simulink and a physical flight controller.</p>
+                        
+                        <div class="project-details">
+                            <div class="text-section">
+                                <ul>
+                                    <li>Programmed an edge-computing vision pipeline in Python and OpenCV on a Raspberry Pi to track ArUco markers in real-time.</li>
+                                    <li>Established a robust UDP telemetry link to stream positional data seamlessly from the edge device to a MATLAB/Simulink model.</li>
+                                    <li>Interfaced the Simulink architecture directly with an Aero Selfie H743 flight controller to achieve an autonomous, end-to-end vision-to-flight pipeline.</li>
+                                </ul>
+                            </div>
+                            <div class="media-section">
+                                <h3>Project Resources</h3>
+                                <p class="caption">Project documentation and media coming soon...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Desktop Multimeter Tab -->
+            <div id="desktop-multimeter" class="tab-content">
+                <div class="project-card large">
+                    <div class="card-content">
+                        <h2>Electronics Prototyping Station</h2>
+                        <span class="badge ucl">Desktop Multimeter</span>
+                        <p class="summary">A comprehensive 226-page NEA project integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station.</p>
+                        
+                        <div class="project-details">
+                            <div class="text-section">
+                                <ul>
+                                    <li>Engineered custom measurement circuitry (using ACS724 Hall-effect sensors and potential dividers) and routed the PCB in EasyEDA.</li>
+                                    <li>Programmed a 500+ line C++ firmware utilizing hardware interrupts (ISRs) and SPI communication for a 1.8-inch TFT display.</li>
+                                    <li>Designed a modular, multi-part PETG/PLA enclosure in Fusion 360, focusing heavily on Design for Manufacture and Assembly (DFMA).</li>
+                                </ul>
+                                <div class="resources-links">
+                                    <a href="Electronics Project 2024.pdf" target="_blank" class="download-btn">View NEA Document (226 Pages)</a>
+                                    <a href="Electronics Project 2024.pptx" target="_blank" class="download-btn">Download Presentation (.pptx)</a>
+                                </div>
+                            </div>
+                            
+                            <div class="media-section">
+                                <h3>Project Media</h3>
+                                <div class="slider-container" id="multimeter-slider">
+                                    <div class="slider-slides">
+                                        <div class="slide active">
+                                            <img src="images_NEA/extracted_205.png" alt="Finished Product Front" class="zoomable-img">
+                                            <p class="caption">Fully Assembled Prototyping Station (Front)</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_196.png" alt="3D Printed Parts Assembly" class="zoomable-img">
+                                            <p class="caption">3D Printed Enclosure Assembly</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_206.jpeg" alt="TFT Interface Testing" class="zoomable-img">
+                                            <p class="caption">Active Testing of Prototyping Station</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_274.jpeg" alt="Multimeter Testing" class="zoomable-img">
+                                            <p class="caption">Desktop Multimeter Circuit Probing</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_293.jpeg" alt="Rear PCB Integration" class="zoomable-img">
+                                            <p class="caption">Rear PCB Integration & Wiring</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_294.jpeg" alt="Solder setup" class="zoomable-img">
+                                            <p class="caption">Final PCB Hand-Soldering Setup</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_NEA/extracted_394.jpeg" alt="Testing and Evaluation" class="zoomable-img">
+                                            <p class="caption">Breadboard Prototyping & Calibration</p>
+                                        </div>
+                                    </div>
+                                    <button class="slider-btn prev" onclick="moveSlide('multimeter-slider', -1)">&#10094;</button>
+                                    <button class="slider-btn next" onclick="moveSlide('multimeter-slider', 1)">&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pet Feeder Tab -->
+            <div id="pet-feeder" class="tab-content">
+                <div class="project-card large">
+                    <div class="card-content">
+                        <h2>Smart Pet Feeder</h2>
+                        <span class="badge iot">BLE IoT System</span>
+                        <p class="summary">A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.</p>
+                        
+                        <div class="project-details">
+                            <div class="text-section">
+                                <ul>
+                                    <li>Developed bespoke C++ firmware for an ESP32 microcontroller utilising the NimBLE stack, achieving a 50% reduction in flash usage.</li>
+                                    <li>Engineered a mechanical dispensing mechanism fully integrated with custom load-cell circuitry and ESP32 firmware for automated portion control (±1%).</li>
+                                    <li>Implemented an event-driven GATT server architecture using the Nordic UART Service (NUS) enabling low latency communication with a custom Android client.</li>
+                                </ul>
+                            </div>
+                            <div class="media-section">
+                                <h3>Project Resources & Media</h3>
+                                <a href="Final Scenarios PPT - pet feeder.pdf" target="_blank" class="download-btn">View Final Scenarios PDF</a>
+                                <a href="Final Scenarios PPT.pptx" target="_blank" class="download-btn">Download Scenarios (.pptx)</a>
+                                
+                                <div class="slider-container" id="petfeeder-slider" style="margin-top: 1.5rem;">
+                                    <div class="slider-slides">
+                                        <div class="slide active">
+                                            <img src="images_pet_feeder/extracted_1.jpeg" alt="System Flowchart" class="zoomable-img">
+                                            <p class="caption">System Architecture & Flowchart</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_162.jpeg" alt="Pet Feeder Design" class="zoomable-img">
+                                            <p class="caption">Product Prototype Design</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_164.jpeg" alt="Feeder Mechanism Detail" class="zoomable-img">
+                                            <p class="caption">Feeder Mechanism Integration</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_166.jpeg" alt="Mobile UI mockup" class="zoomable-img">
+                                            <p class="caption">Mobile App UI Mockup</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_182.jpeg" alt="Testing Scenario 1" class="zoomable-img">
+                                            <p class="caption">Portion Control & Calibration Tests</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_183.png" alt="Testing Scenario 2" class="zoomable-img">
+                                            <p class="caption">Firmware Flow Chart</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_184.jpeg" alt="Mechanical Layout" class="zoomable-img">
+                                            <p class="caption">Mechanical Layout Diagram</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_199.png" alt="Firmware Architecture" class="zoomable-img">
+                                            <p class="caption">BLE Event Callback Handlers</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_204.jpeg" alt="Electronics Enclosure" class="zoomable-img">
+                                            <p class="caption">PCB Electronics Enclosure Design</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_218.jpeg" alt="Calibration Setup" class="zoomable-img">
+                                            <p class="caption">Load-Cell Calibration Configuration</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_219.jpeg" alt="Dispensing Test" class="zoomable-img">
+                                            <p class="caption">Dispensing Mechanics Verification</p>
+                                        </div>
+                                        <div class="slide">
+                                            <img src="images_pet_feeder/extracted_262.jpeg" alt="Final Hardware" class="zoomable-img">
+                                            <p class="caption">Smart Pet Feeder Main Chassis</p>
+                                        </div>
+                                    </div>
+                                    <button class="slider-btn prev" onclick="moveSlide('petfeeder-slider', -1)">&#10094;</button>
+                                    <button class="slider-btn next" onclick="moveSlide('petfeeder-slider', 1)">&#10095;</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- IMechE Rover Tab -->
+            <div id="imeche-rover" class="tab-content">
+                <div class="project-card large">
+                    <div class="card-content">
+                        <h2>Autonomous Robotic Device</h2>
+                        <span class="badge imeche">IMechE Design Challenge</span>
+                        <p class="summary">Award-winning electro-mechanical design featuring custom PCB architecture for extreme weight reduction and space efficiency.</p>
+                        
+                        <div class="project-details">
+                            <div class="text-section">
+                                <ul>
+                                    <li>Led the team to develop a bespoke electro-mechanical solution involving H-bridges and latch circuits, placing 3rd of 45 teams.</li>
+                                    <li>Designed and assembled a PCB using EasyEDA, cutting weight by 85% and reducing internal wire length by 1.2 metres versus breadboards.</li>
+                                    <li>Collaborated with mechanical designers to prioritise DFMA, maximising space efficiency and vehicle modularity.</li>
+                                </ul>
+                                <div class="resources-links">
+                                    <a href="IMechE design portfolio.pdf" target="_blank" class="download-btn">View Full Portfolio PDF</a>
+                                    <a href="IMechE design Challenge poster.pdf" target="_blank" class="download-btn">View Challenge Poster PDF</a>
+                                </div>
+                            </div>
+                            
+                            <div class="media-section">
+                                <h3>PCB & Circuit Design</h3>
+                                <div class="image-gallery">
+                                    <div class="image-wrapper">
+                                        <img src="3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" class="zoomable-img">
+                                        <p class="caption">3D Render of Mainboard</p>
+                                    </div>
+                                    <div class="image-wrapper">
+                                        <img src="FinalCircuitSchematic.png" alt="Final Circuit Schematic" class="zoomable-img">
+                                        <p class="caption">Circuit Schematic</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- JavaScript for Tabs & Sliders -->
+    <script>
+        function openTab(evt, tabName) {
+            const tabContents = document.getElementsByClassName("tab-content");
+            for (let i = 0; i < tabContents.length; i++) {
+                tabContents[i].style.display = "none";
+                tabContents[i].classList.remove("active");
+            }
+
+            const tabBtns = document.getElementsByClassName("tab-btn");
+            for (let i = 0; i < tabBtns.length; i++) {
+                tabBtns[i].classList.remove("active");
+            }
+
+            const activeTab = document.getElementById(tabName);
+            activeTab.style.display = "block";
+            void activeTab.offsetWidth;
+            activeTab.classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // Image Slider logic
+        const sliderStates = {};
+
+        function moveSlide(sliderId, direction) {
+            const container = document.getElementById(sliderId);
+            const slides = container.querySelectorAll(".slide");
+            
+            if (!(sliderId in sliderStates)) {
+                sliderStates[sliderId] = 0;
+            }
+            
+            slides[sliderStates[sliderId]].classList.remove("active");
+            
+            sliderStates[sliderId] += direction;
+            if (sliderStates[sliderId] >= slides.length) {
+                sliderStates[sliderId] = 0;
+            } else if (sliderStates[sliderId] < 0) {
+                sliderStates[sliderId] = slides.length - 1;
+            }
+            
+            slides[sliderStates[sliderId]].classList.add("active");
+        }
+    </script>
+</body>
+</html>
