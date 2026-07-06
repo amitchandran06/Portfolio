@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <div class="mobile-banner" id="mobile-banner">
+        <span> For the optimal interactive experience (including PDF previews and image sliders), please view this portfolio on a desktop screen or in desktop view mode.</span>
+        <button onclick="document.getElementById('mobile-banner').style.display='none'">✕</button>
+    </div>
     <div class="background-orbs">
         <div class="orb orb-1"></div>
         <div class="orb orb-2"></div>
@@ -42,7 +46,7 @@
                                     <div>
                                         <h3>Amit Chandran</h3>
                                         <p class="subtitle" style="text-align: left; margin: 0;">MEng Mechanical Engineering Student @ UCL</p>
-                                        <p class="security-clearance">🔒 UK Security Clearance</p>
+                                        
                                     </div>
                                 </div>
                                 <div class="bio-text">
@@ -79,9 +83,14 @@
                         <!-- Leonardo UK -->
                         <div class="experience-block">
                             <div class="experience-header">
-                                <h3>Systems Engineering Intern</h3>
-                                <span class="company">Leonardo UK</span>
-                                <span class="duration">Summer 2025 & 2026</span>
+                                <div class="experience-title-area">
+                                    <h3>Systems Engineering Intern</h3>
+                                    <span class="company">Leonardo UK</span>
+                                </div>
+                                <div class="experience-meta">
+                                    <img src="Leonardo-Logo.png" alt="Leonardo Logo" class="experience-logo">
+                                    <span class="duration">Summer 2025 & 2026</span>
+                                </div>
                             </div>
                             <ul>
                                 <li>Implemented HDL-compatible signal processing pipelines in Simulink and successfully deployed them on an RFSoC FPGA board to produce high-resolution spectra.</li>
@@ -98,9 +107,14 @@
                         <!-- UCL Rover Team -->
                         <div class="experience-block">
                             <div class="experience-header">
-                                <h3>Technical Lead & Drone Controls Engineer</h3>
-                                <span class="company">UCL Rover Team</span>
-                                <span class="duration">January 2025 – Present</span>
+                                <div class="experience-title-area">
+                                    <h3>Technical Lead & Drone Controls Engineer</h3>
+                                    <span class="company">UCL Rover Team</span>
+                                </div>
+                                <div class="experience-meta">
+                                    <img src="UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="experience-logo">
+                                    <span class="duration">January 2025 – Present</span>
+                                </div>
                             </div>
                             <ul>
                                 <li>Led the development of the drone's autonomous navigation features, and selected to transition into the overall **Team Technical Lead** role for the upcoming academic year.</li>

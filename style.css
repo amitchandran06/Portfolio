@@ -502,3 +502,61 @@ header h1 {
     margin-bottom: 0.5rem;
     color: var(--text-primary);
 }
+
+/* Mobile Warning Banner */
+.mobile-banner {
+    display: none;
+    background: rgba(56, 189, 248, 0.08);
+    border: 1px solid rgba(56, 189, 248, 0.3);
+    color: var(--text-primary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    margin: 0 auto 2rem auto;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.mobile-banner button {
+    background: transparent;
+    border: none;
+    color: var(--accent);
+    font-size: 1.1rem;
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+@media (max-width: 768px) {
+    .mobile-banner {
+        display: flex;
+    }
+}
+
+/* Experience Logo Images */
+.experience-title-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+}
+
+.experience-meta {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+.experience-logo {
+    max-height: 80px;
+    max-width: 250px;
+    object-fit: contain;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 0.25rem 0.6rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
