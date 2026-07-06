@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
     
     <script>
         tailwind.config = {
@@ -290,29 +291,33 @@
                                     <h3 class="text-lg font-semibold text-zinc-200">Project Media</h3>
                                     <div class="slider-container" id="multimeter-slider">
                                         <div class="slider-slides">
-                                            <div class="slide active flex-col items-center">
+                                            <div class="slide active">
                                                 <img src="images_NEA/extracted_205.png" alt="Finished Product Front" class="zoomable-img">
-                                                <p class="caption">Final PCB Layout</p>
+                                                <div class="caption-banner">Final PCB Layout</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_NEA/extracted_196.png" alt="3D Printed Parts Assembly" class="zoomable-img">
-                                                <p class="caption">Final Circuit Schematic</p>
+                                                <div class="caption-banner">Final Circuit Schematic</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_NEA/extracted_206.jpeg" alt="TFT Interface Testing" class="zoomable-img">
-                                                <p class="caption">3D PCB Render in EasyEDA</p>
+                                                <div class="caption-banner">3D PCB Render in EasyEDA</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_NEA/extracted_293.jpeg" alt="Rear PCB Integration" class="zoomable-img">
-                                                <p class="caption">Full Enclosure Assembly in Fusion360</p>
+                                                <div class="caption-banner">Full Enclosure Assembly in Fusion360</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_NEA/extracted_394.jpeg" alt="Testing and Evaluation" class="zoomable-img">
-                                                <p class="caption">Full Prototype Assembly</p>
+                                                <div class="caption-banner">Full Prototype Assembly</div>
                                             </div>
                                         </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('multimeter-slider', -1)">&#10094;</button>
-                                        <button class="slider-btn next" onclick="moveSlide('multimeter-slider', 1)">&#10095;</button>
+                                        <button class="slider-btn prev" onclick="moveSlide('multimeter-slider', -1)">
+                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
+                                        </button>
+                                        <button class="slider-btn next" onclick="moveSlide('multimeter-slider', 1)">
+                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -350,17 +355,21 @@
                                     <h3 class="text-lg font-semibold text-zinc-200">PCB & Simulation Media</h3>
                                     <div class="slider-container" id="imeche-slider">
                                         <div class="slider-slides">
-                                            <div class="slide active flex-col items-center">
+                                            <div class="slide active">
                                                 <img src="3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" class="zoomable-img">
-                                                <p class="caption">3D Render of Mainboard in EasyEDA</p>
+                                                <div class="caption-banner">3D Render of Mainboard in EasyEDA</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="FinalCircuitSchematic.png" alt="Final Circuit Schematic" class="zoomable-img">
-                                                <p class="caption">Final Circuit Schematic featuring 555 timer & MOSFET controls</p>
+                                                <div class="caption-banner">Final Circuit Schematic featuring 555 timer & MOSFET controls</div>
                                             </div>
                                         </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('imeche-slider', -1)">&#10094;</button>
-                                        <button class="slider-btn next" onclick="moveSlide('imeche-slider', 1)">&#10095;</button>
+                                        <button class="slider-btn prev" onclick="moveSlide('imeche-slider', -1)">
+                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
+                                        </button>
+                                        <button class="slider-btn next" onclick="moveSlide('imeche-slider', 1)">
+                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -389,29 +398,33 @@
                                     <h3 class="text-lg font-semibold text-zinc-200">Project Resources & Media</h3>
                                     <div class="slider-container" id="petfeeder-slider">
                                         <div class="slider-slides">
-                                            <div class="slide active flex-col items-center">
+                                            <div class="slide active">
                                                 <img src="images_pet_feeder/extracted_1.jpeg" alt="System Flowchart" class="zoomable-img">
-                                                <p class="caption">Full CAD Render of the Pet Feeder</p>
+                                                <div class="caption-banner">Full CAD Render of the Pet Feeder</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_pet_feeder/extracted_166.jpeg" alt="Mobile UI mockup" class="zoomable-img">
-                                                <p class="caption">Mobile App UI Mockup</p>
+                                                <div class="caption-banner">Mobile App UI Mockup</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_pet_feeder/extracted_204.jpeg" alt="Electronics Enclosure" class="zoomable-img">
-                                                <p class="caption">Circuitry Rendering</p>
+                                                <div class="caption-banner">Circuitry Rendering</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_pet_feeder/extracted_219.jpeg" alt="Dispensing Test" class="zoomable-img">
-                                                <p class="caption">Electronics Verification with External Power Source</p>
+                                                <div class="caption-banner">Electronics Verification with External Power Source</div>
                                             </div>
-                                            <div class="slide flex-col items-center">
+                                            <div class="slide">
                                                 <img src="images_pet_feeder/extracted_262.jpeg" alt="Final Hardware" class="zoomable-img">
-                                                <p class="caption">BLE Verification</p>
+                                                <div class="caption-banner">BLE Verification</div>
                                             </div>
                                         </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('petfeeder-slider', -1)">&#10094;</button>
-                                        <button class="slider-btn next" onclick="moveSlide('petfeeder-slider', 1)">&#10095;</button>
+                                        <button class="slider-btn prev" onclick="moveSlide('petfeeder-slider', -1)">
+                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
+                                        </button>
+                                        <button class="slider-btn next" onclick="moveSlide('petfeeder-slider', 1)">
+                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
+                                        </button>
                                     </div>
                                     <div class="pt-4">
                                         <a href="Final Scenarios PPT - pet feeder.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
@@ -509,6 +522,7 @@
 
         // Image Slider state management
         const sliderStates = {};
+        const sliderTimeouts = {};
 
         function moveSlide(sliderId, direction) {
             const container = document.getElementById(sliderId);
@@ -516,6 +530,12 @@
             
             if (!(sliderId in sliderStates)) {
                 sliderStates[sliderId] = 0;
+            }
+            
+            // Hide current slide's caption
+            const currentCaption = slides[sliderStates[sliderId]].querySelector(".caption-banner");
+            if (currentCaption) {
+                currentCaption.classList.remove("show");
             }
             
             slides[sliderStates[sliderId]].classList.remove("active");
@@ -527,7 +547,26 @@
                 sliderStates[sliderId] = slides.length - 1;
             }
             
-            slides[sliderStates[sliderId]].classList.add("active");
+            const activeSlide = slides[sliderStates[sliderId]];
+            activeSlide.classList.add("active");
+            
+            // Trigger caption fade sequence
+            triggerCaption(sliderId, activeSlide);
+        }
+
+        function triggerCaption(sliderId, activeSlide) {
+            const caption = activeSlide.querySelector(".caption-banner");
+            if (caption) {
+                if (sliderTimeouts[sliderId]) {
+                    clearTimeout(sliderTimeouts[sliderId]);
+                }
+                
+                caption.classList.add("show");
+                
+                sliderTimeouts[sliderId] = setTimeout(() => {
+                    caption.classList.remove("show");
+                }, 2500);
+            }
         }
 
         // Click to view full image / download
@@ -539,6 +578,14 @@
                 img.addEventListener("click", () => {
                     window.open(img.src, "_blank");
                 });
+            });
+
+            // Initialize captions for all active slides on first load
+            document.querySelectorAll(".slider-container").forEach(slider => {
+                const activeSlide = slider.querySelector(".slide.active");
+                if (activeSlide) {
+                    triggerCaption(slider.id, activeSlide);
+                }
             });
 
             // Initialize mobile banner alert
