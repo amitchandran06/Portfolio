@@ -26,12 +26,12 @@
             <button class="tab-btn" onclick="openTab(event, 'drone-vision')">Drone Vision & Control</button>
             <button class="tab-btn" onclick="openTab(event, 'desktop-multimeter')">Desktop Multimeter</button>
             <button class="tab-btn" onclick="openTab(event, 'pet-feeder')">Smart Pet Feeder</button>
-            <button class="tab-btn" onclick="openTab(event, 'imeche-rover')">IMechE Autonomous Rover</button>
+            <button class="tab-btn" onclick="openTab(event, 'imeche-rover')">IMechE Autonomous Vehicle</button>
         </nav>
 
         <main class="projects-container">
 
-            <!-- About Me & CV Tab -->
+            <!-- About Me & CV secition -->
             <div id="about-me" class="tab-content active">
                 <div class="project-card large">
                     <div class="card-content">
@@ -39,14 +39,14 @@
                         <div class="project-details">
                             <div class="text-section bio-container">
                                 <div class="profile-header">
-                                    <img src="Profile Photo.jpeg" alt="Amit Chandran" class="profile-img">
+                                    <img src="Profile Photo.jpeg" width="100%" height="500px"alt="Amit Chandran" class="profile-img">
                                     <div>
                                         <h3>Amit Chandran</h3>
                                         <p class="subtitle" style="text-align: left; margin: 0;">MEng Mechanical Engineering @ UCL</p>
                                     </div>
                                 </div>
                                 <div class="bio-text">
-                                    <p>I am a Mechanical Engineering student at UCL (expected graduation June 2028), specializing in robotics, control systems, and mechatronic design.</p>
+                                    <p>I am a Mechanical Engineering student at UCL (expected graduation June 2028), specialising in robotics, control systems, and mechatronic design.</p>
                                     <p>My work spans across high-level control algorithm design in MATLAB/Simulink, embedded C++ firmware (ESP32/Arduino), custom PCB layout, and physical prototyping with 3D printers and CNC machines.</p>
                                 </div>
                                 <div class="cv-download-container" style="margin-top: 2rem;">
@@ -118,31 +118,28 @@
                                     <div class="slider-slides">
                                         <div class="slide active">
                                             <img src="images_NEA/extracted_205.png" alt="Finished Product Front" class="zoomable-img">
-                                            <p class="caption">Fully Assembled Prototyping Station (Front)</p>
+                                            <p class="caption">Final PCB Schematic</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_NEA/extracted_196.png" alt="3D Printed Parts Assembly" class="zoomable-img">
-                                            <p class="caption">3D Printed Enclosure Assembly</p>
+                                            <p class="caption">Final Schematic for circuitry</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_NEA/extracted_206.jpeg" alt="TFT Interface Testing" class="zoomable-img">
-                                            <p class="caption">Active Testing of Prototyping Station</p>
+                                            <p class="caption">3D Model of PCB</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_NEA/extracted_274.jpeg" alt="Multimeter Testing" class="zoomable-img">
-                                            <p class="caption">Desktop Multimeter Circuit Probing</p>
+                                            <p class="caption">PCB Fitting in 3D Printed Enclosure</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_NEA/extracted_293.jpeg" alt="Rear PCB Integration" class="zoomable-img">
-                                            <p class="caption">Rear PCB Integration & Wiring</p>
+                                            <p class="caption">Full 3D Assembly in Fusion 360</p>
                                         </div>
-                                        <div class="slide">
-                                            <img src="images_NEA/extracted_294.jpeg" alt="Solder setup" class="zoomable-img">
-                                            <p class="caption">Final PCB Hand-Soldering Setup</p>
-                                        </div>
+                                
                                         <div class="slide">
                                             <img src="images_NEA/extracted_394.jpeg" alt="Testing and Evaluation" class="zoomable-img">
-                                            <p class="caption">Breadboard Prototyping & Calibration</p>
+                                            <p class="caption">Fully Assembled Prototype</p>
                                         </div>
                                     </div>
                                     <button class="slider-btn prev" onclick="moveSlide('multimeter-slider', -1)">&#10094;</button>
@@ -173,57 +170,37 @@
                             <div class="media-section">
                                 <h3>Project Resources & Media</h3>
                                 <a href="Final Scenarios PPT - pet feeder.pdf" target="_blank" class="download-btn">View Final Scenarios PDF</a>
-                                <a href="Final Scenarios PPT.pptx" target="_blank" class="download-btn">Download Scenarios (.pptx)</a>
+                            
                                 
                                 <div class="slider-container" id="petfeeder-slider" style="margin-top: 1.5rem;">
                                     <div class="slider-slides">
                                         <div class="slide active">
                                             <img src="images_pet_feeder/extracted_1.jpeg" alt="System Flowchart" class="zoomable-img">
-                                            <p class="caption">System Architecture & Flowchart</p>
+                                            <p class="caption">Full CAD Render</p>
                                         </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_162.jpeg" alt="Pet Feeder Design" class="zoomable-img">
-                                            <p class="caption">Product Prototype Design</p>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_164.jpeg" alt="Feeder Mechanism Detail" class="zoomable-img">
-                                            <p class="caption">Feeder Mechanism Integration</p>
-                                        </div>
+                                      
+                            
                                         <div class="slide">
                                             <img src="images_pet_feeder/extracted_166.jpeg" alt="Mobile UI mockup" class="zoomable-img">
-                                            <p class="caption">Mobile App UI Mockup</p>
+                                            <p class="caption">Exploded view of dispensing mechanism</p>
                                         </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_182.jpeg" alt="Testing Scenario 1" class="zoomable-img">
-                                            <p class="caption">Portion Control & Calibration Tests</p>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_183.png" alt="Testing Scenario 2" class="zoomable-img">
-                                            <p class="caption">Firmware Flow Chart</p>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_184.jpeg" alt="Mechanical Layout" class="zoomable-img">
-                                            <p class="caption">Mechanical Layout Diagram</p>
-                                        </div>
-                                        <div class="slide">
-                                            <img src="images_pet_feeder/extracted_199.png" alt="Firmware Architecture" class="zoomable-img">
-                                            <p class="caption">BLE Event Callback Handlers</p>
-                                        </div>
+                                    
+                                  
                                         <div class="slide">
                                             <img src="images_pet_feeder/extracted_204.jpeg" alt="Electronics Enclosure" class="zoomable-img">
-                                            <p class="caption">PCB Electronics Enclosure Design</p>
+                                            <p class="caption"> Electronics Enclosure Render</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_pet_feeder/extracted_218.jpeg" alt="Calibration Setup" class="zoomable-img">
-                                            <p class="caption">Load-Cell Calibration Configuration</p>
+                                            <p class="caption">Breadboard Prototyping</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_pet_feeder/extracted_219.jpeg" alt="Dispensing Test" class="zoomable-img">
-                                            <p class="caption">Dispensing Mechanics Verification</p>
+                                            <p class="caption">Full circuit test with external power source</p>
                                         </div>
                                         <div class="slide">
                                             <img src="images_pet_feeder/extracted_262.jpeg" alt="Final Hardware" class="zoomable-img">
-                                            <p class="caption">Smart Pet Feeder Main Chassis</p>
+                                            <p class="caption">BLE Testing with Android Client</p>
                                         </div>
                                     </div>
                                     <button class="slider-btn prev" onclick="moveSlide('petfeeder-slider', -1)">&#10094;</button>
