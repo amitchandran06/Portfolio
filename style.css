@@ -193,16 +193,16 @@ header h1 {
     margin-bottom: 2rem;
 }
 
-.project-card li {
+.project-card li, .sub-tab-content li {
     color: var(--text-secondary);
-    font-size: 1rem;
-    line-height: 1.7;
-    margin-bottom: 1.2rem;
+    font-size: 1.05rem;
+    line-height: 1.9;
+    margin-bottom: 2rem;
     position: relative;
-    padding-left: 1.5rem;
+    padding-left: 1.8rem;
 }
 
-.project-card li::before {
+.project-card li::before, .sub-tab-content li::before {
     content: "▹";
     position: absolute;
     left: 0;
@@ -385,4 +385,138 @@ header h1 {
 @keyframes fadeIn {
     from { opacity: 0; }
     to { opacity: 1; }
+}
+
+/* Experience Block styling */
+.experience-block {
+    margin-bottom: 1rem;
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.experience-header h3 {
+    font-size: 1.5rem;
+    color: var(--text-primary);
+    width: 100%;
+}
+
+.company {
+    color: var(--accent);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.duration {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    font-style: italic;
+}
+
+.separator {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+.security-clearance {
+    display: inline-block;
+    background: rgba(56, 189, 248, 0.1);
+    color: var(--accent);
+    padding: 0.25rem 0.75rem;
+    border-radius: 9999px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* Projects Sidebar & Nested Layout */
+.projects-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    align-items: start;
+}
+
+@media (max-width: 900px) {
+    .projects-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+.projects-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    background: rgba(20, 25, 40, 0.2);
+    border: 1px solid var(--card-border);
+    padding: 1.5rem;
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+}
+
+@media (max-width: 900px) {
+    .projects-sidebar {
+        flex-direction: row;
+        overflow-x: auto;
+        padding: 1rem;
+    }
+}
+
+.sub-tab-btn {
+    background: transparent;
+    border: 1px solid transparent;
+    color: var(--text-secondary);
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 900px) {
+    .sub-tab-btn {
+        text-align: center;
+        white-space: nowrap;
+    }
+}
+
+.sub-tab-btn:hover {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-primary);
+}
+
+.sub-tab-btn.active {
+    background: var(--btn-hover);
+    color: var(--accent);
+    border-color: rgba(56, 189, 248, 0.3);
+}
+
+/* Sub-tab Content */
+.sub-tab-content {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.sub-tab-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeIn 0.4s ease-out forwards;
+}
+
+.sub-tab-content h2 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
 }
