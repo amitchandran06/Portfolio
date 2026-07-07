@@ -132,7 +132,7 @@
                         <div class="space-y-4">
                             <h3 class="text-lg font-bold tracking-tight text-zinc-100">CV Preview</h3>
                             <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-2 shadow-inner overflow-hidden">
-                                <iframe src="https://amitchandran06.github.io/Resumes/main.pdf#navpanes=0" width="100%" height="480px" class="border-none rounded-lg bg-white"></iframe>
+                                <iframe id="cv-iframe" src="https://amitchandran06.github.io/Resumes/main.pdf#navpanes=0" width="100%" height="480px" class="border-none rounded-lg bg-white"></iframe>
                             </div>
                         </div>
                     </div>
@@ -642,6 +642,13 @@
 
         // Click to view full image / download
         document.addEventListener("DOMContentLoaded", () => {
+            // Prevent iframe PDF caching by appending a unique timestamp query parameter
+            const cvIframe = document.getElementById("cv-iframe");
+            if (cvIframe) {
+                const timestamp = new Date().getTime();
+                cvIframe.src = `https://amitchandran06.github.io/Resumes/main.pdf?v=${timestamp}#navpanes=0`;
+            }
+
             const images = document.querySelectorAll(".zoomable-img");
             images.forEach(img => {
                 img.style.cursor = "zoom-in";
