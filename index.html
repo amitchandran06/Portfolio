@@ -3,675 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amit Chandran - Portfolio</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Google Fonts for Geist Sans & Geist Mono -->
-    <link href="https://fonts.googleapis.com/css2?family=Geist+Sans:wght@100..900&family=Geist+Mono:wght@100..900&display=swap" rel="stylesheet">
+    <title>Amit Chandran — Portfolio</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Geist Sans', 'sans-serif'],
-                        mono: ['Geist Mono', 'monospace'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        /* Custom slide transitions and scrollbar styling matching ShadCN theme */
-        .slide {
-            display: none;
-        }
-        .slide.active {
-            display: flex;
-        }
-        /* Custom scrollbar for experience list */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #09090b;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #27272a;
-            border-radius: 3px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #3f3f46;
-        }
-    </style>
 </head>
-<body class="bg-[#09090b] text-zinc-50 font-sans min-height-screen selection:bg-zinc-800 selection:text-zinc-100 antialiased">
-    
-    <!-- Top Mobile Warning Banner (ShadCN Alert style) -->
-    <div class="hidden sm:hidden md:hidden lg:hidden" id="mobile-banner">
-        <!-- We will show this via JS/CSS on small screens -->
-    </div>
-    <div class="max-width-[1200px] mx-auto px-4 py-8 md:py-16 md:px-8 max-w-6xl">
-        
-        <header class="text-center mb-12 animate-fade-in">
-            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight bg-gradient-to-r from-zinc-100 to-zinc-400 bg-clip-text text-transparent mb-2">
+<body>
+
+    <!-- Hero Section -->
+    <section class="section-bleed" id="hero">
+        <div class="page-container">
+            <div class="mono-accent mb-4">ELECTRONICS · EMBEDDED · MECHANICAL DESIGN</div>
+            <h1 class="hero-h1 mb-4">
                 Amit Chandran
             </h1>
-            <p class="text-zinc-400 text-md md:text-lg font-medium tracking-tight">
-                Controls, IoT, and Mechatronics Engineering Portfolio
-            </p>
-        </header>
-
-        <!-- Navigation Tabs (ShadCN TabsList style) -->
-        <div class="flex justify-center mb-12">
-            <nav class="inline-flex h-10 items-center justify-center rounded-lg bg-zinc-900 p-1 text-zinc-400 border border-zinc-800/80">
-                <button class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200 active-tab-style active" onclick="openTab(event, 'about-me')">
-                    About Me & CV
-                </button>
-                <button class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200" onclick="openTab(event, 'experience')">
-                    Experience
-                </button>
-                <button class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-md px-4 py-1.5 text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200" onclick="openTab(event, 'projects')">
-                    Projects
-                </button>
-            </nav>
-        </div>
-
-        <main class="space-y-8">
-
-            <!-- About Me & CV Tab -->
-            <div id="about-me" class="tab-content block opacity-100 transition-opacity duration-300">
-                <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 md:p-8 backdrop-blur-xl shadow-lg space-y-8">
-                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                        
-                        <!-- Left Bio Column -->
-                        <div class="space-y-6">
-                            <div class="flex items-center gap-4">
-                                <img src="Profile Photo.jpeg" alt="Amit Chandran" class="w-20 h-20 rounded-full object-cover border-2 border-zinc-700 shadow-md">
-                                <div class="space-y-1">
-                                    <h3 class="text-xl font-bold tracking-tight text-zinc-100">Amit Chandran</h3>
-                                    <p class="text-sm text-zinc-400">MEng Mechanical Engineering Student @ UCL</p>
-                                    <span class="inline-flex items-center rounded-full bg-zinc-800/80 px-2.5 py-0.5 text-xs font-semibold text-zinc-300 border border-zinc-700/50">
-                                         Holding UK Security Clearance (SC)
-                                    </span>
-                                </div>
-                            </div>
-                            
-                            <div class="space-y-4 text-zinc-400 text-sm md:text-base leading-relaxed">
-                                <p>Mechanical Engineering student at UCL (expected graduation June 2028), specializing in robotics, control systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.</p>
-                                <p>My technical expertise ranges from high-level control algorithm design in MATLAB/Simulink, low level FPGA-based signal processing, embedded C++ firmware (ESP32/Arduino), custom PCB design (EasyEDA), and mechanical CAD modeling (Fusion 360) optimized for manfacturing and assembly (DfMA).</p>
-                            </div>
-                            
-                            <div class="flex flex-wrap gap-3">
-                                <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
-                                    Open CV in New Tab
-                                </a>
-                                <a href="https://amitchandran06.github.io/Resumes/main.pdf" download class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors bg-zinc-100 text-zinc-950 hover:bg-zinc-200 px-4 py-2 shadow">
-                                    Download CV (PDF)
-                                </a>
-                            </div>
-                            
-                            <div class="border-t border-zinc-800/80 pt-6 space-y-2">
-                                <h4 class="text-xs font-bold uppercase tracking-wider text-zinc-500">Connect</h4>
-                                <div class="flex gap-3">
-                                    <a href="https://www.linkedin.com/in/amit-chandran" target="_blank" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-200 transition-colors">
-                                        <i class="fa-brands fa-linkedin text-lg"></i> LinkedIn
-                                    </a>
-                                    <a href="https://github.com/amitchandran06" target="_blank" class="inline-flex items-center gap-2 text-sm text-zinc-400 hover:text-zinc-200 transition-colors">
-                                        <i class="fa-brands fa-github text-lg"></i> GitHub
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <!-- Right CV Preview Column -->
-                        <div class="space-y-4">
-                            <h3 class="text-lg font-bold tracking-tight text-zinc-100">CV Preview</h3>
-                            <div class="rounded-xl border border-zinc-800 bg-zinc-950 p-2 shadow-inner overflow-hidden">
-                                <iframe id="cv-iframe" src="https://amitchandran06.github.io/Resumes/main.pdf#navpanes=0" width="100%" height="480px" class="border-none rounded-lg bg-white"></iframe>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Full Width bottom sections -->
-                    <div class="border-t border-zinc-800 pt-8 space-y-6">
-                        <div class="space-y-2">
-                            <h3 class="text-lg font-bold tracking-tight text-zinc-100">What I can bring to your team</h3>
-                            <div class="text-zinc-400 text-sm md:text-base leading-relaxed space-y-4">
-                                <p> I am an engineer who works best in fast-paced, dynamic environments. I flourish when I am working on complex cross-functional projects and teams such as those in a start-up. </p>
-                                <p> My greatest strengths are my ability to rapidly take on new concepts and connect them to existing knowledge, and my ability to communicate complex technical ideas clearly and concisely to those who need it. I believe this makes me a valuable asset to any engineering team, whether it be anything from early testing and development, to rapid iteration or showcasing your product to clients. </p>
-                                <p> The attributes above, combined with my experience and passion for merging mechanical, electrical and software engineering principles, is what leads me to looking for <strong>internship</strong> or <strong>entry-level</strong> opportunities in the field of robotics and / or control systems. </p>
-                            </div>
-                        </div>
-
-                        <div class="border-t border-zinc-800 pt-8 space-y-4">
-                            <h3 class="text-lg font-bold tracking-tight text-zinc-100">Technical Skills</h3>
-                            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                                <div class="space-y-2">
-                                    <h4 class="text-sm font-semibold text-zinc-300">Programming Languages</h4>
-                                    <div class="flex flex-wrap gap-1.5">
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">MATLAB</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">C++</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Python</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Arduino (C++)</span>
-                                    </div>
-                                </div>
-                                <div class="space-y-2">
-                                    <h4 class="text-sm font-semibold text-zinc-300">Software & Tools</h4>
-                                    <div class="flex flex-wrap gap-1.5">
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Simulink</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Fusion 360</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">EasyEDA</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Git</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Azure DevOps</span>
-                                    </div>
-                                </div>
-                                <div class="space-y-2">
-                                    <h4 class="text-sm font-semibold text-zinc-300">Manufacturing</h4>
-                                    <div class="flex flex-wrap gap-1.5">
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">PCB Assembly & Soldering</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">3D Printing / Rapid Manufacturing</span>
-                                        <span class="inline-flex items-center rounded-md bg-zinc-800/60 px-2 py-1 text-xs font-medium text-zinc-200 border border-zinc-700/50">Workshop Equipment</span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div class="hero-subtitle mb-8">
+                Robotics, Controls & Mechatronic Systems Engineer.
+            </div>
+            
+            <!-- Action Buttons directly under subtitle -->
+            <div class="flex flex-wrap gap-4 items-center">
+                <a href="#work" class="btn-solid">View projects <i class="fa-solid fa-arrow-right"></i></a>
+                <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="pill-btn">Download CV <i class="fa-solid fa-arrow-down"></i></a>
             </div>
 
-            <!-- Experience Tab -->
-            <div id="experience" class="tab-content hidden opacity-0 transition-opacity duration-300">
-                <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 md:p-8 backdrop-blur-xl shadow-lg space-y-8">
-                    
-                    <!-- Section: Professional Experience -->
-                    <div class="space-y-6">
-                        <h2 class="text-2xl font-bold tracking-tight text-zinc-100 flex items-center gap-2">
-                            <i></i> Professional Experience
-                        </h2>
-                        
-                        <!-- Leonardo UK -->
-                        <div class="space-y-4">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 pb-4 border-b border-zinc-800">
-                                <div class="space-y-1">
-                                    <h3 class="text-xl font-bold text-zinc-100">Systems Engineering Intern</h3>
-                                    <p class="text-zinc-400 font-semibold">Leonardo UK</p>
-                                </div>
-                                <div class="flex flex-col items-start md:items-end gap-2">
-                                    <div class="bg-white p-2 rounded-lg shadow-sm max-h-[40px] flex items-center">
-                                        <img src="Leonardo-Logo.png" alt="Leonardo Logo" class="max-h-7 max-w-[120px] object-contain">
-                                    </div>
-                                    <span class="text-sm font-medium text-zinc-500 italic">Summer 2025 & 2026</span>
-                                </div>
-                            </div>
-                            <ul class="list-none space-y-3.5 pl-0">
-                                <p>During this 9 week internship, I operated as a systems engineer, coordinating 10 other interns to seamlessly integrate antenna, firmware, hardware and software components into a continous live RF signal processing pipeline. During this role, we as interns had full ownership and responsibility over our project, with full control over how we wanted the design process to be carried out. The project was built from the ground up, starting at requirements identification and ending at verification and testing. Giving us a brief but full experience of early stage design, similar to that in a startup environment. Below are some of my key successes as an engineer: </p>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Implemented HDL-compatible signal processing pipelines in Simulink and successfully deployed them on an RFSoC FPGA board to produce high-resolution spectra.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Developed a highly optimized compression algorithm that reduced FFT data bandwidth requirements by over <strong>2500×</strong>, minimizing network utilization while preserving critical telemetry.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Directed the integration of upstream and downstream sub-systems to deliver a unified, high-performance system despite initial incompatibilities.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Coordinated with software teams to implement a robust data exchange protocol using TCP, enabling results to be monitored via a web-based server.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Architected a signal integrity self-test diagnostics algorithm to verify RF signal paths, significantly cutting troubleshooting and maintenance downtime.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Optimized graph max-hold algorithms in MATLAB, reducing execution latency by <strong>99.3%</strong> to boost overall system performance.</li>
-                            </ul>
-                            <div class="flex flex-wrap items-center gap-2 mt-4">
-                                <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">MATLAB</span>
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Simulink</span>
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Git</span>
-                                </div>
-                            </div>
-                        </div>
+            <!-- Quick Jump Navigation Bar further below with generous spacing and hairline divider -->
+            <div class="quick-jump-bar">
+                <span class="mono-label mr-2">JUMP TO SECTION:</span>
+                <a href="#about" class="jump-pill">01 · About</a>
+                <a href="#experience" class="jump-pill">02 · Experience</a>
+                <a href="#work" class="jump-pill">03 · Work</a>
+                <a href="#skills" class="jump-pill">04 · Skills</a>
+                <a href="#contact" class="jump-pill">05 · Contact</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 01 — ABOUT Section -->
+    <section class="section-bleed" id="about">
+        <div class="page-container">
+            <div class="mb-10 border-b pb-6">
+                <div class="mono-accent mb-2">SECTION 01</div>
+                <h2 class="section-title-h2">About Me</h2>
+            </div>
+
+            <!-- Full-width introductory bio text spanning across the entire page -->
+            <div class="mb-10 pb-8 border-b">
+                <div class="flex items-center gap-3 mb-6">
+                    <span class="pill-chip" style="border-color: var(--accent); color: var(--accent); font-weight: 600;">
+                        <i class="fa-solid fa-shield-halved"></i> Holding UK Security Clearance (SC)
+                    </span>
+                </div>
+                <p class="lead-p" style="color: var(--ink); font-weight: 600; max-width: 100%;">
+                    Mechanical Engineering student at UCL (expected graduation June 2028), specializing in robotics, control systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.
+                </p>
+            </div>
+
+            <!-- 2-column split for bio and profile photo -->
+            <div class="grid-2col items-start">
+                <div style="padding-right: clamp(16px, 3vw, 48px);">
+                    <p class="lead-p mb-6" style="color: var(--muted); font-size: 20px;">
+                        A multidisciplinary maker who's happiest at the intersection of hardware and software.
+                    </p>
+                    <div class="space-y-4 body-p">
+                        <p>
+                            My technical expertise ranges from high-level control algorithm design in MATLAB/Simulink, low level FPGA-based signal processing, embedded C++ firmware (ESP32/Arduino), custom PCB design (EasyEDA), and mechanical CAD modeling (Fusion 360) optimized for manfacturing and assembly (DfMA).
+                        </p>
+                        <h3 class="item-h3 pt-4" style="color: var(--ink);">What I can bring to your team</h3>
+                        <p>
+                            I am an engineer who works best in fast-paced, dynamic environments. I flourish when I am working on complex cross-functional projects and teams such as those in a start-up.
+                        </p>
+                        <p>
+                            My greatest strengths are my ability to rapidly take on new concepts and connect them to existing knowledge, and my ability to communicate complex technical ideas clearly and concisely to those who need it. I believe this makes me a valuable asset to any engineering team, whether it be anything from early testing and development, to rapid iteration or showcasing your product to clients.
+                        </p>
+                        <p>
+                            The attributes above, combined with my experience and passion for merging mechanical, electrical and software engineering principles, is what leads me to looking for <strong>internship</strong> or <strong>entry-level</strong> opportunities in the field of robotics and / or control systems.
+                        </p>
                     </div>
-
-                    <!-- Divider -->
-                    <div class="border-t border-zinc-800 my-8"></div>
-
-                    <!-- Section: Academic Experience -->
-                    <div class="space-y-6">
-                        <h2 class="text-2xl font-bold tracking-tight text-zinc-100 flex items-center gap-2">
-                            <i></i> Academic & Extracurricular Experience
-                        </h2>
-
-                        <!-- UCL Rover Team -->
-                        <div class="space-y-4">
-                            <div class="flex flex-col md:flex-row md:justify-between md:items-start gap-4 pb-4 border-b border-zinc-800">
-                                <div class="space-y-1">
-                                    <h3 class="text-xl font-bold text-zinc-100">Technical Lead & Drone Controls Engineer</h3>
-                                    <p class="text-zinc-400 font-semibold">UCL Rover Team</p>
-                                </div>
-                                <div class="flex flex-col items-start md:items-end gap-2">
-                                    <div class="bg-white p-2 rounded-lg shadow-sm max-h-[40px] flex items-center">
-                                        <img src="UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="max-h-7 max-w-[120px] object-contain">
-                                    </div>
-                                    <span class="text-sm font-medium text-zinc-500 italic">January 2025 – Present</span>
-                                </div>
-                            </div>
-                            <ul class="list-none space-y-3.5 pl-0">
-                                <p> My role at UCL's Rover Team has been ongoing since January 2025, and has seen significiant added responsibilties. I started as a controls engineer for the team, working on firmware for the rover's remote control system. As my second year at the team began, this advanced to more complex algorithms, mainly developed in Python and Simulink to provide autonomy for our Rover's mobile drone platform. Most recently, I have been selected to lead the Technical side of the entire team from the 2026/27 academic year. </p>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Led the development of the drone's autonomous navigation features, and selected to transition into the overall **Team Technical Lead** role for the upcoming academic year.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Programmed an edge-computing vision pipeline in Python and OpenCV on a Raspberry Pi to track ArUco markers in real-time.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Established a robust UDP telemetry link to stream positional coordinate data seamlessly from the edge device to a high-level MATLAB/Simulink control model.</li>
-                                <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400">Interfaced the Simulink control architecture directly with an Aero Selfie H743 flight controller to achieve an autonomous, end-to-end vision-to-flight pipeline.</li>
-                            </ul>
-                            <div class="flex flex-wrap items-center gap-2 mt-4">
-                                <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                <div class="flex flex-wrap gap-1.5">
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Python</span>
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">MATLAB</span>
-                                    <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Simulink</span>
-                            </div>
-                        </div>
+                    <div class="flex gap-4 mt-8">
+                        <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="pill-btn">Open CV in New Tab ↗</a>
+                        <a href="https://amitchandran06.github.io/Resumes/main.pdf" download class="pill-btn" style="background: var(--ink); color: var(--paper);">Download CV (PDF) ↓</a>
                     </div>
+                </div>
+                <div>
+                    <img src="Profile Photo.jpeg" alt="Amit Chandran" style="width: 100%; min-height: 480px; object-fit: cover; border: 1px solid var(--line); border-radius: 4px;">
                 </div>
             </div>
         </div>
+    </section>
 
-            <!-- Projects Tab (With horizontal sub-tab triggers) -->
-            <div id="projects" class="tab-content hidden opacity-0 transition-opacity duration-300">
-                <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6 md:p-8 backdrop-blur-xl shadow-lg space-y-8">
-                    
-                    <!-- Horizontal Sub-tab triggers (ShadCN Segmented Control style) -->
-                    <div class="flex justify-center border-b border-zinc-800/80 pb-4">
-                        <nav class="inline-flex flex-wrap h-auto items-center justify-center rounded-lg bg-zinc-950 p-1 text-zinc-400 border border-zinc-800/50 gap-1">
-                            <button class="sub-tab-btn inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-xs md:text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200 active" onclick="openSubTab(event, 'sub-multimeter')">
-                                Desktop Multimeter
-                            </button>
-                            <button class="sub-tab-btn inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-xs md:text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200" onclick="openSubTab(event, 'sub-imeche')">
-                                IMechE Design Challenge
-                            </button>
-                            <button class="sub-tab-btn inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-xs md:text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200" onclick="openSubTab(event, 'sub-petfeeder')">
-                                Smart Pet Feeder
-                            </button>
-                            <button class="sub-tab-btn inline-flex items-center justify-center rounded-md px-3.5 py-1.5 text-xs md:text-sm font-medium transition-all text-zinc-400 hover:text-zinc-200" onclick="openSubTab(event, 'sub-drone')">
-                                Drone Flight System
-                            </button>
-                        </nav>
+    <!-- 02 — EXPERIENCE Section -->
+    <section class="section-bleed" id="experience">
+        <div class="page-container">
+            <div class="mb-12 border-b pb-6">
+                <div class="mono-accent mb-2">SECTION 02</div>
+                <h2 class="section-title-h2">Experience</h2>
+            </div>
+            
+            <!-- Professional Experience -->
+            <div class="mb-16">
+                <h3 class="section-h2 mb-8">
+                    Professional Experience
+                </h3>
+                
+                <div class="p-8 border" style="background-color: var(--paper);">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <h4 class="item-h3" style="font-size: 28px;">Systems Engineering Intern</h4>
+                            <p class="body-p font-semibold" style="color: var(--ink); font-size: 18px;">Leonardo UK</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <img src="Leonardo-Logo.png" alt="Leonardo Logo" class="exp-logo">
+                            <span class="mono-label" style="color: var(--muted); font-size: 14px;">Summer 2025 & 2026</span>
+                        </div>
                     </div>
-
-                    <!-- Sub-contents -->
-                    <div class="space-y-4">
-                        
-                        <!-- Desktop Multimeter -->
-                        <div id="sub-multimeter" class="sub-tab-content block">
-                            <div class="flex flex-col gap-2 mb-6">
-                                <h2 class="text-2xl font-bold tracking-tight text-zinc-100">Electronics Prototyping Station (2023/24)</h2>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-flex items-center rounded-full bg-zinc-800 px-2.5 py-0.5 text-xs font-medium text-zinc-300 border border-zinc-700/50">Desktop Multimeter (NEA Project)</span>
-                                </div>
-                            </div>
-                            <p class="text-zinc-400 text-sm md:text-base leading-relaxed italic mb-8">A comprehensive project integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station. Driven by end user oriented design.</p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                                <div class="space-y-6">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Technical Depth & Achievements</h3>
-                                    <ul class="list-none space-y-4 pl-0">
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Custom PCB Architecture:</strong> Engineered measurement circuitry using EasyEDA, integrating potential dividers for voltage, an ACS724 Hall-effect sensor for non-invasive current, and dedicated charge/discharge paths for capacitance.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Embedded Firmware:</strong> Programmed a 500+ line C++ codebase on an Arduino MEGA utilizing SPI to drive a 1.8-inch TFT display. Implemented custom pin-change interrupt routines (PCINT) using the <code>YetAnotherPcint.h</code> library to support 6 mode switches concurrently without interfering with SPI data lines.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Calibration & Accuracy:</strong> Designed a multi-range ohmmeter and capacitance meter using software-driven auto-ranging logic. Compounded accuracy from a 19.1% average error in v1 to a highly precise <strong>4.1% average error in v2</strong>.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>DFMA Enclosure:</strong> Designed a modular, multi-part PLA/PETG enclosure in Fusion 360. Iterated on physical tolerances (accounting for 0.3mm-0.4mm 3D printing tolerances) to integrate sliding drawers, helper hands, and a magnifying glass mount.</li>
-                                    </ul>
-                                    <div class="pt-4">
-                                        <a href="Electronics Project 2024.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
-                                            View NEA Document (226 Pages)
-                                        </a>
-                                    </div>
-                                    <div class="mt-6 pt-4 border-t border-zinc-850 flex flex-wrap items-center gap-2">
-                                        <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                        <div class="flex flex-wrap gap-1.5">
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Arduino (C++)</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">C++</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">EasyEDA</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Fusion 360</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">PCB Assembly & Soldering</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">3D Printing / Rapid Manufacturing</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Workshop Equipment</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Project Media</h3>
-                                    <div class="slider-container" id="multimeter-slider">
-                                        <div class="slider-slides">
-                                            <div class="slide active">
-                                                <img src="images_NEA/extracted_205.png" alt="Finished Product Front" class="zoomable-img">
-                                                <div class="caption-banner">Final PCB Layout</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_NEA/extracted_196.png" alt="3D Printed Parts Assembly" class="zoomable-img">
-                                                <div class="caption-banner">Final Circuit Schematic</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_NEA/extracted_206.jpeg" alt="TFT Interface Testing" class="zoomable-img">
-                                                <div class="caption-banner">3D PCB Render in EasyEDA</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_NEA/extracted_293.jpeg" alt="Rear PCB Integration" class="zoomable-img">
-                                                <div class="caption-banner">Full Enclosure Assembly in Fusion360</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_NEA/extracted_394.jpeg" alt="Testing and Evaluation" class="zoomable-img">
-                                                <div class="caption-banner">Full Prototype Assembly</div>
-                                            </div>
-                                        </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('multimeter-slider', -1)">
-                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
-                                        </button>
-                                        <button class="slider-btn next" onclick="moveSlide('multimeter-slider', 1)">
-                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- IMechE Rover -->
-                        <div id="sub-imeche" class="sub-tab-content hidden">
-                            <div class="flex flex-col gap-2 mb-6">
-                                <h2 class="text-2xl font-bold tracking-tight text-zinc-100">Autonomous Robotic Device (2025)</h2>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-flex items-center rounded-full bg-zinc-800 px-2.5 py-0.5 text-xs font-medium text-zinc-300 border border-zinc-700/50">IMechE Design Challenge</span>
-                                </div>
-                            </div>
-                            <p class="text-zinc-400 text-sm md:text-base leading-relaxed italic mb-8">Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.</p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                                <div class="space-y-6">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Technical Depth & Achievements</h3>
-                                    <ul class="list-none space-y-4 pl-0">
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Circuit Simulation & Debugging:</strong> Simulating and validating H-bridges and 555-timer circuits in Falstad. Debugged a critical floating gate issue on the MOSFET Q5 by implementing a 1MΩ pull-down resistor to ground to ensure reliable gate discharge.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>PCB Layout & Weight Optimization:</strong> Compacted the physical footprint of the PCB in EasyEDA from 200x80mm down to 165x60mm. Replaced SMD capacitors with THT variants to match hardware availability and integrated a fuse holder in series with VCC for circuit protection.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Structural FEA Simulation:</strong> Conducted structural finite element analysis (FEA) on the rover chassis using ANSYS (Static Structural) to analyze total deformation and stress distribution under mechanical load, securing high stiffness-to-weight ratios.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Team Leadership:</strong> Led the electro-mechanical design team to place 3rd out of 45 teams globally.</li>
-                                    </ul>
-                                    <div class="flex flex-wrap gap-2 pt-4">
-                                        <a href="IMechE design portfolio.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
-                                            View Full Portfolio PDF
-                                        </a>
-                                        <a href="IMechE design Challenge poster.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
-                                            View Challenge Poster PDF
-                                        </a>
-                                    </div>
-                                    <div class="mt-6 pt-4 border-t border-zinc-850 flex flex-wrap items-center gap-2">
-                                        <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                        <div class="flex flex-wrap gap-1.5">
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">EasyEDA</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Fusion 360</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">PCB Assembly & Soldering</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4">
-                                    <h3 class="text-lg font-semibold text-zinc-200">PCB & Simulation Media</h3>
-                                    <div class="slider-container" id="imeche-slider">
-                                        <div class="slider-slides">
-                                            <div class="slide active">
-                                                <img src="3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" class="zoomable-img">
-                                                <div class="caption-banner">3D Render of Mainboard in EasyEDA</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="FinalCircuitSchematic.png" alt="Final Circuit Schematic" class="zoomable-img">
-                                                <div class="caption-banner">Final Circuit Schematic featuring 555 timer & MOSFET controls</div>
-                                            </div>
-                                        </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('imeche-slider', -1)">
-                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
-                                        </button>
-                                        <button class="slider-btn next" onclick="moveSlide('imeche-slider', 1)">
-                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Smart Pet Feeder -->
-                        <div id="sub-petfeeder" class="sub-tab-content hidden">
-                            <div class="flex flex-col gap-2 mb-6">
-                                <h2 class="text-2xl font-bold tracking-tight text-zinc-100">Smart Pet Feeder (2025/26)</h2>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-flex items-center rounded-full bg-zinc-800 px-2.5 py-0.5 text-xs font-medium text-zinc-300 border border-zinc-700/50">BLE IoT System</span>
-                                </div>
-                            </div>
-                            <p class="text-zinc-400 text-sm md:text-base leading-relaxed italic mb-8">A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.</p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                                <div class="space-y-6">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Technical Depth & Achievements</h3>
-                                    <ul class="list-none space-y-4 pl-0">
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Firmware Optimization:</strong> Developed custom C++ firmware on an ESP32 utilizing the NimBLE-Arduino library to achieve a <strong>50% reduction in RAM and Flash usage</strong> compared to standard Bluedroid.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Hardware-Software Co-Design:</strong> Integrated a mechanical dispensing mechanism with an HX711 amplifier and load cell. Implemented digital calibration routines to achieve automated, software-driven portion control within ±1% precision.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Event-Driven Communication:</strong> Built a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for low-latency command processing from a Kotlin-based Android app.</li>
-                                    </ul>
-                                    <div class="pt-4">
-                                        <a href="Final Scenarios PPT - pet feeder.pdf" target="_blank" class="inline-flex items-center justify-center rounded-md text-xs md:text-sm font-semibold transition-colors border border-zinc-800 bg-transparent text-zinc-200 hover:bg-zinc-800 px-4 py-2">
-                                            View Scenarios PDF
-                                        </a>
-                                    </div>
-                                    <div class="mt-6 pt-4 border-t border-zinc-855 flex flex-wrap items-center gap-2">
-                                        <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                        <div class="flex flex-wrap gap-1.5">
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">C++</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Arduino (C++)</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">EasyEDA</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">PCB Assembly & Soldering</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Project Resources & Media</h3>
-                                    <div class="slider-container" id="petfeeder-slider">
-                                        <div class="slider-slides">
-                                            <div class="slide active">
-                                                <img src="images_pet_feeder/extracted_1.jpeg" alt="System Flowchart" class="zoomable-img">
-                                                <div class="caption-banner">Full CAD Render of the Pet Feeder</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_pet_feeder/extracted_166.jpeg" alt="Mobile UI mockup" class="zoomable-img">
-                                                <div class="caption-banner">Mobile App UI Mockup</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_pet_feeder/extracted_204.jpeg" alt="Electronics Enclosure" class="zoomable-img">
-                                                <div class="caption-banner">Circuitry Rendering</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_pet_feeder/extracted_219.jpeg" alt="Dispensing Test" class="zoomable-img">
-                                                <div class="caption-banner">Electronics Verification with External Power Source</div>
-                                            </div>
-                                            <div class="slide">
-                                                <img src="images_pet_feeder/extracted_262.jpeg" alt="Final Hardware" class="zoomable-img">
-                                                <div class="caption-banner">BLE Verification</div>
-                                            </div>
-                                        </div>
-                                        <button class="slider-btn prev" onclick="moveSlide('petfeeder-slider', -1)">
-                                            <i class="fa-solid fa-chevron-left text-xs md:text-sm"></i>
-                                        </button>
-                                        <button class="slider-btn next" onclick="moveSlide('petfeeder-slider', 1)">
-                                            <i class="fa-solid fa-chevron-right text-xs md:text-sm"></i>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Drone Flight System -->
-                        <div id="sub-drone" class="sub-tab-content hidden">
-                            <div class="flex flex-col gap-2 mb-6">
-                                <h2 class="text-2xl font-bold tracking-tight text-zinc-100">Drone Flight Control System (2026 - Ongoing)</h2>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="inline-flex items-center rounded-full bg-zinc-800 px-2.5 py-0.5 text-xs font-medium text-zinc-300 border border-zinc-700/50">UCL Rover Team</span>
-                                </div>
-                            </div>
-                            <p class="text-zinc-400 text-sm md:text-base leading-relaxed italic mb-8">Integration of computer vision with high-level Simulink models and physical flight control units.</p>
-                            
-                            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-                                <div class="space-y-6">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Technical Depth & Achievements</h3>
-                                    <ul class="list-none space-y-4 pl-0">
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Real-time Computer Vision:</strong> Built a Python OpenCV pipeline on an edge Raspberry Pi to detect and track ArUco coordinates dynamically.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Networking & Control:</strong> Established a low-latency UDP link between Python and MATLAB/Simulink to pipe XYZ spatial telemetry.</li>
-                                        <li class="relative pl-6 text-zinc-400 text-sm md:text-base leading-relaxed before:content-['▹'] before:absolute before:left-0 before:text-zinc-400"><strong>Flight Controller Hardware:</strong> Interfaced high-level control loops with an Aero Selfie H743 flight controller to enable autonomous flight behaviors.</li>
-                                    </ul>
-                                    <div class="mt-6 pt-4 border-t border-zinc-850 flex flex-wrap items-center gap-2">
-                                        <span class="text-xs font-semibold text-zinc-500 uppercase tracking-wider">Skills Used:</span>
-                                        <div class="flex flex-wrap gap-1.5">
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Python</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">MATLAB</span>
-                                            <span class="inline-flex items-center rounded bg-zinc-800/60 px-2 py-0.5 text-[11px] font-medium text-zinc-300 border border-zinc-700/50">Simulink</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="space-y-4">
-                                    <h3 class="text-lg font-semibold text-zinc-200">Project Resources</h3>
-                                    <p class="text-zinc-500 text-sm italic">Media assets and flight telemetry data coming soon...</p>
-                                </div>
-                            </div>
-                        </div>
-
+                    
+                    <div class="mt-6 body-p">
+                        <p class="mb-4">
+                            During this 9 week internship, I operated as a systems engineer, coordinating 10 other interns to seamlessly integrate antenna, firmware, hardware and software components into a continous live RF signal processing pipeline. During this role, we as interns had full ownership and responsibility over our project, with full control over how we wanted the design process to be carried out. The project was built from the ground up, starting at requirements identification and ending at verification and testing. Giving us a brief but full experience of early stage design, similar to that in a startup environment. Below are some of my key successes as an engineer:
+                        </p>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">Implemented HDL-compatible signal processing pipelines in Simulink and successfully deployed them on an RFSoC FPGA board to produce high-resolution spectra.</li>
+                            <li class="bullet-item">Developed a highly optimized compression algorithm that reduced FFT data bandwidth requirements by over <strong>2500×</strong>, minimizing network utilization while preserving critical telemetry.</li>
+                            <li class="bullet-item">Directed the integration of upstream and downstream sub-systems to deliver a unified, high-performance system despite initial incompatibilities.</li>
+                            <li class="bullet-item">Coordinated with software teams to implement a robust data exchange protocol using TCP, enabling results to be monitored via a web-based server.</li>
+                            <li class="bullet-item">Architected a signal integrity self-test diagnostics algorithm to verify RF signal paths, significantly cutting troubleshooting and maintenance downtime.</li>
+                            <li class="bullet-item">Optimized graph max-hold algorithms in MATLAB, reducing execution latency by <strong>99.3%</strong> to boost overall system performance.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Increased vertical space before skills used -->
+                    <div class="exp-skills-row">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">MATLAB</span>
+                        <span class="pill-chip">Simulink</span>
+                        <span class="pill-chip">Git</span>
                     </div>
                 </div>
             </div>
 
-        </main>
-    </div>
-
-    <!-- JavaScript for Tabs & Sliders -->
-    <script>
-        function openTab(evt, tabName) {
-            const tabContents = document.getElementsByClassName("tab-content");
-            for (let i = 0; i < tabContents.length; i++) {
-                tabContents[i].classList.add("hidden");
-                tabContents[i].classList.remove("block", "opacity-100");
-                tabContents[i].classList.add("opacity-0");
-            }
-
-            const tabBtns = document.getElementsByClassName("tab-btn");
-            for (let i = 0; i < tabBtns.length; i++) {
-                tabBtns[i].classList.remove("active");
-                tabBtns[i].classList.remove("bg-zinc-800", "text-zinc-50");
-                tabBtns[i].classList.add("text-zinc-400");
-            }
-
-            const activeTab = document.getElementById(tabName);
-            activeTab.classList.remove("hidden");
-            activeTab.classList.add("block");
-            void activeTab.offsetWidth;
-            activeTab.classList.remove("opacity-0");
-            activeTab.classList.add("opacity-100");
-            
-            evt.currentTarget.classList.add("active");
-            evt.currentTarget.classList.remove("text-zinc-400");
-            evt.currentTarget.classList.add("bg-zinc-800", "text-zinc-50");
-        }
-
-        function openSubTab(evt, subTabName) {
-            const subTabContents = document.getElementsByClassName("sub-tab-content");
-            for (let i = 0; i < subTabContents.length; i++) {
-                subTabContents[i].classList.add("hidden");
-                subTabContents[i].classList.remove("block");
-            }
-
-            const subTabBtns = document.getElementsByClassName("sub-tab-btn");
-            for (let i = 0; i < subTabBtns.length; i++) {
-                subTabBtns[i].classList.remove("active");
-                subTabBtns[i].classList.remove("bg-zinc-800", "text-zinc-50");
-                subTabBtns[i].classList.add("text-zinc-400");
-            }
-
-            const activeSubTab = document.getElementById(subTabName);
-            activeSubTab.classList.remove("hidden");
-            activeSubTab.classList.add("block");
-            
-            evt.currentTarget.classList.add("active");
-            evt.currentTarget.classList.remove("text-zinc-400");
-            evt.currentTarget.classList.add("bg-zinc-800", "text-zinc-50");
-        }
-
-        // Image Slider state management
-        const sliderStates = {};
-        const sliderTimeouts = {};
-
-        function moveSlide(sliderId, direction) {
-            const container = document.getElementById(sliderId);
-            const slides = container.querySelectorAll(".slide");
-            
-            if (!(sliderId in sliderStates)) {
-                sliderStates[sliderId] = 0;
-            }
-            
-            // Hide current slide's caption
-            const currentCaption = slides[sliderStates[sliderId]].querySelector(".caption-banner");
-            if (currentCaption) {
-                currentCaption.classList.remove("show");
-            }
-            
-            slides[sliderStates[sliderId]].classList.remove("active");
-            
-            sliderStates[sliderId] += direction;
-            if (sliderStates[sliderId] >= slides.length) {
-                sliderStates[sliderId] = 0;
-            } else if (sliderStates[sliderId] < 0) {
-                sliderStates[sliderId] = slides.length - 1;
-            }
-            
-            const activeSlide = slides[sliderStates[sliderId]];
-            activeSlide.classList.add("active");
-            
-            // Trigger caption fade sequence
-            triggerCaption(sliderId, activeSlide);
-        }
-
-        function triggerCaption(sliderId, activeSlide) {
-            const caption = activeSlide.querySelector(".caption-banner");
-            if (caption) {
-                if (sliderTimeouts[sliderId]) {
-                    clearTimeout(sliderTimeouts[sliderId]);
-                }
+            <!-- Academic & Extracurricular Experience -->
+            <div>
+                <h3 class="section-h2 mb-8">
+                    Academic & Extracurricular Experience
+                </h3>
                 
-                caption.classList.add("show");
+                <div class="p-8 border" style="background-color: var(--paper);">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <h4 class="item-h3" style="font-size: 28px;">Technical Lead & Drone Controls Engineer</h4>
+                            <p class="body-p font-semibold" style="color: var(--ink); font-size: 18px;">UCL Rover Team</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <img src="UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="exp-logo">
+                            <span class="mono-label" style="color: var(--muted); font-size: 14px;">January 2025 – Present</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 body-p">
+                        <p class="mb-4">
+                            My role at UCL's Rover Team has been ongoing since January 2025, and has seen significiant added responsibilties. I started as a controls engineer for the team, working on firmware for the rover's remote control system. As my second year at the team began, this advanced to more complex algorithms, mainly developed in Python and Simulink to provide autonomy for our Rover's mobile drone platform. Most recently, I have been selected to lead the Technical side of the entire team from the 2026/27 academic year.
+                        </p>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">Led the development of the drone's autonomous navigation features, and selected to transition into the overall <strong>Team Technical Lead</strong> role for the upcoming academic year.</li>
+                            <li class="bullet-item">Programmed an edge-computing vision pipeline in Python and OpenCV on a Raspberry Pi to track ArUco markers in real-time.</li>
+                            <li class="bullet-item">Established a robust UDP telemetry link to stream positional coordinate data seamlessly from the edge device to a high-level MATLAB/Simulink control model.</li>
+                            <li class="bullet-item">Interfaced the Simulink control architecture directly with an Aero Selfie H743 flight controller to achieve an autonomous, end-to-end vision-to-flight pipeline.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Increased vertical space before skills used -->
+                    <div class="exp-skills-row">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">Python</span>
+                        <span class="pill-chip">MATLAB</span>
+                        <span class="pill-chip">Simulink</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 03 — SELECTED WORK Section -->
+    <section class="section-bleed" id="work">
+        <div class="page-container">
+            <div class="mb-12 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
+                <div>
+                    <div class="mono-accent mb-2">SECTION 03</div>
+                    <h2 class="section-title-h2">Selected Work & Projects</h2>
+                </div>
+                <div class="mono-label" style="font-size: 14px;">2023 — 2026</div>
+            </div>
+            
+            <div class="work-list">
+                <!-- Project 1 -->
+                <a href="projects/desktop-multimeter.html" class="work-row">
+                    <div class="work-num">001</div>
+                    <div>
+                        <div class="work-title">Desktop Multimeter (NEA Project)</div>
+                        <div class="work-meta">Electronics Prototyping Station (2023/24) · Arduino (C++) · EasyEDA · Fusion 360</div>
+                    </div>
+                    <div class="work-arrow">→</div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="projects/imeche-rover.html" class="work-row">
+                    <div class="work-num">002</div>
+                    <div>
+                        <div class="work-title">IMechE Rover</div>
+                        <div class="work-meta">Autonomous Robotic Device (2025) · EasyEDA · Fusion 360 · PCB Assembly</div>
+                    </div>
+                    <div class="work-arrow">→</div>
+                </a>
+
+                <!-- Project 3 -->
+                <a href="projects/smart-pet-feeder.html" class="work-row">
+                    <div class="work-num">003</div>
+                    <div>
+                        <div class="work-title">Smart Pet Feeder</div>
+                        <div class="work-meta">BLE IoT System (2025/26) · C++ · Arduino (C++) · EasyEDA</div>
+                    </div>
+                    <div class="work-arrow">→</div>
+                </a>
+
+                <!-- Project 4 -->
+                <a href="projects/drone-flight-system.html" class="work-row">
+                    <div class="work-num">004</div>
+                    <div>
+                        <div class="work-title">Drone Flight Control System</div>
+                        <div class="work-meta">UCL Rover Team (2026 - Ongoing) · Python · MATLAB · Simulink</div>
+                    </div>
+                    <div class="work-arrow">→</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 04 — SKILLS & TOOLS Section -->
+    <section class="section-bleed" id="skills">
+        <div class="page-container">
+            <div class="mb-12 border-b pb-6">
+                <div class="mono-accent mb-2">SECTION 04</div>
+                <h2 class="section-title-h2">Skills & Tools</h2>
+            </div>
+            
+            <!-- Categorized Skills Grid matching page background color -->
+            <div class="grid-3col">
+                <!-- Programming Languages -->
+                <div class="skills-box">
+                    <div class="mono-accent mb-6" style="font-size: 14px;">
+                        Programming Languages
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">MATLAB</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">C++</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Python</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Arduino (C++)</span>
+                    </div>
+                </div>
+
+                <!-- Software & Tools -->
+                <div class="skills-box">
+                    <div class="mono-accent mb-6" style="font-size: 14px;">
+                        Software & Tools
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Simulink</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Fusion 360</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">EasyEDA</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Git</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Azure DevOps</span>
+                    </div>
+                </div>
+
+                <!-- Manufacturing -->
+                <div class="skills-box">
+                    <div class="mono-accent mb-6" style="font-size: 14px;">
+                        Manufacturing & Hardware
+                    </div>
+                    <div class="flex flex-wrap gap-3">
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">PCB Assembly & Soldering</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">3D Printing / Rapid Manufacturing</span>
+                        <span class="pill-chip" style="font-size: 15px; padding: 10px 18px;">Workshop Equipment</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 05 — CONTACT Section -->
+    <section class="section-bleed" id="contact">
+        <div class="page-container">
+            <div class="contact-block">
+                <div>
+                    <div class="mono-accent mb-4" style="color: #FF6B4A;">SECTION 05 · CONTACT</div>
+                    <h2 class="hero-h1 mb-6" style="color: var(--paper); font-size: clamp(40px, 7vw, 80px);">Let's build something.</h2>
+                    <p class="lead-p mb-8" style="color: rgba(244, 241, 234, 0.8); max-width: 640px;">
+                        I'm currently seeking summer internships and placements in robotics, embedded systems, and control engineering. Feel free to reach out!
+                    </p>
+                </div>
                 
-                sliderTimeouts[sliderId] = setTimeout(() => {
-                    caption.classList.remove("show");
-                }, 2500);
-            }
-        }
+                <div class="flex flex-col sm:flex-row gap-6 sm:gap-12 pt-8 border-t" style="border-color: rgba(244, 241, 234, 0.2);">
+                    <a href="https://www.linkedin.com/in/amit-chandran" target="_blank" class="contact-link">
+                        <i class="fa-brands fa-linkedin"></i> LinkedIn ↗
+                    </a>
+                    <a href="https://github.com/amitchandran06" target="_blank" class="contact-link">
+                        <i class="fa-brands fa-github"></i> GitHub ↗
+                    </a>
+                    <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="contact-link">
+                        <i class="fa-solid fa-file-lines"></i> Open CV ↗
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
 
-        // Click to view full image / download
-        document.addEventListener("DOMContentLoaded", () => {
-            // Prevent iframe PDF caching by appending a unique timestamp query parameter
-            const cvIframe = document.getElementById("cv-iframe");
-            if (cvIframe) {
-                const timestamp = new Date().getTime();
-                cvIframe.src = `https://amitchandran06.github.io/Resumes/main.pdf?v=${timestamp}#navpanes=0`;
-            }
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x);">
+        <div class="page-container">
+            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+        </div>
+    </footer>
 
-            const images = document.querySelectorAll(".zoomable-img");
-            images.forEach(img => {
-                img.style.cursor = "zoom-in";
-                img.title = "Click to view full size / download";
-                img.addEventListener("click", () => {
-                    window.open(img.src, "_blank");
-                });
-            });
-
-            // Initialize captions for all active slides on first load
-            document.querySelectorAll(".slider-container").forEach(slider => {
-                const activeSlide = slider.querySelector(".slide.active");
-                if (activeSlide) {
-                    triggerCaption(slider.id, activeSlide);
-                }
-            });
-
-            // Initialize mobile banner alert
-            if (window.innerWidth < 768) {
-                const banner = document.getElementById("mobile-banner");
-                banner.className = "flex justify-between items-center bg-zinc-900 border border-zinc-800 text-zinc-300 text-xs px-4 py-3 rounded-lg mx-4 mt-4 backdrop-blur-md";
-            }
-        });
-    </script>
 </body>
 </html>

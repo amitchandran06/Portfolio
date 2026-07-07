@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Pet Feeder — Amit Chandran Portfolio</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Case Study Header -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
+            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
+            <div class="mono-accent mb-4">PROJECT 003 · IOT & EMBEDDED SYSTEMS</div>
+            <h1 class="hero-h1 mb-6" style="font-size: clamp(40px, 7vw, 84px);">Smart Pet Feeder — BLE IoT System</h1>
+            <p class="lead-p mb-8" style="max-width: 100%;">
+                BLE IoT System (2025/26) — A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.
+            </p>
+            
+            <!-- Meta Grid -->
+            <div class="meta-grid">
+                <div>
+                    <div class="mono-label mb-1">ROLE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Firmware & Hardware Co-Design</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">TIMELINE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">2025 / 2026</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">STACK</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">C++ · Arduino (C++) · EasyEDA</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">OUTCOME</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Working IoT Ecosystem</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initial Hero Image (Sleeker and smaller) -->
+    <div style="background-color: #EBE7DE; border-bottom: 1px solid var(--line);">
+        <div class="page-container">
+            <img src="../images_pet_feeder/extracted_1.jpeg" alt="Full CAD Render of the Pet Feeder" style="width: 100%; height: clamp(200px, 28vw, 360px); max-height: 360px; object-fit: cover; cursor: zoom-in;" title="Click to view full size" onclick="window.open(this.src, '_blank')">
+            <div class="caption-bar">Full CAD Render of the Pet Feeder</div>
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
+            
+            <!-- 01 — THE BRIEF -->
+            <div class="grid-brief pb-16 border-b">
+                <div class="mono-label">01 — THE BRIEF</div>
+                <div>
+                    <p class="lead-p mb-4">
+                        A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.
+                    </p>
+                    <div class="pt-4">
+                        <a href="../Final Scenarios PPT - pet feeder.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Scenarios PDF ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div>
+                    <ul class="bullet-list">
+                        <li class="bullet-item"><strong>Firmware Optimization:</strong> Developed custom C++ firmware on an ESP32 utilizing the NimBLE-Arduino library to achieve a <strong>50% reduction in RAM and Flash usage</strong> compared to standard Bluedroid.</li>
+                        <li class="bullet-item"><strong>Hardware-Software Co-Design:</strong> Integrated a mechanical dispensing mechanism with an HX711 amplifier and load cell. Implemented digital calibration routines to achieve automated, software-driven portion control within ±1% precision.</li>
+                        <li class="bullet-item"><strong>Event-Driven Communication:</strong> Built a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for low-latency command processing from a Kotlin-based Android app.</li>
+                    </ul>
+
+                    <!-- Skills Used Chips -->
+                    <div class="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">Arduino (C++)</span>
+                        <span class="pill-chip">EasyEDA</span>
+                        <span class="pill-chip">PCB Assembly & Soldering</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 — OUTCOME -->
+            <div class="py-16 border-b">
+                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
+                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
+                        A working connected pet feeder prototype that feeds on schedule and confirms each portion by weight via automated digital calibration.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 — PROJECT RESOURCES & MEDIA -->
+            <div class="py-16 border-b">
+                <div class="mono-label mb-6">04 — PROJECT RESOURCES & MEDIA</div>
+                
+                <div class="slider-container" id="media-slider">
+                    <div class="slider-slides">
+                        <div class="slide active">
+                            <img src="../images_pet_feeder/extracted_166.jpeg" alt="Mobile App UI Mockup">
+                            <div class="caption-banner">Mobile App UI Mockup</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_pet_feeder/extracted_204.jpeg" alt="Circuitry Rendering">
+                            <div class="caption-banner">Circuitry Rendering</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_pet_feeder/extracted_219.jpeg" alt="Electronics Verification with External Power Source">
+                            <div class="caption-banner">Electronics Verification with External Power Source</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_pet_feeder/extracted_262.jpeg" alt="BLE Verification">
+                            <div class="caption-banner">BLE Verification</div>
+                        </div>
+                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
+                        <button class="slider-btn next" aria-label="Next Slide">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Bottom Navigation -->
+            <div class="project-nav-row">
+                <a href="../index.html#work" class="btn-solid">← All projects</a>
+                <a href="drone-flight-system.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Drone Flight System →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x); border-top: 1px solid var(--line);">
+        <div class="page-container">
+            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+        </div>
+    </footer>
+
+    <script>
+    function initSlider(sliderId) {
+        const container = document.getElementById(sliderId);
+        if (!container) return;
+        const slides = container.querySelectorAll('.slide');
+        const prevBtn = container.querySelector('.slider-btn.prev');
+        const nextBtn = container.querySelector('.slider-btn.next');
+        let current = 0;
+        
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            });
+            nextBtn.addEventListener('click', () => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            });
+        }
+    }
+    initSlider('media-slider');
+    </script>
+</body>
+</html>

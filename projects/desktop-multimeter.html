@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desktop Multimeter — Amit Chandran Portfolio</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Case Study Header -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
+            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
+            <div class="mono-accent mb-4">PROJECT 001 · ELECTRONICS & EMBEDDED SYSTEMS</div>
+            <h1 class="hero-h1 mb-6" style="font-size: clamp(40px, 7vw, 84px);">Desktop Multimeter (NEA Project)</h1>
+            <p class="lead-p mb-8" style="max-width: 100%;">
+                Electronics Prototyping Station (2023/24) — A comprehensive project integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station. Driven by end user oriented design.
+            </p>
+            
+            <!-- Meta Grid -->
+            <div class="meta-grid">
+                <div>
+                    <div class="mono-label mb-1">ROLE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">End-to-end Design</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">TIMELINE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">2023 / 2024</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">STACK</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Arduino (C++) · EasyEDA · Fusion 360</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">OUTCOME</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Prototyping Station</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initial Hero Image (Sleeker and smaller) -->
+    <div style="background-color: #EBE7DE; border-bottom: 1px solid var(--line);">
+        <div class="page-container">
+            <img src="../images_NEA/extracted_205.png" alt="Final PCB Layout" style="width: 100%; height: clamp(200px, 28vw, 360px); max-height: 360px; object-fit: cover; cursor: zoom-in;" title="Click to view full size" onclick="window.open(this.src, '_blank')">
+            <div class="caption-bar">Final PCB Layout</div>
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
+            
+            <!-- 01 — THE BRIEF -->
+            <div class="grid-brief pb-16 border-b">
+                <div class="mono-label">01 — THE BRIEF</div>
+                <div>
+                    <p class="lead-p mb-4">
+                        A comprehensive project integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station. Driven by end user oriented design.
+                    </p>
+                    <div class="pt-4">
+                        <a href="../Electronics Project 2024.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View NEA Document (226 Pages) ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div>
+                    <ul class="bullet-list">
+                        <li class="bullet-item"><strong>Custom PCB Architecture:</strong> Engineered measurement circuitry using EasyEDA, integrating potential dividers for voltage, an ACS724 Hall-effect sensor for non-invasive current, and dedicated charge/discharge paths for capacitance.</li>
+                        <li class="bullet-item"><strong>Embedded Firmware:</strong> Programmed a 500+ line C++ codebase on an Arduino MEGA utilizing SPI to drive a 1.8-inch TFT display. Implemented custom pin-change interrupt routines (PCINT) using the <code>YetAnotherPcint.h</code> library to support 6 mode switches concurrently without interfering with SPI data lines.</li>
+                        <li class="bullet-item"><strong>Calibration & Accuracy:</strong> Designed a multi-range ohmmeter and capacitance meter using software-driven auto-ranging logic. Compounded accuracy from a 19.1% average error in v1 to a highly precise <strong>4.1% average error in v2</strong>.</li>
+                        <li class="bullet-item"><strong>DFMA Enclosure:</strong> Designed a modular, multi-part PLA/PETG enclosure in Fusion 360. Iterated on physical tolerances (accounting for 0.3mm-0.4mm 3D printing tolerances) to integrate sliding drawers, helper hands, and a magnifying glass mount.</li>
+                    </ul>
+
+                    <!-- Skills Used Chips -->
+                    <div class="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">Arduino (C++)</span>
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">EasyEDA</span>
+                        <span class="pill-chip">Fusion 360</span>
+                        <span class="pill-chip">PCB Assembly & Soldering</span>
+                        <span class="pill-chip">3D Printing / Rapid Manufacturing</span>
+                        <span class="pill-chip">Workshop Equipment</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 — OUTCOME -->
+            <div class="py-16 border-b">
+                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
+                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
+                        Delivered a fully functional, high-accuracy desktop testing station with multi-mode measurement capabilities and a modular 3D printed enclosure.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 — PROJECT MEDIA & SCHEMATICS -->
+            <div class="py-16 border-b">
+                <div class="mono-label mb-6">04 — PROJECT MEDIA & SCHEMATICS</div>
+                
+                <div class="slider-container" id="media-slider">
+                    <div class="slider-slides">
+                        <div class="slide active">
+                            <img src="../images_NEA/extracted_196.png" alt="Final Circuit Schematic">
+                            <div class="caption-banner">Final Circuit Schematic</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_NEA/extracted_206.jpeg" alt="3D PCB Render in EasyEDA">
+                            <div class="caption-banner">3D PCB Render in EasyEDA</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_NEA/extracted_293.jpeg" alt="Full Enclosure Assembly in Fusion360">
+                            <div class="caption-banner">Full Enclosure Assembly in Fusion360</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_NEA/extracted_394.jpeg" alt="Full Prototype Assembly">
+                            <div class="caption-banner">Full Prototype Assembly</div>
+                        </div>
+                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
+                        <button class="slider-btn next" aria-label="Next Slide">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Bottom Navigation -->
+            <div class="project-nav-row">
+                <a href="../index.html#work" class="btn-solid">← All projects</a>
+                <a href="imeche-rover.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: IMechE Rover →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x); border-top: 1px solid var(--line);">
+        <div class="page-container">
+            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+        </div>
+    </footer>
+
+    <script>
+    function initSlider(sliderId) {
+        const container = document.getElementById(sliderId);
+        if (!container) return;
+        const slides = container.querySelectorAll('.slide');
+        const prevBtn = container.querySelector('.slider-btn.prev');
+        const nextBtn = container.querySelector('.slider-btn.next');
+        let current = 0;
+        
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            });
+            nextBtn.addEventListener('click', () => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            });
+        }
+    }
+    initSlider('media-slider');
+    </script>
+</body>
+</html>

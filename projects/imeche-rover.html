@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMechE Rover — Amit Chandran Portfolio</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- Case Study Header -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
+            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
+            <div class="mono-accent mb-4">PROJECT 002 · MECHANICAL & HARDWARE DESIGN</div>
+            <h1 class="hero-h1 mb-6" style="font-size: clamp(40px, 7vw, 84px);">IMechE Rover — Autonomous Robotic Device</h1>
+            <p class="lead-p mb-8" style="max-width: 100%;">
+                IMechE Design Challenge (2025) — Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.
+            </p>
+            
+            <!-- Meta Grid -->
+            <div class="meta-grid">
+                <div>
+                    <div class="mono-label mb-1">ROLE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Team Lead · Electro-Mechanical</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">TIMELINE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">2025</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">STACK</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">EasyEDA · Fusion 360 · ANSYS</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">OUTCOME</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">3rd Place Globally (45 Teams)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initial Hero Image (Sleeker and smaller) -->
+    <div style="background-color: #EBE7DE; border-bottom: 1px solid var(--line);">
+        <div class="page-container">
+            <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" style="width: 100%; height: clamp(200px, 28vw, 360px); max-height: 360px; object-fit: cover; cursor: zoom-in;" title="Click to view full size" onclick="window.open(this.src, '_blank')">
+            <div class="caption-bar">3D Render of Mainboard in EasyEDA</div>
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
+            
+            <!-- 01 — THE BRIEF -->
+            <div class="grid-brief pb-16 border-b">
+                <div class="mono-label">01 — THE BRIEF</div>
+                <div>
+                    <p class="lead-p mb-4">
+                        Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.
+                    </p>
+                    <div class="flex flex-wrap gap-4 pt-4">
+                        <a href="../IMechE design portfolio.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Full Portfolio PDF ↗
+                        </a>
+                        <a href="../IMechE design Challenge poster.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Challenge Poster PDF ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div>
+                    <ul class="bullet-list">
+                        <li class="bullet-item"><strong>Circuit Simulation & Debugging:</strong> Simulating and validating H-bridges and 555-timer circuits in Falstad. Debugged a critical floating gate issue on the MOSFET Q5 by implementing a 1MΩ pull-down resistor to ground to ensure reliable gate discharge.</li>
+                        <li class="bullet-item"><strong>PCB Layout & Weight Optimization:</strong> Compacted the physical footprint of the PCB in EasyEDA from 200x80mm down to 165x60mm. Replaced SMD capacitors with THT variants to match hardware availability and integrated a fuse holder in series with VCC for circuit protection.</li>
+                        <li class="bullet-item"><strong>Structural FEA Simulation:</strong> Conducted structural finite element analysis (FEA) on the rover chassis using ANSYS (Static Structural) to analyze total deformation and stress distribution under mechanical load, securing high stiffness-to-weight ratios.</li>
+                        <li class="bullet-item"><strong>Team Leadership:</strong> Led the electro-mechanical design team to place 3rd out of 45 teams globally.</li>
+                    </ul>
+
+                    <!-- Skills Used Chips -->
+                    <div class="flex flex-wrap items-center gap-2 mt-8 pt-6 border-t">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">EasyEDA</span>
+                        <span class="pill-chip">Fusion 360</span>
+                        <span class="pill-chip">PCB Assembly & Soldering</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 — OUTCOME -->
+            <div class="py-16 border-b">
+                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
+                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
+                        Led the electro-mechanical design team to place 3rd out of 45 teams globally with a robust, weight-optimized autonomous target-seeking robot.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 — PCB & SIMULATION MEDIA -->
+            <div class="py-16 border-b">
+                <div class="mono-label mb-6">04 — PCB & SIMULATION MEDIA</div>
+                
+                <div class="slider-container" id="media-slider">
+                    <div class="slider-slides">
+                        <div class="slide active">
+                            <img src="../FinalCircuitSchematic.png" alt="Final Circuit Schematic">
+                            <div class="caption-banner">Final Circuit Schematic featuring 555 timer & MOSFET controls</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1">
+                            <div class="caption-banner">3D Render of Mainboard in EasyEDA</div>
+                        </div>
+                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
+                        <button class="slider-btn next" aria-label="Next Slide">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Bottom Navigation -->
+            <div class="project-nav-row">
+                <a href="../index.html#work" class="btn-solid">← All projects</a>
+                <a href="smart-pet-feeder.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Smart Pet Feeder →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x); border-top: 1px solid var(--line);">
+        <div class="page-container">
+            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+        </div>
+    </footer>
+
+    <script>
+    function initSlider(sliderId) {
+        const container = document.getElementById(sliderId);
+        if (!container) return;
+        const slides = container.querySelectorAll('.slide');
+        const prevBtn = container.querySelector('.slider-btn.prev');
+        const nextBtn = container.querySelector('.slider-btn.next');
+        let current = 0;
+        
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            });
+            nextBtn.addEventListener('click', () => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            });
+        }
+    }
+    initSlider('media-slider');
+    </script>
+</body>
+</html>
