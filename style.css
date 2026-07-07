@@ -1,25 +1,26 @@
 /* ==========================================================================
    Swiss Editorial Design System — Portfolio of Amit Chandran
+   (Scaled ~15% smaller for a sleek, compact, 80% zoom-out editorial aesthetic)
    ========================================================================== */
 
 :root {
   /* Color Tokens */
-  --paper:       #F4F1EA;   /* Warm off-white page background */
+  --paper:       #DDD5C3;   /* Rich archival greige/stone paper background */
   --ink:         #17150F;   /* Near-black primary text / dark blocks */
   --muted:       #4C493F;   /* Body copy */
   --faint:       #8A877B;   /* Labels, captions, metadata */
   --accent:      #D8452B;   /* Vermillion — link hovers, section kickers */
-  --line:        rgba(23, 21, 15, 0.14);  /* Hairline dividers */
-  --line-strong: rgba(23, 21, 15, 0.24);  /* Chip borders */
+  --line:        rgba(23, 21, 15, 0.18);  /* Hairline dividers */
+  --line-strong: rgba(23, 21, 15, 0.30);  /* Chip borders */
 
   /* Typography */
   --font-sans:   'Archivo', system-ui, -apple-system, sans-serif;
   --font-serif:  'Newsreader', Georgia, serif;
   --font-mono:   'JetBrains Mono', ui-monospace, monospace;
 
-  /* Rhythm & Spacing */
-  --pad-x:       clamp(20px, 5vw, 72px);   /* Horizontal page padding */
-  --pad-y:       clamp(48px, 7vw, 80px);   /* Section vertical padding */
+  /* Rhythm & Spacing (~15% scaled down for sleek, compact editorial framing) */
+  --pad-x:       clamp(28px, 7vw, 100px);  /* Generous horizontal margins, scaled for 15% zoom out */
+  --pad-y:       clamp(30px, 4.2vw, 48px); /* Standardized compact section vertical padding */
   --maxw:        1440px;                   /* Content max width, centered */
 }
 
@@ -35,14 +36,14 @@
 
 html {
   scroll-behavior: smooth;
-  font-size: 16px;
+  font-size: 14px; /* Scaled down from 16px (~15% zoom out) */
 }
 
 body {
   background-color: var(--paper);
   color: var(--ink);
   font-family: var(--font-sans);
-  line-height: 1.7;
+  line-height: 1.65;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
 }
@@ -69,7 +70,7 @@ img {
 }
 
 /* ==========================================================================
-   Utility Classes (Flexbox, Spacing, Borders)
+   Utility Classes (~15% scaled down spacing)
    ========================================================================== */
 
 .flex { display: flex; }
@@ -77,50 +78,58 @@ img {
 .flex-wrap { flex-wrap: wrap; }
 .items-center { align-items: center; }
 .items-start { align-items: flex-start; }
+.items-end { align-items: flex-end; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }
 .inline-block { display: inline-block; }
 
-.gap-2 { gap: 8px; }
-.gap-3 { gap: 12px; }
-.gap-4 { gap: 16px; }
-.gap-6 { gap: 24px; }
+.gap-2 { gap: 6px; }
+.gap-3 { gap: 10px; }
+.gap-4 { gap: 14px; }
+.gap-6 { gap: 20px; }
 
-.mb-1 { margin-bottom: 4px; }
-.mb-2 { margin-bottom: 8px; }
-.mb-3 { margin-bottom: 12px; }
-.mb-4 { margin-bottom: 16px; }
-.mb-6 { margin-bottom: 24px; }
-.mb-8 { margin-bottom: 32px; }
-.mb-10 { margin-bottom: 40px; }
-.mb-12 { margin-bottom: 48px; }
-.mb-16 { margin-bottom: 64px; }
-.mr-2 { margin-right: 8px; }
+.mb-1 { margin-bottom: 3px; }
+.mb-2 { margin-bottom: 6px; }
+.mb-3 { margin-bottom: 10px; }
+.mb-4 { margin-bottom: 14px; }
+.mb-6 { margin-bottom: 17px; }
+.mb-8 { margin-bottom: 20px; }
+.mb-10 { margin-bottom: 27px; }
+.mb-12 { margin-bottom: 30px; }
+.mb-16 { margin-bottom: 40px; }
+.mr-2 { margin-right: 6px; }
 
-.pb-6 { padding-bottom: 24px; }
-.pb-8 { padding-bottom: 32px; }
-.pb-16 { padding-bottom: 64px; }
-.pt-4 { padding-top: 16px; }
-.pt-6 { padding-top: 24px; }
-.pt-8 { padding-top: 32px; }
-.pt-16 { padding-top: 64px; }
-.py-16 { padding-top: 64px; padding-bottom: 64px; }
-.p-8 { padding: 32px; }
+.pb-4 { padding-bottom: 14px; }
+.pb-6 { padding-bottom: 17px; }
+.pb-8 { padding-bottom: 20px; }
+.pb-10 { padding-bottom: clamp(20px, 3.5vw, 30px); }
+.pb-16 { padding-bottom: clamp(28px, 4.2vw, 40px); }
+
+.pt-4 { padding-top: 14px; }
+.pt-6 { padding-top: 17px; }
+.pt-8 { padding-top: 20px; }
+.pt-10 { padding-top: clamp(20px, 3.5vw, 30px); }
+.pt-16 { padding-top: clamp(28px, 4.2vw, 40px); }
+
+.py-8 { padding-top: 20px; padding-bottom: 20px; }
+.py-10 { padding-top: clamp(20px, 3.5vw, 30px); padding-bottom: clamp(20px, 3.5vw, 30px); }
+.py-16 { padding-top: clamp(28px, 4.2vw, 40px); padding-bottom: clamp(28px, 4.2vw, 40px); }
+.p-8 { padding: clamp(17px, 2.5vw, 24px); }
 
 .border { border: 1px solid var(--line); }
 .border-b { border-bottom: 1px solid var(--line); }
 .border-t { border-top: 1px solid var(--line); }
 
-.space-y-4 > * + * { margin-top: 16px; }
+.space-y-4 > * + * { margin-top: 14px; }
 
 /* ==========================================================================
-   Typography Classes
+   Typography Classes (~15% scaled down)
    ========================================================================== */
 
 .hero-h1 {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: clamp(52px, 10vw, 116px);
+  font-size: clamp(40px, 7.5vw, 92px);
   line-height: 0.92;
   letter-spacing: -0.04em;
   color: var(--ink);
@@ -130,7 +139,7 @@ img {
 .hero-subtitle {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: clamp(24px, 4vw, 42px);
+  font-size: clamp(18px, 3.2vw, 32px);
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -139,7 +148,7 @@ img {
 .section-title-h2 {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: clamp(36px, 6vw, 64px);
+  font-size: clamp(28px, 4.5vw, 48px);
   line-height: 1.05;
   letter-spacing: -0.03em;
   color: var(--ink);
@@ -148,7 +157,7 @@ img {
 .section-h2 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(26px, 3.5vw, 38px);
+  font-size: clamp(20px, 2.7vw, 28px);
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--ink);
@@ -157,7 +166,7 @@ img {
 .item-h3 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(20px, 2.5vw, 26px);
+  font-size: clamp(17px, 2.1vw, 22px);
   line-height: 1.25;
   color: var(--ink);
 }
@@ -165,7 +174,7 @@ img {
 .lead-p {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: clamp(20px, 2.6vw, 24px);
+  font-size: clamp(15px, 2vw, 18.5px);
   line-height: 1.5;
   color: var(--ink);
 }
@@ -173,14 +182,14 @@ img {
 .body-p {
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.65;
   color: var(--muted);
 }
 
 .mono-label {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -189,7 +198,7 @@ img {
 
 .mono-accent {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 11.5px;
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -210,10 +219,10 @@ img {
   border-bottom: 1px solid var(--line);
 }
 
-/* Hero specific spacing to increase gap before About section */
+/* Hero specific spacing (Tightened bottom gap before About section) */
 #hero {
-  padding-top: clamp(48px, 8vw, 96px);
-  padding-bottom: clamp(64px, 10vw, 128px);
+  padding-top: clamp(30px, 5vw, 54px);
+  padding-bottom: clamp(14px, 2vw, 24px);
 }
 
 /* Quick Jump Pill Bar in Hero */
@@ -221,25 +230,25 @@ img {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 12px;
-  margin-top: 56px;
-  padding-top: 40px;
+  gap: 10px;
+  margin-top: 30px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
 }
 
 .jump-pill {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--ink);
   background-color: transparent;
   border: 1px solid var(--line-strong);
-  padding: 10px 18px;
+  padding: 6px 14px;
   border-radius: 100px;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .jump-pill:hover {
@@ -252,39 +261,39 @@ img {
 /* Grid splits */
 .grid-2col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: clamp(32px, 5vw, 64px);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: clamp(20px, 3.5vw, 40px);
 }
 
 .grid-3col {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: clamp(24px, 4vw, 48px);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(17px, 2.5vw, 30px);
 }
 
 .grid-brief {
   display: grid;
-  grid-template-columns: minmax(auto, 200px) 1fr;
-  gap: clamp(24px, 4vw, 48px);
+  grid-template-columns: minmax(auto, 160px) 1fr;
+  gap: clamp(17px, 2.5vw, 34px);
 }
 
 @media (max-width: 768px) {
   .grid-brief {
     grid-template-columns: 1fr;
-    gap: 16px;
+    gap: 10px;
   }
 }
 
 .meta-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
-  padding-top: 32px;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 17px;
+  padding-top: 20px;
   border-top: 1px solid var(--line);
 }
 
 /* ==========================================================================
-   Experience & Skills Components
+   Experience & Skills Components (~15% scaled down)
    ========================================================================== */
 
 /* Experience Card Header (Guarantees right-alignment and spacing) */
@@ -293,8 +302,8 @@ img {
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
-  gap: 24px;
-  padding-bottom: 24px;
+  gap: 14px;
+  padding-bottom: 14px;
   border-bottom: 1px solid var(--line);
 }
 
@@ -307,74 +316,74 @@ img {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  gap: 8px;
+  gap: 6px;
 }
 
 @media (max-width: 640px) {
   .exp-header-right {
     align-items: flex-start;
-    margin-top: 8px;
+    margin-top: 6px;
   }
 }
 
 .exp-logo {
-  height: 56px;
+  height: 48px;
   width: auto;
-  max-width: 240px;
+  max-width: 200px;
   object-fit: contain;
   background: transparent;
   border: none;
 }
 
-/* Increased vertical space between last bullet point and skills used */
+/* Balanced vertical space between last bullet point and skills used */
 .exp-skills-row {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 10px;
-  margin-top: 56px;
-  padding-top: 28px;
+  gap: 8px;
+  margin-top: 27px;
+  padding-top: 17px;
   border-top: 1px solid var(--line);
 }
 
 /* Skills & Tools Background Matching Page Background */
 .skills-box {
-  padding: 32px;
+  padding: clamp(17px, 2.5vw, 24px);
   border: 1px solid var(--line);
   background-color: var(--paper); /* Matches page background exactly */
 }
 
 /* ==========================================================================
-   Components (Buttons, Chips, Rows)
+   Components (Buttons, Chips, Rows — ~15% scaled down)
    ========================================================================== */
 
 .pill-chip {
   border: 1px solid var(--line-strong);
   border-radius: 100px;
-  padding: 8px 16px;
+  padding: 5px 12px;
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--ink);
   display: inline-flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background-color: transparent; /* Matches page background */
 }
 
 .pill-btn {
   border: 1px solid var(--line-strong);
   border-radius: 100px;
-  padding: 12px 24px;
+  padding: 8px 18px;
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   color: var(--ink);
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
   background-color: transparent;
 }
 
@@ -389,15 +398,15 @@ img {
   color: var(--paper);
   border: 1px solid var(--ink);
   border-radius: 100px;
-  padding: 12px 24px;
+  padding: 8px 18px;
   font-family: var(--font-sans);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 600;
   text-decoration: none;
   transition: all 0.2s ease;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
 }
 
 .btn-solid:hover {
@@ -412,22 +421,22 @@ img {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 24px;
-  padding-top: 64px;
-  padding-bottom: 32px;
+  gap: 17px;
+  padding-top: 30px;
+  padding-bottom: 17px;
 }
 
 /* Project Index Rows */
 .work-row {
   display: grid;
-  grid-template-columns: 64px 1fr auto;
-  padding: clamp(24px, 3.5vw, 36px) 0;
+  grid-template-columns: 48px 1fr auto;
+  padding: clamp(17px, 2.5vw, 24px) 0;
   border-top: 1px solid var(--line);
   align-items: center;
   text-decoration: none;
   color: var(--ink);
   transition: all 0.2s ease;
-  gap: 16px;
+  gap: 14px;
 }
 
 .work-row:last-of-type {
@@ -445,7 +454,7 @@ img {
 
 .work-num {
   font-family: var(--font-mono);
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 600;
   color: var(--accent);
 }
@@ -453,27 +462,27 @@ img {
 .work-title {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(24px, 3.5vw, 34px);
+  font-size: clamp(18px, 2.5vw, 26px);
   letter-spacing: -0.02em;
   transition: color 0.2s ease;
 }
 
 .work-meta {
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 11.5px;
   color: var(--faint);
-  margin-top: 4px;
+  margin-top: 3px;
 }
 
 .work-arrow {
   font-family: var(--font-mono);
-  font-size: 20px;
+  font-size: 17px;
   transition: transform 0.2s ease, color 0.2s ease;
 }
 
 @media (max-width: 600px) {
   .work-row {
-    grid-template-columns: 48px 1fr;
+    grid-template-columns: 34px 1fr;
   }
   .work-arrow {
     display: none;
@@ -484,18 +493,18 @@ img {
 .bullet-list {
   list-style: none;
   padding-left: 0;
-  margin-top: 16px;
+  margin-top: 14px;
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
 }
 
 .bullet-item {
   position: relative;
-  padding-left: 20px;
+  padding-left: 18px;
   font-family: var(--font-sans);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 14px;
+  line-height: 1.65;
   color: var(--muted);
 }
 
@@ -511,44 +520,44 @@ img {
 .contact-block {
   background-color: var(--ink);
   color: var(--paper);
-  padding: clamp(32px, 5vw, 56px);
+  padding: clamp(24px, 3.5vw, 40px);
   border-radius: 4px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 32px;
+  gap: 24px;
 }
 
 .contact-link {
   color: var(--paper);
   font-family: var(--font-sans);
-  font-size: clamp(18px, 2.5vw, 24px);
+  font-size: clamp(15px, 2.1vw, 20px);
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 12px;
-  border-bottom: 1px solid rgba(244, 241, 234, 0.2);
-  padding-bottom: 12px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(221, 213, 195, 0.2);
+  padding-bottom: 8px;
   transition: all 0.2s ease;
 }
 
 .contact-link:hover {
   color: var(--accent);
   border-color: var(--accent);
-  padding-left: 8px;
+  padding-left: 6px;
 }
 
 /* ==========================================================================
-   Image Pair & Sliders
+   Image Pair & Sliders (~15% scaled down)
    ========================================================================== */
 
 .image-pair {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1px;
   background-color: var(--line);
   border: 1px solid var(--line);
-  margin-top: 48px;
+  margin-top: 30px;
 }
 
 .image-pair-item {
@@ -561,7 +570,7 @@ img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  min-height: 320px;
+  min-height: 270px;
   transition: transform 0.3s ease;
 }
 
@@ -570,9 +579,9 @@ img {
 }
 
 .caption-bar {
-  padding: 12px 16px;
+  padding: 8px 14px;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 11px;
   color: var(--faint);
   background-color: var(--paper);
   border-top: 1px solid var(--line);
@@ -585,17 +594,17 @@ img {
   background-color: var(--paper);
   border: 1px solid var(--line);
   overflow: hidden;
-  margin-top: 24px;
+  margin-top: 17px;
 }
 
 .slider-slides {
   position: relative;
   width: 100%;
-  height: clamp(360px, 50vw, 580px);
+  height: clamp(290px, 41vw, 460px);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #EBE7DE;
+  background-color: #CFC6B2; /* Harmonious contrast with darker greige paper */
 }
 
 .slide {
@@ -628,8 +637,8 @@ img {
   background: rgba(23, 21, 15, 0.92);
   color: var(--paper);
   font-family: var(--font-mono);
-  font-size: 14px;
-  padding: 14px 20px;
+  font-size: 12px;
+  padding: 10px 17px;
   text-align: center;
   transform: translateY(100%);
   opacity: 0;
@@ -647,11 +656,11 @@ img {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background: rgba(244, 241, 234, 0.95);
+  background: rgba(221, 213, 195, 0.95);
   border: 2px solid var(--ink);
   color: var(--ink);
-  width: 56px;
-  height: 56px;
+  width: 44px;
+  height: 44px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -659,7 +668,7 @@ img {
   border-radius: 50%;
   transition: all 0.2s ease;
   z-index: 10;
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   font-weight: 700;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
 }
@@ -670,8 +679,8 @@ img {
   transform: translateY(-50%) scale(1.08);
 }
 
-.slider-btn.prev { left: 24px; }
-.slider-btn.next { right: 24px; }
+.slider-btn.prev { left: 17px; }
+.slider-btn.next { right: 17px; }
 
 @keyframes fadeIn {
   from { opacity: 0; }
@@ -683,9 +692,9 @@ img {
   display: grid;
   place-items: center;
   font-family: var(--font-mono);
-  font-size: 13px;
+  font-size: 11.5px;
   color: var(--faint);
-  background: repeating-linear-gradient(135deg, #e7e3d8 0 11px, #efece3 11px 22px);
-  min-height: 340px;
+  background: repeating-linear-gradient(135deg, #cfc6b2 0 11px, #ddd5c3 11px 22px);
+  min-height: 270px;
   border: 1px solid var(--line);
 }
