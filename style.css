@@ -182,7 +182,7 @@ img {
 .body-p {
   font-family: var(--font-sans);
   font-weight: 400;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--muted);
 }
@@ -503,7 +503,7 @@ img {
   position: relative;
   padding-left: 18px;
   font-family: var(--font-sans);
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.65;
   color: var(--muted);
 }
@@ -698,3 +698,32 @@ img {
   min-height: 270px;
   border: 1px solid var(--line);
 }
+
+/* Custom grid for About Section: wider text, narrower profile image */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(24px, 4vw, 48px);
+  align-items: start;
+}
+
+@media (max-width: 768px) {
+  .about-grid {
+    grid-template-columns: 1fr; /* Stack on tablet/mobile */
+  }
+}
+
+/* Hover styling to shift/highlight "Click to see more" label on work row */
+.work-row:hover .work-link-label {
+  color: var(--accent);
+}
+
+/* Vertical space between last bullet point and skills used in project pages */
+.project-skills-row {
+  display: flex;
+  align-items: center;
+  margin-top: 48px; /* Increased to 48px for more breathing room */
+  padding-top: 24px; /* Increased to 24px */
+  border-top: 1px solid var(--line);
+}
+
