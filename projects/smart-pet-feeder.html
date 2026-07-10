@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.12">
+    <link rel="stylesheet" href="../style.css?v=2.13">
 </head>
 <body>
 
@@ -23,9 +23,9 @@
         <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
             <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
             <div class="mono-accent mb-4">PROJECT 004 · IOT & EMBEDDED SYSTEMS</div>
-            <h1 class="hero-h1 mb-6">Smart Pet Feeder — BLE IoT System</h1>
+            <h1 class="hero-h1 mb-6">IoT Integrated Pet Feeder</h1>
             <p class="lead-p mb-8" style="max-width: 100%;">
-                BLE IoT System (2025/26) — A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.
+                Open Source Design Project — A complete IoT ecosystem featuring , real time dispensing scheduling, precise mass control and bluetooth meal programming via an Android client.
             </p>
             
             <!-- Meta Grid -->
@@ -51,7 +51,7 @@
     </section>
 
     <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #1a1a1a; border-bottom: 1px solid var(--line); padding: 16px 0;">
+    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
         <div class="page-container">
             <img src="../images_pet_feeder/extracted_1.jpeg" alt="Full CAD Render of the Pet Feeder" class="case-hero-img" onclick="window.open(this.src, '_blank')">
         </div>
@@ -66,7 +66,14 @@
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
                     <p class="lead-p mb-4">
-                        A complete IoT ecosystem featuring mechanical dispensing, custom load-cell circuitry, and ESP32 NimBLE firmware.
+                        The brief of this project was to develop an open-source product for a distinct target market. The product must also focus on a being part of the 'circular economy' principle, ensuring recylability and repairability. As a group, we settled on pet feeding as our context, the problem statement is defined in the PDF below.
+                    </p>
+                     <p class="lead-p mb-4">
+                        The design philosphy was centered around a very intuitive and open-source design process. Every component and layout was chosen with the intent of the end user either producing it or assembling it themselves (see assembly manual PDF). This prompted us to opt for a breadboard design rather than a PCB due to it being more practical for users to build. 
+                        </p>
+                     <p class="lead-p mb-4">
+                        The software and firmware were also developed in a totally open-source fashion. With all code available on GitHub, allowing for user to adjust parameters as appropriate.
+                        Another key aspect to the pet-feeder was use of no onboard controls or inbuilt screens, instead making use of the user's mobile phone to program meals. This minimises the e-waste produced.
                     </p>
                     <div class="pt-4">
                         <a href="../Final Scenarios PPT - pet feeder.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
@@ -81,9 +88,10 @@
                 <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Firmware Optimisation:</strong> Developed custom C++ firmware on an ESP32 utilizing the NimBLE-Arduino library to achieve a <strong>50% reduction in RAM and Flash usage</strong> compared to standard Bluedroid.</li>
-                        <li class="bullet-item"><strong>Hardware-Software Co-Design:</strong> Integrated a mechanical dispensing mechanism with an HX711 amplifier and load cell. Implemented digital calibration routines to achieve automated, software-driven portion control within ±1% precision.</li>
-                        <li class="bullet-item"><strong>Event-Driven Communication:</strong> Built a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for low-latency command processing from a Kotlin-based Android app.</li>
+                        <li class="bullet-item"><strong>Electronics Architecture:</strong> The electronics for the pet feeder is centralised around an ESP32-S3 microcontroller. The ESP32 is responsible for controlling / interfacing with a NEMA17 stepper motor, as well as HX711 strain gauge amplifer. My role focused on programming the ESP32, allowing for precise mass measuring as well as accurate portion control</li>
+                        <li class="bullet-item"><strong>Event-Driven BLE Communication:</strong> The user interfaces with the pet feeder settings via BLE (Bluetooth Low Energy) on an Android client. Users can program specific meal times and masses for their pets. Communication was handled on the ESP32 side via a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for lowest latencies.</li>
+                         <li class="bullet-item"><strong>RTC Syncing:</strong> Instead of adding a dedicated RTC unit, we opted to sync the onboard ESP32 clock with real time whenever a bluetooth message is tramsitted from the phone. This saved money and space and makes use of exisitng hardware (the user's phone) instead of introducing new components</li>
+                         <li class="bullet-item"><strong>Power Distrubtion:</strong> Since the product usecase was very dynamic, it was important that the product could take in a range of power supplies. To accomodate this, I developed an intutive and logical power distrubtion layout using buck-boosts. This set up made assembly simple and also made it easier to debug systems by isolating different power levels (Motor and ESP32). </li>
                     </ul>
 
                     <!-- Skills Used Chips -->
@@ -101,7 +109,7 @@
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
                     <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        A working connected pet feeder prototype that feeds on schedule and confirms each portion by weight via automated digital calibration.
+                        We produced a fully functional prototype, with a functional Android app client companion. Portion control was accurate up to 2% of masses in  range 20-100g. Timing was accurate with a maximum delay of 2 seconds with minimal drift. The product was tested using real pet food substitutes (skittles!).
                     </p>
                 </div>
             </div>
@@ -114,7 +122,7 @@
                     <div class="slider-slides">
                         <div class="slide active">
                             <img src="../images_pet_feeder/extracted_166.jpeg" alt="Mobile App UI Mockup">
-                            <div class="caption-banner">Mobile App UI Mockup</div>
+                            <div class="caption-banner">Exploded view of dispensing mechanism</div>
                         </div>
                         <div class="slide">
                             <img src="../images_pet_feeder/extracted_204.jpeg" alt="Circuitry Rendering">

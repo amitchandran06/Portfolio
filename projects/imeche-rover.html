@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.12">
+    <link rel="stylesheet" href="../style.css?v=2.13">
 </head>
 <body>
 
@@ -23,9 +23,9 @@
         <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
             <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
             <div class="mono-accent mb-4">PROJECT 003 · MECHANICAL & HARDWARE DESIGN</div>
-            <h1 class="hero-h1 mb-6">IMechE Rover — Autonomous Robotic Device</h1>
+            <h1 class="hero-h1 mb-6">Analog Robotic Device</h1>
             <p class="lead-p mb-8" style="max-width: 100%;">
-                IMechE Design Challenge (2025) — Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.
+                IMechE Design Challenge (2025) — Autonomous robotic device with a custom PCB and generatively designed chassis. Featuring an electronics solution with no micrcontroller, all logic is derived from the hardware components.
             </p>
             
             <!-- Meta Grid -->
@@ -51,7 +51,7 @@
     </section>
 
     <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #1a1a1a; border-bottom: 1px solid var(--line); padding: 16px 0;">
+    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
         <div class="page-container">
             <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" class="case-hero-img" onclick="window.open(this.src, '_blank')">
         </div>
@@ -66,7 +66,16 @@
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
                     <p class="lead-p mb-4">
-                        Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.
+                        The brief for this challenge was strictly defined, which is very different from the open nature of many of my other project briefs. This gave me a much clearer understanding of how to design a product to very strict requirements. 
+                        The specifics of the regulations are detailed in the PDFs below. However, the core aspect of the challenge was to develop a robotic device that could move perfectly linearily, from a start point, to a variable distane target, then return to exactly where it started. 
+                        This had to be achieved without any programmable logic.
+                    </p>
+                     <p class="lead-p mb-4">
+                        One of the core aspects of our design philosophy was to create a sleek, easily assembleable and most importantly, a reusable design. Out of all of my projects, this was the one which involved the most iterative testing. Electronics were iterated and changed dozens of times, even 
+                        navigating through last minute regulation changes. The design would follow a very organic process. With wiring, placement and mechanical design all seamlessly confluencing.
+                    </p>
+                    <p class="lead-p mb-4"> 
+                        Testing for electronics followed the general process of breadboarding, verifying results, verifying compatibility with mechanism, and finally PCB production and assembly. Use of JST connectors were prioritsed over soldering to allow for easy component replacement and testing.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="../IMechE design portfolio.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
@@ -84,10 +93,11 @@
                 <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Circuit Simulation & Debugging:</strong> Simulating and validating H-bridges and 555-timer circuits in Falstad. Debugged a critical floating gate issue on the MOSFET Q5 by implementing a 1MΩ pull-down resistor to ground to ensure reliable gate discharge.</li>
-                        <li class="bullet-item"><strong>PCB Layout & Weight Optimisation:</strong> Compacted the physical footprint of the PCB in EasyEDA from 200x80mm down to 165x60mm. Replaced SMD capacitors with THT variants to match hardware availability and integrated a fuse holder in series with VCC for circuit protection.</li>
-                        <li class="bullet-item"><strong>Structural FEA Simulation:</strong> Conducted structural finite element analysis (FEA) on the rover chassis using ANSYS (Static Structural) to analyze total deformation and stress distribution under mechanical load, securing high stiffness-to-weight ratios.</li>
-                        <li class="bullet-item"><strong>Team Leadership:</strong> Led the electro-mechanical design team to place 3rd out of 45 teams.</li>
+                        <li class="bullet-item"><strong>Circuit Simulation & Debugging:</strong> Circuitry was designed on EasyEDA, with simulations conducted on an online platform called Falstad. The design of the circuit had to be strictly compliant with regulations.
+                             To avoid using programmable microcontrollers, the circuit was designed with discrete logic gates to trigger waiting sequences and shut down. Custom H-bridge circuits were implemented to allow for automatic reversal of the motor direction electronically. This was <strong> unique amongst competition </strong>, providing us with a more solid state and reliable system </li>
+                        <li class="bullet-item"><strong>PCB Layout & Weight Optimisation:</strong> Optimisation and assembly were priorities for our design. The cost cap for the project was strict, meaning components and frame weight had to be tightly controlled. This prompted us to develop an organic, generatively designed frame. Which in turn required wire lengths and layouts to be very carefully chosen </li>
+                        <li class="bullet-item"><strong>Mechanical Timer</strong> The competition required the device to wait for 10-15 seconds once at the wall. Initally, we opted for a solution based off of an RC circuit. However, a last minute regulation change required a rethink. We eventually re-designed the timer mechanically. Utilising fixed speed rotation to trigger an SPDT switch.
+                        However, the most unique aspect of our design was was the ability for our timer to <strong> automatically reset</strong> after each run. Enabling a level of autonomy other designs did not have.</li>
                     </ul>
 
                     <!-- Skills Used Chips -->
@@ -105,7 +115,7 @@
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
                     <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        Led the electro-mechanical design team to place 3rd out of 45 teams  with an extremely unique, optimised and automated design
+                        Produced a fully functional design scoring 99/100 in the final competition. The design was the most unique out of all 45 teams present, being the only one to feature a custom PCB and automatic timer reset.
                 </div>
             </div>
 
@@ -117,7 +127,7 @@
                     <div class="slider-slides">
                         <div class="slide active">
                             <img src="../FinalCircuitSchematic.png" alt="Final Circuit Schematic">
-                            <div class="caption-banner">Final Circuit Schematic featuring 555 timer & MOSFET controls</div>
+                            <div class="caption-banner">Final Circuit Schematic - Used to develop PCB</div>
                         </div>
                         <div class="slide">
                             <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1">

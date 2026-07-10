@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.12">
+    <link rel="stylesheet" href="../style.css?v=2.13">
 </head>
 <body>
 
@@ -25,7 +25,7 @@
             <div class="mono-accent mb-4">PROJECT 001 · MECHATRONICS & SYSTEMS INTEGRATION</div>
             <h1 class="hero-h1 mb-6">Digital Sign-In & Locker Kiosk</h1>
             <p class="lead-p mb-8" style="max-width: 100%;">
-                Industrial Cadets Gold Project (2022/23) — A smart, modular safety kiosk featuring automatic locker locking, LED occupancy status, and an interactive site-hazard map.
+                Industrial Cadets Gold Award (2022/23) — A smart, modular safety kiosk featuring automatic locker locking, LED occupancy status, and an interactive touchscreen program.
             </p>
             
             <!-- Meta Grid -->
@@ -36,7 +36,7 @@
                 </div>
                 <div>
                     <div class="mono-label mb-1">TIMELINE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">2022 / 2023</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">2022 - 2023</div>
                 </div>
                 <div>
                     <div class="mono-label mb-1">STACK</div>
@@ -51,7 +51,7 @@
     </section>
 
     <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #1a1a1a; border-bottom: 1px solid var(--line); padding: 16px 0;">
+    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
         <div class="page-container">
             <img src="../kiosk-hero.png" alt="Completed Physical Prototype Kiosk" class="case-hero-img" onclick="window.open(this.src, '_blank')">
         </div>
@@ -66,7 +66,18 @@
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
                     <p class="lead-p mb-4">
-                        Designed a mechatronic sign-in station to manage safety regulations on Severn Trent Water facilities. The kiosk provides visual safety guidance, safe storage for potential ignition hazards (like phones/lighters) via automatically locked compartments, and logs worker presence.
+                        As part of the industrial cadets award, our team of 6 were tasked with designing a digital replacement for existing paper-based sign in systems at Severn Trent Water treatment plants. The brief highlighted key customer requirements (see full report below),
+                        including storage for ignition hazards as well as a 3D site information. The company also requested the ability to log employee and contractor sign-in via an inbuilt digital database.
+                    </p>
+                     <p class="lead-p mb-4">
+
+                        When drafting our ideas for the prototype, we chose to split the project into three components: The enclosure, the electronics, and the software. A key design principle was modularity and DfMA (Design for Manufacturing and Assembly), which would feature throughout the enclosure design. Every component of the enclosure was to be assembled with minimal permanent fasteners, instead focusing on slots grooves and screws.
+
+                    </p>
+                     <p class="lead-p mb-4">
+                        In terms of the software and microcontroller framework, we opted for a 2 fronted approach. The front end would be written in Python (using Kivy for GUI), providing users with a simple but aesthetic GUI to convey key info. This program would also perform all the high level logic (such as file handling) and locker reservation. However, control over the physical components (LEDs and Servos) would be done through a microcontroller
+                        (Arduino Mega) to ensure there were enough GPIO pins and most importantly PWM control for servos. The front end would then transmit instructions to the microcontroller when specific actions were needed to reflect user requests.
+                
                     </p>
                     <div class="pt-4">
                         <a href="../Severn Trent IC Gold DSEAR Final Report.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
@@ -81,9 +92,13 @@
                 <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Firmware Development:</strong> Developed C++ firmware on an Arduino Mega 2560 to manage locker servos, RGB status LEDs, and LDR light sensing. Programmed the Serial parsing logic to decode incoming instructions dynamically.</li>
-                        <li class="bullet-item"><strong>Kivy-Arduino Serial Integration:</strong> Integrated Kivy-based Python GUI on a Raspberry Pi with the Arduino microcontroller over USB using PySerial. Handled latency constraints and optimised data transmission using short, robust integer instruction tokens (e.g. 10/11 for lock/unlock).</li>
-                        <li class="bullet-item"><strong>Modular CAD Design:</strong> CAD modelled the modular stackable lockers in Fusion 360. Incorporated slots/grooves for structural stacking, dedicated cavities for servo and LED integration, and tolerance cutouts for USB charging ports.</li>
+                        <li class="bullet-item"><strong>Firmware Development:</strong> I was solely respomnsible for the development of the C++ firmware on an Arduino Mega 2560 to control locker servos, RGB status LEDs, and LDR light sensing. Whilst the arduino directly interfaced with electronics, instructions for when certain actions were to be executed came from the front-end, hosted on the Raspberry Pi. 
+                            To communicate between the two, I programmed Serial parsing logic to decode incoming instructions from the Raspberry Pi via USB.</li>
+                        <li class="bullet-item"><strong>Kivy-Arduino Serial Integration:</strong> The frontend was developed in Kivy (a Python framework). Users of the kiosk would interact with the program via a 7 inch touch screen. Allowing them to verify their indentity and select a locker to store their items. 
+                            My specific role was to find a way to communicate between the front and backend of the system. Several options, both wireless and wired were explored, I eventually settled on using serial over USB. The data exchange protocol settled on is based of a simple 2-3 integer code system. With each digit representing a specific locker, action and state This enabled us to easily control actions for all 4 lockers and indicator LEDs in a manner that was efficient as well as intutive to decode for debugging</li>
+                        <li class="bullet-item"><strong>Modular CAD Design:</strong> The physical design for the kiosk was modelled from the ground up to be easily manufactured and assembled (using Fusion360). Slots and grooves were used for structural stacking, dedicated cavities for servo and LED integration, and tolerance cutouts for USB charging ports. This allowed
+                        Severn Trent to modify the kiosk design to fit the needs of each local site. It also allowed for the hot swappability of components that need to replaced without disrupting daily operation</li>
+                        <li class="bullet-item"><strong>Automated Lighting:</strong> The kiosk was also equipped with a scaled down lighting strip. This was controlled by a simple transistor-based circuit as to not impede the main firmware code. Allowed for operation despite usage in darker winters. </li>
                     </ul>
 
                     <!-- Skills Used Chips -->
@@ -101,7 +116,8 @@
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
                     <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        Successfully built and verified a mechatronic kiosk prototype with automatic locker locks, real-time occupancy status indicators, and an interactive safety map. Recognised for successful cross-disciplinary hardware-software systems integration.
+                        Successfully built and verified a scaled kiosk prototype with automatic locker locks, real-time occupancy status indicators, and an interactive safety map. At the award ceremony, we were awarded the 'Best Teamwork' award for our prototype and presentation. This was a testement to the
+                        coordination and synchronicity that our team displayed throughout the planning, design and execution of the project.
                     </p>
                 </div>
             </div>
