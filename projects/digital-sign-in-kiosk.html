@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Sign-In & Locker Kiosk — Amit Chandran Portfolio</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="../style.css?v=2.11">
+</head>
+<body>
+
+    <!-- Case Study Header -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
+            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
+            <div class="mono-accent mb-4">PROJECT 001 · MECHATRONICS & SYSTEMS INTEGRATION</div>
+            <h1 class="hero-h1 mb-6" style="font-size: clamp(34px, 6vw, 72px);">Digital Sign-In & Locker Kiosk</h1>
+            <p class="lead-p mb-8" style="max-width: 100%;">
+                Industrial Cadets Gold Project (2022/23) — A smart, modular safety kiosk featuring automatic locker locking, LED occupancy status, and an interactive site-hazard map.
+            </p>
+            
+            <!-- Meta Grid -->
+            <div class="meta-grid">
+                <div>
+                    <div class="mono-label mb-1">ROLE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Mechatronics & Systems</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">TIMELINE</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">2022 / 2023</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">STACK</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">C++ · Python · Fusion 360</div>
+                </div>
+                <div>
+                    <div class="mono-label mb-1">OUTCOME</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">3D Printed Operational Prototype</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Initial Hero Image (Sleeker and smaller) -->
+    <div style="background-color: #1a1a1a; border-bottom: 1px solid var(--line); padding: 16px 0;">
+        <div class="page-container">
+            <img src="../kiosk-hero.png" alt="Completed Physical Prototype Kiosk" class="case-hero-img" onclick="window.open(this.src, '_blank')">
+        </div>
+    </div>
+
+    <!-- Case Study Content -->
+    <section class="section-bleed">
+        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
+            
+            <!-- 01 — THE BRIEF -->
+            <div class="grid-brief pb-16 border-b">
+                <div class="mono-label">01 — THE BRIEF</div>
+                <div>
+                    <p class="lead-p mb-4">
+                        Designed a mechatronic sign-in station to manage safety regulations on Severn Trent Water facilities. The kiosk provides visual safety guidance, safe storage for potential ignition hazards (like phones/lighters) via automatically locked compartments, and logs worker presence.
+                    </p>
+                    <div class="pt-4">
+                        <a href="../Severn Trent IC Gold DSEAR Final Report.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Full Report PDF ↗
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div>
+                    <ul class="bullet-list">
+                        <li class="bullet-item"><strong>Firmware Development:</strong> Developed C++ firmware on an Arduino Mega 2560 to manage locker servos, RGB status LEDs, and LDR light sensing. Programmed the Serial parsing logic to decode incoming instructions dynamically.</li>
+                        <li class="bullet-item"><strong>Kivy-Arduino Serial Integration:</strong> Integrated Kivy-based Python GUI on a Raspberry Pi with the Arduino microcontroller over USB using PySerial. Handled latency constraints and optimised data transmission using short, robust integer instruction tokens (e.g. 10/11 for lock/unlock).</li>
+                        <li class="bullet-item"><strong>Modular CAD Design:</strong> CAD modelled the modular stackable lockers in Fusion 360. Incorporated slots/grooves for structural stacking, dedicated cavities for servo and LED integration, and tolerance cutouts for USB charging ports.</li>
+                    </ul>
+
+                    <!-- Skills Used Chips -->
+                    <div class="project-skills-row flex-wrap gap-2">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">Python</span>
+                        <span class="pill-chip">Fusion 360</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 03 — OUTCOME -->
+            <div class="py-16 border-b">
+                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
+                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
+                        Successfully built and verified a mechatronic kiosk prototype with automatic locker locks, real-time occupancy status indicators, and an interactive safety map. Recognised for successful cross-disciplinary hardware-software systems integration.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 04 — PROJECT RESOURCES & MEDIA -->
+            <div class="py-16 border-b">
+                <div class="mono-label mb-6">04 — PROJECT RESOURCES & MEDIA</div>
+                
+                <div class="slider-container" id="media-slider">
+                    <div class="slider-slides">
+                        <div class="slide active">
+                            <img src="../kiosk-cad-render.jpeg" alt="Full 3D CAD Render of the Safety Kiosk">
+                            <div class="caption-banner">Full 3D CAD Render of the Safety Kiosk</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../kiosk-completed-irl.jpeg" alt="Completed Kiosk Livery IRL">
+                            <div class="caption-banner">Completed Kiosk Livery</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../kiosk-schematic.jpeg" alt="Kiosk 2D Technical Schematic">
+                            <div class="caption-banner">Kiosk 2D Technical Schematic</div>
+                        </div>
+                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
+                        <button class="slider-btn next" aria-label="Next Slide">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Centered Bottom Navigation -->
+            <div class="project-nav-row">
+                <a href="../index.html#work" class="btn-solid">← All projects</a>
+                <a href="desktop-multimeter.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Electronics Prototyping Station →</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
+        <div class="page-container">
+            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+        </div>
+    </footer>
+
+    <script>
+    function initSlider(sliderId) {
+        const container = document.getElementById(sliderId);
+        if (!container) return;
+        const slides = container.querySelectorAll('.slide');
+        const prevBtn = container.querySelector('.slider-btn.prev');
+        const nextBtn = container.querySelector('.slider-btn.next');
+        let current = 0;
+        
+        function showSlide(index) {
+            slides.forEach((s, i) => {
+                s.classList.toggle('active', i === index);
+            });
+        }
+        
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', () => {
+                current = (current - 1 + slides.length) % slides.length;
+                showSlide(current);
+            });
+            nextBtn.addEventListener('click', () => {
+                current = (current + 1) % slides.length;
+                showSlide(current);
+            });
+        }
+    }
+    initSlider('media-slider');
+    </script>
+</body>
+</html>

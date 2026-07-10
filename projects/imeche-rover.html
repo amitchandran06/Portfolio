@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.8">
+    <link rel="stylesheet" href="../style.css?v=2.11">
 </head>
 <body>
 
@@ -22,7 +22,7 @@
     <section class="section-bleed">
         <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
             <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
-            <div class="mono-accent mb-4">PROJECT 002 · MECHANICAL & HARDWARE DESIGN</div>
+            <div class="mono-accent mb-4">PROJECT 003 · MECHANICAL & HARDWARE DESIGN</div>
             <h1 class="hero-h1 mb-6" style="font-size: clamp(34px, 6vw, 72px);">IMechE Rover — Autonomous Robotic Device</h1>
             <p class="lead-p mb-8" style="max-width: 100%;">
                 IMechE Design Challenge (2025) — Award-winning electro-mechanical design featuring custom PCB architecture and structural simulation for a target-seeking robot.
@@ -44,17 +44,16 @@
                 </div>
                 <div>
                     <div class="mono-label mb-1">OUTCOME</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">3rd Place Globally (45 Teams)</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">3rd Place - Most Unique Design (45 Teams)</div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line);">
+    <div style="background-color: #1a1a1a; border-bottom: 1px solid var(--line); padding: 16px 0;">
         <div class="page-container">
-            <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" style="width: 100%; height: clamp(170px, 24vw, 300px); max-height: 300px; object-fit: cover; cursor: zoom-in;" title="Click to view full size" onclick="window.open(this.src, '_blank')">
-            <div class="caption-bar">3D Render of Mainboard in EasyEDA</div>
+            <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1" class="case-hero-img" onclick="window.open(this.src, '_blank')">
         </div>
     </div>
 
@@ -88,7 +87,7 @@
                         <li class="bullet-item"><strong>Circuit Simulation & Debugging:</strong> Simulating and validating H-bridges and 555-timer circuits in Falstad. Debugged a critical floating gate issue on the MOSFET Q5 by implementing a 1MΩ pull-down resistor to ground to ensure reliable gate discharge.</li>
                         <li class="bullet-item"><strong>PCB Layout & Weight Optimisation:</strong> Compacted the physical footprint of the PCB in EasyEDA from 200x80mm down to 165x60mm. Replaced SMD capacitors with THT variants to match hardware availability and integrated a fuse holder in series with VCC for circuit protection.</li>
                         <li class="bullet-item"><strong>Structural FEA Simulation:</strong> Conducted structural finite element analysis (FEA) on the rover chassis using ANSYS (Static Structural) to analyze total deformation and stress distribution under mechanical load, securing high stiffness-to-weight ratios.</li>
-                        <li class="bullet-item"><strong>Team Leadership:</strong> Led the electro-mechanical design team to place 3rd out of 45 teams globally.</li>
+                        <li class="bullet-item"><strong>Team Leadership:</strong> Led the electro-mechanical design team to place 3rd out of 45 teams.</li>
                     </ul>
 
                     <!-- Skills Used Chips -->
@@ -133,7 +132,8 @@
             <!-- Centered Bottom Navigation -->
             <div class="project-nav-row">
                 <a href="../index.html#work" class="btn-solid">← All projects</a>
-                <a href="smart-pet-feeder.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Smart Pet Feeder →</a>
+                <a href="desktop-multimeter.html" class="pill-btn">← Previous: Electronics Prototyping Station</a>
+                <a href="smart-pet-feeder.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: IoT Integrated Pet Feeder →</a>
             </div>
 
         </div>

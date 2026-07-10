@@ -193,7 +193,17 @@ img {
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: var(--faint);
+  color: var(--muted);
+}
+
+.case-hero-img {
+  width: 100%;
+  height: clamp(140px, 20vw, 260px);
+  max-height: 260px;
+  object-fit: contain;
+  cursor: zoom-in;
+  margin-inline: auto;
+  display: block;
 }
 
 .mono-accent {
@@ -470,7 +480,7 @@ img {
 .work-meta {
   font-family: var(--font-mono);
   font-size: 11.5px;
-  color: var(--faint);
+  color: var(--muted);
   margin-top: 3px;
 }
 
