@@ -14,9 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.13">
+    <link rel="stylesheet" href="../style.css?v=2.15">
 </head>
 <body>
+
+    <!-- Mobile Warning Banner -->
+    <div class="mobile-warning-banner" id="mobile-banner">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
+            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
+            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+        </div>
+    </div>
 
     <!-- Case Study Header -->
     <section class="section-bleed">
@@ -58,7 +66,7 @@
             <div class="grid-brief pb-16 border-b">
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
-                    <p class="lead-p mb-4">
+                    <p class="body-p mb-4">
                         Integration of computer vision with high-level Simulink models and physical flight control units.
                     </p>
                 </div>
@@ -113,7 +121,10 @@
     <!-- Footer -->
     <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
         <div class="page-container">
-            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span>© 2026 AMIT CHANDRAN</span>
+                <span>V2.14</span>
+            </div>
         </div>
     </footer>
 

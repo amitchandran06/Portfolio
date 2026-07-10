@@ -14,9 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.13">
+    <link rel="stylesheet" href="../style.css?v=2.15">
 </head>
 <body>
+
+    <!-- Mobile Warning Banner -->
+    <div class="mobile-warning-banner" id="mobile-banner">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
+            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
+            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+        </div>
+    </div>
 
     <!-- Case Study Header -->
     <section class="section-bleed">
@@ -32,7 +40,7 @@
             <div class="meta-grid">
                 <div>
                     <div class="mono-label mb-1">ROLE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">Team Lead · Electro-Mechanical</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">Electro-Mechanical Lead</div>
                 </div>
                 <div>
                     <div class="mono-label mb-1">TIMELINE</div>
@@ -40,7 +48,7 @@
                 </div>
                 <div>
                     <div class="mono-label mb-1">STACK</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">EasyEDA · Fusion 360 · ANSYS</div>
+                    <div class="body-p font-semibold" style="color: var(--ink);">EasyEDA · Fusion 360</div>
                 </div>
                 <div>
                     <div class="mono-label mb-1">OUTCOME</div>
@@ -65,17 +73,10 @@
             <div class="grid-brief pb-16 border-b">
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
-                    <p class="lead-p mb-4">
+                    <p class="body-p mb-4">
                         The brief for this challenge was strictly defined, which is very different from the open nature of many of my other project briefs. This gave me a much clearer understanding of how to design a product to very strict requirements. 
                         The specifics of the regulations are detailed in the PDFs below. However, the core aspect of the challenge was to develop a robotic device that could move perfectly linearily, from a start point, to a variable distane target, then return to exactly where it started. 
                         This had to be achieved without any programmable logic.
-                    </p>
-                     <p class="lead-p mb-4">
-                        One of the core aspects of our design philosophy was to create a sleek, easily assembleable and most importantly, a reusable design. Out of all of my projects, this was the one which involved the most iterative testing. Electronics were iterated and changed dozens of times, even 
-                        navigating through last minute regulation changes. The design would follow a very organic process. With wiring, placement and mechanical design all seamlessly confluencing.
-                    </p>
-                    <p class="lead-p mb-4"> 
-                        Testing for electronics followed the general process of breadboarding, verifying results, verifying compatibility with mechanism, and finally PCB production and assembly. Use of JST connectors were prioritsed over soldering to allow for easy component replacement and testing.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="../IMechE design portfolio.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
@@ -88,9 +89,23 @@
                 </div>
             </div>
 
-            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <!-- 02 — DESIGN PHILOSOPHY -->
             <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
+                <div>
+                    <p class="body-p mb-4">
+                        One of the core aspects of our design philosophy was to create a sleek, easily assembleable and most importantly, a reusable design. Out of all of my projects, this was the one which involved the most iterative testing. Electronics were iterated and changed dozens of times, even 
+                        navigating through last minute regulation changes. The design would follow a very organic process. With wiring, placement and mechanical design all seamlessly confluencing.
+                    </p>
+                    <p class="body-p mb-4"> 
+                        Testing for electronics followed the general process of breadboarding, verifying results, verifying compatibility with mechanism, and finally PCB production and assembly. Use of JST connectors were prioritsed over soldering to allow for easy component replacement and testing.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 03 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
                         <li class="bullet-item"><strong>Circuit Simulation & Debugging:</strong> Circuitry was designed on EasyEDA, with simulations conducted on an online platform called Falstad. The design of the circuit had to be strictly compliant with regulations.
@@ -110,18 +125,19 @@
                 </div>
             </div>
 
-            <!-- 03 — OUTCOME -->
+            <!-- 04 — OUTCOME -->
             <div class="py-16 border-b">
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
                         Produced a fully functional design scoring 99/100 in the final competition. The design was the most unique out of all 45 teams present, being the only one to feature a custom PCB and automatic timer reset.
+                    </p>
                 </div>
             </div>
 
-            <!-- 04 — PCB & SIMULATION MEDIA -->
+            <!-- 05 — PCB & SIMULATION MEDIA -->
             <div class="py-16 border-b">
-                <div class="mono-label mb-6">04 — PCB & SIMULATION MEDIA</div>
+                <div class="mono-label mb-6">05 — PCB & SIMULATION MEDIA</div>
                 
                 <div class="slider-container" id="media-slider">
                     <div class="slider-slides">
@@ -132,6 +148,10 @@
                         <div class="slide">
                             <img src="../3D_MainBoardV7_1_2025-03-22.png" alt="3D Mainboard V7.1">
                             <div class="caption-banner">3D Render of Mainboard in EasyEDA</div>
+                        </div>
+                        <div class="slide">
+                            <img src="../images_imeche/CAD Render.jpeg" alt="Full 3D CAD Render of the Target-Seeking Robot">
+                            <div class="caption-banner">Full 3D CAD Render of the Target-Seeking Robot</div>
                         </div>
                         <button class="slider-btn prev" aria-label="Previous Slide">←</button>
                         <button class="slider-btn next" aria-label="Next Slide">→</button>
@@ -152,7 +172,10 @@
     <!-- Footer -->
     <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
         <div class="page-container">
-            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span>© 2026 AMIT CHANDRAN</span>
+                <span>V2.14</span>
+            </div>
         </div>
     </footer>
 

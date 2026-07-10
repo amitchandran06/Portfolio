@@ -14,9 +14,17 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.13">
+    <link rel="stylesheet" href="../style.css?v=2.15">
 </head>
 <body>
+
+    <!-- Mobile Warning Banner -->
+    <div class="mobile-warning-banner" id="mobile-banner">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
+            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
+            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+        </div>
+    </div>
 
     <!-- Case Study Header -->
     <section class="section-bleed">
@@ -65,27 +73,40 @@
             <div class="grid-brief pb-16 border-b">
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
-                    <p class="lead-p mb-4">
+                    <p class="body-p mb-4">
                         The brief of this project was to develop an open-source product for a distinct target market. The product must also focus on a being part of the 'circular economy' principle, ensuring recylability and repairability. As a group, we settled on pet feeding as our context, the problem statement is defined in the PDF below.
                     </p>
-                     <p class="lead-p mb-4">
-                        The design philosphy was centered around a very intuitive and open-source design process. Every component and layout was chosen with the intent of the end user either producing it or assembling it themselves (see assembly manual PDF). This prompted us to opt for a breadboard design rather than a PCB due to it being more practical for users to build. 
-                        </p>
-                     <p class="lead-p mb-4">
-                        The software and firmware were also developed in a totally open-source fashion. With all code available on GitHub, allowing for user to adjust parameters as appropriate.
-                        Another key aspect to the pet-feeder was use of no onboard controls or inbuilt screens, instead making use of the user's mobile phone to program meals. This minimises the e-waste produced.
-                    </p>
-                    <div class="pt-4">
+                    <div class="flex flex-wrap gap-4 pt-4">
                         <a href="../Final Scenarios PPT - pet feeder.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
                             <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Scenarios PDF ↗
+                        </a>
+                        <a href="../Pet Feeder Manual.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Product Manual PDF ↗
+                        </a>
+                        <a href="https://github.com/amitchandran06/pet-feeder.git" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
+                            <i class="fa-brands fa-github" style="color: var(--accent);"></i> View GitHub Repository ↗
                         </a>
                     </div>
                 </div>
             </div>
 
-            <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <!-- 02 — DESIGN PHILOSOPHY -->
             <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
+                <div>
+                    <p class="body-p mb-4">
+                        The design philosphy was centered around a very intuitive and open-source design process. Every component and layout was chosen with the intent of the end user either producing it or assembling it themselves (see assembly manual PDF). This prompted us to opt for a breadboard design rather than a PCB due to it being more practical for users to build. 
+                    </p>
+                    <p class="body-p mb-4">
+                        The software and firmware were also developed in a totally open-source fashion. With all code available on GitHub, allowing for user to adjust parameters as appropriate.
+                        Another key aspect to the pet-feeder was use of no onboard controls or inbuilt screens, instead making use of the user's mobile phone to program meals. This minimises the e-waste produced.
+                    </p>
+                </div>
+            </div>
+
+            <!-- 03 — TECHNICAL DEPTH & ACHIEVEMENTS -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
                         <li class="bullet-item"><strong>Electronics Architecture:</strong> The electronics for the pet feeder is centralised around an ESP32-S3 microcontroller. The ESP32 is responsible for controlling / interfacing with a NEMA17 stepper motor, as well as HX711 strain gauge amplifer. My role focused on programming the ESP32, allowing for precise mass measuring as well as accurate portion control</li>
@@ -104,23 +125,27 @@
                 </div>
             </div>
 
-            <!-- 03 — OUTCOME -->
+            <!-- 04 — OUTCOME -->
             <div class="py-16 border-b">
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
                         We produced a fully functional prototype, with a functional Android app client companion. Portion control was accurate up to 2% of masses in  range 20-100g. Timing was accurate with a maximum delay of 2 seconds with minimal drift. The product was tested using real pet food substitutes (skittles!).
                     </p>
                 </div>
             </div>
 
-            <!-- 04 — PROJECT RESOURCES & MEDIA -->
+            <!-- 05 — PROJECT RESOURCES & MEDIA -->
             <div class="py-16 border-b">
-                <div class="mono-label mb-6">04 — PROJECT RESOURCES & MEDIA</div>
+                <div class="mono-label mb-6">05 — PROJECT RESOURCES & MEDIA</div>
                 
                 <div class="slider-container" id="media-slider">
                     <div class="slider-slides">
                         <div class="slide active">
+                            <img src="../images_pet_feeder/manual_front_page.png" alt="Pet Feeder Assembly & User Manual Front Page">
+                            <div class="caption-banner">Pet Feeder Assembly & User Manual Front Page</div>
+                        </div>
+                        <div class="slide">
                             <img src="../images_pet_feeder/extracted_166.jpeg" alt="Mobile App UI Mockup">
                             <div class="caption-banner">Exploded view of dispensing mechanism</div>
                         </div>
@@ -155,7 +180,10 @@
     <!-- Footer -->
     <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
         <div class="page-container">
-            <div class="mono-label">© 2026 AMIT CHANDRAN</div>
+            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span>© 2026 AMIT CHANDRAN</span>
+                <span>V2.14</span>
+            </div>
         </div>
     </footer>
 

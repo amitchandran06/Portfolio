@@ -510,7 +510,7 @@ img {
   margin-top: 14px;
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 16px;
 }
 
 .bullet-item {
@@ -774,6 +774,25 @@ img {
   .contact-links-row {
     flex-direction: column;
     gap: 16px;
+  }
+}
+
+.mobile-warning-banner {
+  display: none;
+  background-color: var(--accent);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 500;
+  border-bottom: 1px solid var(--line);
+  line-height: 1.4;
+  position: relative;
+  z-index: 10000;
+}
+
+@media (max-width: 768px) {
+  .mobile-warning-banner {
+    display: block;
   }
 }
 
