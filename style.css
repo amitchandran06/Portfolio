@@ -129,11 +129,15 @@ img {
 .hero-h1 {
   font-family: var(--font-sans);
   font-weight: 800;
-  font-size: clamp(40px, 7.5vw, 92px);
+  font-size: clamp(34px, 6vw, 72px);
   line-height: 0.92;
   letter-spacing: -0.04em;
   color: var(--ink);
   text-wrap: balance;
+}
+
+#hero .hero-h1 {
+  font-size: clamp(40px, 7.5vw, 92px);
 }
 
 .hero-subtitle {
@@ -166,7 +170,7 @@ img {
 .item-h3 {
   font-family: var(--font-sans);
   font-weight: 700;
-  font-size: clamp(17px, 2.1vw, 22px);
+  font-size: clamp(20px, 2.5vw, 24px);
   line-height: 1.25;
   color: var(--ink);
 }
@@ -189,7 +193,7 @@ img {
 
 .mono-label {
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 12px;
   font-weight: 500;
   letter-spacing: 0.14em;
   text-transform: uppercase;
@@ -735,5 +739,41 @@ img {
   margin-top: 48px; /* Increased to 48px for more breathing room */
   padding-top: 24px; /* Increased to 24px */
   border-top: 1px solid var(--line);
+}
+
+.mt-6 {
+  margin-top: 20px;
+}
+
+.font-semibold {
+  font-weight: 600;
+}
+
+.skills-box .pill-chip {
+  font-size: 13px;
+  padding: 8px 15px;
+}
+
+.work-link-label {
+  font-size: 10px !important;
+  color: var(--faint) !important;
+  letter-spacing: 0.05em;
+  transition: color 0.2s ease;
+}
+
+.contact-links-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: clamp(24px, 4vw, 48px);
+  padding-top: 27px;
+  border-top: 1px solid rgba(221, 213, 195, 0.2);
+}
+
+@media (max-width: 600px) {
+  .contact-links-row {
+    flex-direction: column;
+    gap: 16px;
+  }
 }
 
