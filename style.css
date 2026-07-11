@@ -796,3 +796,22 @@ img {
   }
 }
 
+.work-row-thumb {
+  height: 80px;
+  width: 115px;
+  object-fit: contain;
+  opacity: 0.8;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.work-row:hover .work-row-thumb {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .work-row-thumb {
+    display: none; /* Hide thumbnails on narrow mobile lists to preserve space */
+  }
+}
+

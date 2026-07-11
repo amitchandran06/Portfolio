@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.15">
+    <link rel="stylesheet" href="../style.css?v=2.21">
 </head>
 <body>
 
@@ -58,6 +58,11 @@
         </div>
     </section>
 
+    <!-- Initial Hero Image (Sleeker and larger for Drone) -->
+    <div style="background-color: var(--paper); border-bottom: 1px solid var(--line); padding: 0;">
+        <img src="../images_UCLR/Simulink Top Level Diagram_processed.png" alt="Simulink Top Level Flight Control Diagram" style="width: 100%; max-width: 100%; height: clamp(240px, 30vw, 420px); max-height: 420px; object-fit: contain; display: block; border: none; margin: 0;" class="case-hero-img" onclick="window.open(this.src, '_blank')">
+    </div>
+
     <!-- Case Study Content -->
     <section class="section-bleed">
         <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
@@ -67,19 +72,29 @@
                 <div class="mono-label">01 — THE BRIEF</div>
                 <div>
                     <p class="body-p mb-4">
-                        Integration of computer vision with high-level Simulink models and physical flight control units.
+                       This project comes as part of the UCL Rover Team, which I am part of. We are making strides to compete in the European Rover Challenge (ERC). In addition to building a rover, it must also be accompanied with a custom-built drone. The drone must be capable of navigating around a dynamic space including landing and taking off autonomously, which is the focus of my role. This is an active project, still under development.
                     </p>
+                </div>
+            </div>
+
+             <!-- 02 — DESIGN PHILOSOPHY -->
+            <div class="grid-brief py-16 border-b">
+                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
+                <div>
+                    <p class="body-p mb-4">
+                        Much of the design for this project is strictly dictated by the regulations for the competition. The general philosophy followed that of 'edge computing'. We had to process as much information onboard the drone, sending only basic telemetry back to a central computer. However, due to the ongoing nature of the project, the design is still open to alterations.
+                    </p>
+                
                 </div>
             </div>
 
             <!-- 02 — TECHNICAL DEPTH & ACHIEVEMENTS -->
             <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
+                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Real-time Computer Vision:</strong> Built a Python OpenCV pipeline on an edge Raspberry Pi to detect and track ArUco coordinates dynamically.</li>
-                        <li class="bullet-item"><strong>Networking & Control:</strong> Established a low-latency UDP link between Python and MATLAB/Simulink to pipe XYZ spatial telemetry.</li>
-                        <li class="bullet-item"><strong>Flight Controller Hardware:</strong> Interfaced high-level control loops with an Aero Selfie H743 flight controller to enable autonomous flight behaviors.</li>
+                        <li class="bullet-item"><strong>Real-time Computer Vision:</strong> The drone had to be capable of detecting Aruco markers on the ground, to serve as landing references. By calibrating the camera, we were able to accurately detect the relative to pose to markers within 1cm.</li>
+                        <li class="bullet-item"><strong>Networking & Control:</strong> After processing the pose of the Aruco markers, this data is then transmitted to Simulink via UDP. Simulink then makes use of MAVLink to package and transmit to the flight controller. This completes the connection between a top level object dectection algorithm, and the low level motor control of the FC .</li>
                     </ul>
 
                     <!-- Skills Used Chips -->
@@ -95,9 +110,9 @@
             <!-- 03 — OUTCOME -->
             <div class="py-16 border-b">
                 <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">03 — OUTCOME</div>
+                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
                     <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        An ongoing development establishing real-time autonomous tracking and control between an edge computer vision device and physical flight hardware.
+                        An ongoing project, currently has a functioning Aruco marker detection system with a functional manual flight drone. Development expected to continue into late 2026 / early 2027.
                     </p>
                 </div>
             </div>
@@ -106,7 +121,7 @@
             <div class="py-16 border-b">
                 <div class="mono-label mb-6">04 — PROJECT RESOURCES & MEDIA</div>
                 
-                <div class="ph">[ flight telemetry & vision pipeline media coming soon ]</div>
+                <div class="ph">[ Images Coming Soon! ]</div>
             </div>
 
             <!-- Centered Bottom Navigation -->

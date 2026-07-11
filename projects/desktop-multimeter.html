@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.15">
+    <link rel="stylesheet" href="../style.css?v=2.21">
 </head>
 <body>
 
@@ -100,10 +100,11 @@
                 <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
                 <div>
                     <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Custom PCB Architecture:</strong> Engineered measurement circuitry using EasyEDA, integrating potential dividers for voltage, an ACS724 Hall-effect sensor for non-invasive current, and dedicated charge/discharge paths for capacitance.</li>
-                        <li class="bullet-item"><strong>Embedded Firmware:</strong> Programmed a 500+ line C++ codebase on an Arduino MEGA utilizing SPI to drive a 1.8-inch TFT display. Implemented custom pin-change interrupt routines (PCINT) using the <code>YetAnotherPcint.h</code> library to support 6 mode switches concurrently without interfering with SPI data lines.</li>
-                        <li class="bullet-item"><strong>Calibration & Accuracy:</strong> Designed a multi-range ohmmeter and capacitance meter using software-driven auto-ranging logic. Compounded accuracy from a 19.1% average error in v1 to a highly precise <strong>4.1% average error in v2</strong>.</li>
-                        <li class="bullet-item"><strong>DFMA Enclosure:</strong> Designed a modular, multi-part PLA/PETG enclosure in Fusion 360. Iterated on physical tolerances (accounting for 0.3mm-0.4mm 3D printing tolerances) to integrate sliding drawers, helper hands, and a magnifying glass mount.</li>
+                        <li class="bullet-item"><strong>Custom PCB Architecture:</strong> The development of the electornics followed a systems engineering 'V' model. With subsystems (each measurement mode) being developed individually and verified. Then after fine tuning each sub-system, I moved onto integrating each one into one unified system. This would involve converting breadboard designs into a PCB layout</li>
+                        <li class="bullet-item"><strong>Onboard UI:</strong> Having been powered by a microcontroller, the onboard UI was very simple. It feature a 128x128 1.8inch TFT display. This allowed for simple but intutive UIs for each mode, including a graphing mode for voltage which I developed from scratch (see PDF for details). Modes were changed via the use of simple SPST buttons, which then triggered hardware interrupts in the program, as to not disrupt the logic.</li>
+                        <li class="bullet-item"><strong> Autoranging Measurements </strong> One of the best feature of this product was its auto-ranging feature. Unlike many entry level multimeters, my product was capable automatically adjusting the measurement range. Allowing for accurate readings across 3-9 orders of magnitude depending on the mode. This included measurements of capactiance, which most entry-level multimeters omit completely. 
+                            The circuit made use of the exponential curve that capacitor charge sequences follow, allowing the program to choose <strong> different resistors </strong> to charge through. This ensured the charge time for the capacitor was in the range of maximum resolution for the Arduino, providing more accurate results </li>
+                        <li class="bullet-item"><strong>DfMA Principles and User-friendliness:</strong> One of the core principles for the design was for it to be beginner friendly. This meant ensuring that assembly was intutive and did not require advanced tools. The operation of the product was also to be simple, using minimal proprietary components as possible. To ensure this, I designed the enclosure to only feature one screw size, and slots where possible. This allowed for the station to be highly modular, with components easily able to be hot-swapped to specific needs. The station also featured USB ports for powering your own circuits, as well as USB C power to be as universal as possible.</li>
                     </ul>
 
                     <!-- Skills Used Chips -->
