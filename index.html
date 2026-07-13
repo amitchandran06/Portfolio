@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2.21">
+    <link rel="stylesheet" href="style.css?v=2.25">
 </head>
 <body>
 
@@ -63,17 +63,18 @@
                 <h2 class="section-title-h2">About Me</h2>
             </div>
 
-            <!-- Full-width introductory bio text spanning across the entire page -->
-            <div class="mb-10 pb-8 border-b">
-                <p class="lead-p" style="color: var(--ink); font-weight: 600; max-width: 100%;">
-                    Mechanical Engineering student at UCL (expected graduation June 2028), specialising in robotics, control systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.
-                </p>
-            </div>
-
+            <!-- About Section Grid containing Bio, Skillset, and Photo -->
             <div class="about-grid">
                 <div>
+                    <!-- Bio text at top of column, flush with photo top -->
+                    <div class="mb-8">
+                        <p class="lead-p" style="color: var(--ink); font-weight: 600; max-width: 100%;">
+                           I am a  Mechanical Engineering student at UCL (expected graduation June 2028), specialising in robotics, control / embedded systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.
+                        </p>
+                    </div>
+
                     <div class="space-y-4 body-p">
-                        <h3 class="item-h3 pt-4" style="color: var(--ink);">My skillset at a glance</h3>
+                        <h3 class="item-h3" style="color: var(--ink); margin-top: 0;">My skillset at a glance</h3>
                         <p>
                             My technical expertise includes:
                         </p>
@@ -87,26 +88,33 @@
                         <p>
                             However, working on each aspect individually is only half the story. My strongest trait is my ability to work on and integrate several of the above aspects into a single cohesive system. To me, modern engineering is too integrated and cross-functional to only focus on a single aspect, the best solutions come from those who can understand and coordinate across software, electronics and mechanical components.
                         </p>
-                        
-                        <h3 class="item-h3 pt-4" style="color: var(--ink);">What I can bring to your team</h3>
-                        <p>
-                            I am an engineer who works best in fast-paced, dynamic environments. I flourish when I am working on complex cross-functional projects and teams such as those in a start-up.
-                        </p>
-                        <p>
-                            When it comes to learning, I always want to know the 'why': Why things work and more importantly, why they don't. Learning the basis of concepts and how they relate to previous knowledge has helped me to solve problems faster and discover solutions I wouldn't have found otherwise. I am also someone who thoroughly enjoys communicating complex technical ideas intuitively and concisely to audiences, whether it be fellow engineers or even non-technical stakeholders.
-                        </p>
-                        <p>
-                            The attributes above, combined with my experience and passion for merging mechanical, electrical and software engineering principles, is what led me to the fields of robotics, mechatronics and control systems. These are fields in which engineers, regardless of their role, must be capable of communicating across disciplines and integrating their work across all three of the aforementioned engineering fields.
-                        </p>
-                    </div>
-                    <div class="flex gap-4" style="margin-top: 48px;">
-                        <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="pill-btn">Open CV in New Tab ↗</a>
-                        <a href="https://amitchandran06.github.io/Resumes/main.pdf" download class="pill-btn" style="background: var(--ink); color: var(--paper);">Download CV (PDF) ↓</a>
                     </div>
                 </div>
-                <div style="width: 100%;">
-                    <img src="images_general/Profile Photo.jpeg" alt="Amit Chandran" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: 75% center; border: 1px solid var(--line); border-radius: 4px;">
+                <div class="profile-photo-container">
+                    <img src="images_general/Profile Photo.jpeg" alt="Amit Chandran" style="width: 100%; height: auto; aspect-ratio: 1/1; object-fit: cover; object-position: 75% center; display: block; border: none; border-radius: 0;">
+                    <div class="caption-banner">Me in the cockpit of an Airbus A320!</div>
                 </div>
+            </div>
+
+            <!-- Full-width What I can bring section below the grid -->
+            <div class="body-p" style="margin-top: 24px;">
+                <h3 class="item-h3 pt-4" style="color: var(--ink);">What I can bring to your team</h3>
+                <div class="space-y-4" style="margin-top: 16px;">
+                    <p>
+                        I am an engineer who works best in fast-paced, dynamic environments. I flourish when I am working on complex cross-functional projects and teams in both start-up and established company environments.
+                    </p>
+                    <p>
+                        When it comes to learning, I always want to know the 'why': Why things work and more importantly, why they don't. Learning the basis of concepts and how they relate to previous knowledge has helped me to solve problems faster and discover solutions I wouldn't have found otherwise. I am also someone who thoroughly enjoys communicating complex technical ideas intuitively and concisely to audiences, whether it be fellow engineers or even non-technical stakeholders.
+                    </p>
+                    <p>
+                        The attributes above, combined with my experience and passion for merging mechanical, electrical and software engineering principles, is what led me to the fields of robotics, mechatronics and control systems. These are fields in which engineers, regardless of their role, must be capable of communicating across disciplines and integrating their work across all three of the aforementioned engineering fields.
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex gap-4" style="margin-top: 48px;">
+                <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="pill-btn">Open CV in New Tab ↗</a>
+                <a href="https://amitchandran06.github.io/Resumes/main.pdf" download class="pill-btn" style="background: var(--ink); color: var(--paper);">Download CV (PDF) ↓</a>
             </div>
         </div>
     </section>
@@ -263,7 +271,7 @@
                     <div class="work-num">004</div>
                     <div>
                         <div class="work-title">IoT Integrated Pet Feeder</div>
-                        <div class="work-meta">Open-source design project (2025-26) · C++ · EasyEDA</div>
+                        <div class="work-meta">Open-source design project (2025-26) · C++ · IoT / Bluetooth</div>
                     </div>
                     <div class="flex items-center gap-4">
                         <img src="images_pet_feeder/extracted_1_processed.png" class="work-row-thumb" alt="Pet Feeder CAD model">
@@ -372,7 +380,7 @@
         <div class="page-container">
             <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <span>© 2026 AMIT CHANDRAN</span>
-                <span>V2.14</span>
+                <span>V2.25 - Last Edited: 13/07/26</span>
             </div>
         </div>
     </footer>
