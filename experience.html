@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience — Amit Chandran</title>
+    
+    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Shared Swiss Editorial Stylesheet -->
+    <link rel="stylesheet" href="style.css?v=3.16">
+</head>
+<body>
+
+    <!-- Mobile Warning Banner -->
+    <div class="mobile-warning-banner" id="mobile-banner">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
+            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
+            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+        </div>
+    </div>
+
+    <!-- Header Navigation Bar -->
+    <header class="section-bleed" style="padding-top: 32px; padding-bottom: 24px; border-b: 1px solid var(--line);">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+            <a href="index.html" class="mono-label" style="text-decoration: none; font-size: 13px; font-weight: 600; color: var(--ink);">
+                ← BACK TO HOME
+            </a>
+            <div class="quick-jump-bar" style="margin-top: 0; padding-top: 0; border-top: none;">
+                <a href="index.html" class="jump-pill">Home</a>
+                <a href="about.html" class="jump-pill">About</a>
+                <a href="experience.html" class="jump-pill" style="background: var(--ink); color: var(--paper);">Experience</a>
+                <a href="index.html#work" class="jump-pill">Work</a>
+                <a href="index.html#contact" class="jump-pill">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 02 — EXPERIENCE Section -->
+    <section class="section-bleed" id="experience-detail" style="padding-top: 48px; padding-bottom: 80px;">
+        <div class="page-container">
+            <div class="mb-12 border-b pb-6 reveal">
+                <div class="mono-accent mb-2">02 — EXPERIENCE</div>
+                <h1 class="hero-h1 mb-4" style="font-size: clamp(32px, 5vw, 48px);">Industry Internships & Engineering Leadership</h1>
+            </div>
+            
+            <!-- Professional Experience -->
+            <div class="mb-16 reveal delay-1">
+                <h3 class="section-h2 mb-8">
+                    Professional Experience
+                </h3>
+                
+                <div class="p-8 exp-card">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <h4 class="item-h3">Systems Engineering Intern</h4>
+                            <p class="body-p font-semibold" style="color: var(--ink);">Leonardo UK</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <img src="images_general/Leonardo-Logo.png" alt="Leonardo Logo" class="exp-logo" style="height: 36px; max-width: 220px; margin-top: 0; margin-bottom: 2px;">
+                            <span class="mono-label">Summer 2025 & 2026</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 body-p">
+                        <p class="mb-4">
+                            During this 9 week internship, I operated as a systems engineer, coordinating 10 other interns to seamlessly integrate antenna, firmware, hardware and software components into a continuous live RF signal processing pipeline. During this role, we as interns had full ownership and responsibility over our project, with full control over how we wanted the design process to be carried out. The project was built from the ground up, starting at requirements identification and ending at verification and testing. Giving us a brief but full experience of early stage design, similar to that in a startup environment. Below are some of my key successes as an engineer:
+                        </p>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">Implemented HDL-compatible signal processing pipelines in Simulink and successfully deployed them on an RFSoC FPGA board to produce high-resolution spectra.</li>
+                            <li class="bullet-item">Developed a highly optimised compression algorithm that reduced FFT data bandwidth requirements by over <strong>2500×</strong>, minimising network utilization while preserving critical telemetry.</li>
+                            <li class="bullet-item">Directed the integration of upstream and downstream sub-systems to deliver a unified, high-performance system despite initial incompatibilities.</li>
+                            <li class="bullet-item">Coordinated with software teams to implement a robust data exchange protocol using TCP, enabling results to be monitored via a web-based server.</li>
+                            <li class="bullet-item">Architected a signal integrity self-test diagnostics algorithm to verify RF signal paths, significantly cutting troubleshooting and maintenance downtime.</li>
+                            <li class="bullet-item">Optimised graph max-hold algorithms in MATLAB, reducing execution latency by <strong>99.3%</strong> to boost overall system performance.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Increased vertical space before skills used -->
+                    <div class="exp-skills-row">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">MATLAB</span>
+                        <span class="pill-chip">Simulink</span>
+                        <span class="pill-chip">Git</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Academic & Extracurricular Experience -->
+            <div class="reveal delay-2">
+                <h3 class="section-h2 mb-8">
+                    Academic & Extracurricular Experience
+                </h3>
+                
+                <div class="p-8 exp-card">
+                    <div class="exp-header">
+                        <div class="exp-header-left">
+                            <h4 class="item-h3">Technical Lead & Drone Controls Engineer</h4>
+                            <p class="body-p font-semibold" style="color: var(--ink);">UCL Rover Team</p>
+                        </div>
+                        <div class="exp-header-right">
+                            <img src="images_general/UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="exp-logo">
+                            <span class="mono-label">January 2025 – Present</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 body-p">
+                        <p class="mb-4">
+                            My role at UCL's Rover Team has been ongoing since January 2025, and has seen significiant added responsibilties. I started as a controls engineer for the team, working on firmware for the rover's remote control system. As my second year at the team began, this advanced to more complex algorithms, mainly developed in Python and Simulink to provide autonomy for our Rover's mobile drone platform. Most recently, I have been selected to lead the Technical side of the entire team from the 2026/27 academic year.
+                        </p>
+                        <ul class="bullet-list">
+                            <li class="bullet-item">Led the development of the drone's autonomous navigation features, and selected to transition into the overall <strong>Team Technical Lead</strong> role for the upcoming academic year.</li>
+                            <li class="bullet-item">Programmed an edge-computing vision pipeline in Python and OpenCV on a Raspberry Pi to track ArUco markers in real-time.</li>
+                            <li class="bullet-item">Established a robust UDP telemetry link to stream positional coordinate data seamlessly from the edge device to a high-level MATLAB/Simulink control model.</li>
+                            <li class="bullet-item">Interfaced the Simulink control architecture directly with an Aero Selfie H743 flight controller to achieve an autonomous, end-to-end vision-to-flight pipeline.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Increased vertical space before skills used -->
+                    <div class="exp-skills-row">
+                        <span class="mono-label mr-2">SKILLS USED:</span>
+                        <span class="pill-chip">Python</span>
+                        <span class="pill-chip">MATLAB</span>
+                        <span class="pill-chip">Simulink</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="padding: 32px var(--pad-x);">
+        <div class="page-container">
+            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
+                <span>© 2026 AMIT CHANDRAN</span>
+                <span>V3.00 - Last Edited: 05/08/26</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -30px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
+
+</body>
+</html>

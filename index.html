@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="style.css?v=2.25">
+    <link rel="stylesheet" href="style.css?v=3.17">
 </head>
 <body>
 
@@ -26,68 +26,57 @@
         </div>
     </div>
 
-    <!-- Hero Section -->
-    <section class="section-bleed" id="hero">
-        <div class="page-container">
-            <div class="mono-accent mb-4">ELECTRONICS · EMBEDDED · MECHANICAL DESIGN</div>
-            <h1 class="hero-h1 mb-4">
-                Amit Chandran
-            </h1>
-            <div class="hero-subtitle mb-8">
-                Robotics, Controls & Mechatronic Systems Engineer.
-            </div>
-            
-            <!-- Action Buttons directly under subtitle -->
-            <div class="flex flex-wrap gap-4 items-center">
-                <a href="#work" class="btn-solid">View projects <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="https://amitchandran06.github.io/Resumes/main.pdf" target="_blank" class="pill-btn">Download CV <i class="fa-solid fa-arrow-down"></i></a>
-            </div>
-
-            <!-- Quick Jump Navigation Bar further below with generous spacing and hairline divider -->
-            <div class="quick-jump-bar">
-                <span class="mono-label mr-2">JUMP TO SECTION:</span>
+    <!-- Sticky Top Navigation Bar -->
+    <header class="top-nav-bar">
+        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap;">
+            <a href="index.html" class="nav-brand mono-label">AMIT CHANDRAN - Portfolio</a>
+            <nav class="nav-links">
                 <a href="#about" class="jump-pill">01 · About</a>
                 <a href="#experience" class="jump-pill">02 · Experience</a>
                 <a href="#work" class="jump-pill">03 · Work</a>
                 <a href="#skills" class="jump-pill">04 · Skills</a>
                 <a href="#contact" class="jump-pill">05 · Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="section-bleed" id="hero" style="padding-top: 64px; padding-bottom: 64px;">
+        <div class="page-container reveal" style="text-align: center;">
+            <h1 class="hero-h1 mb-4" style="text-align: center;">
+                Amit Chandran
+            </h1>
+            <div class="hero-subtitle mb-0" style="text-align: center; margin-inline: auto;">
+                Robotics, Controls & Mechatronic Systems Engineer.
             </div>
         </div>
     </section>
 
-    <!-- 01 — ABOUT Section -->
-    <section class="section-bleed" id="about">
+    <!-- 01 — ABOUT Section (Teaser) -->
+    <section class="section-bleed section-alt" id="about">
         <div class="page-container">
-            <div class="mb-10 border-b pb-6">
-                <div class="mono-accent mb-2">SECTION 01</div>
-                <h2 class="section-title-h2">About Me</h2>
+            <div class="mb-10 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div>
+                    <div class="mono-accent mb-2">SECTION 01</div>
+                    <h2 class="section-title-h2">About Me</h2>
+                </div>
+                <a href="about.html" class="mono-label" style="text-decoration: none; color: var(--accent); font-weight: 600;">
+                    READ FULL ABOUT ME →
+                </a>
             </div>
 
-            <!-- About Section Grid containing Bio, Skillset, and Photo -->
-            <div class="about-grid">
+            <!-- About Teaser Grid -->
+            <div class="about-grid reveal delay-1" style="align-items: center;">
                 <div>
-                    <!-- Bio text at top of column, flush with photo top -->
-                    <div class="mb-8">
-                        <p class="lead-p" style="color: var(--ink); font-weight: 600; max-width: 100%;">
-                           I am a  Mechanical Engineering student at UCL (expected graduation June 2028), specialising in robotics, control / embedded systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.
-                        </p>
-                    </div>
-
-                    <div class="space-y-4 body-p">
-                        <h3 class="item-h3" style="color: var(--ink); margin-top: 0;">My skillset at a glance</h3>
-                        <p>
-                            My technical expertise includes:
-                        </p>
-                        <ul class="bullet-list" style="margin-top: 8px; margin-bottom: 16px;">
-                            <li class="bullet-item">High-level control algorithm design in MATLAB/Simulink</li>
-                            <li class="bullet-item">Low-level FPGA-based signal processing</li>
-                            <li class="bullet-item">Embedded C++ firmware (ESP32/Arduino)</li>
-                            <li class="bullet-item">Custom PCB design and PCB assembly</li>
-                            <li class="bullet-item">Mechanical CAD modelling (Fusion 360) optimised for manufacturing and assembly (DfMA)</li>
-                        </ul>
-                        <p>
-                            However, working on each aspect individually is only half the story. My strongest trait is my ability to work on and integrate several of the above aspects into a single cohesive system. To me, modern engineering is too integrated and cross-functional to only focus on a single aspect, the best solutions come from those who can understand and coordinate across software, electronics and mechanical components.
-                        </p>
+                    <p class="lead-p mb-6" style="color: var(--ink); font-weight: 600; max-width: 100%;">
+                        I am a Mechanical Engineering student at UCL (expected graduation June 2028), specialising in robotics, control / embedded systems, and mechatronic design. I have a passion for solving complex, multidisciplinary engineering problems at the confluence of hardware, software, and physics.
+                    </p>
+                    <p class="body-p mb-8" style="color: var(--muted);">
+                        My experience bridges high-level control algorithm design in MATLAB/Simulink, low-level FPGA signal processing, embedded C++ firmware, and precision mechanical CAD modeling (Fusion 360 DfMA).
+                    </p>
+                    <div class="flex flex-wrap gap-4 items-center">
+                        <a href="about.html" class="btn-solid">Read Full About Me <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" target="_blank" class="pill-btn">View CV (PDF) ↗</a>
                     </div>
                 </div>
                 <div class="profile-photo-container">
@@ -95,127 +84,82 @@
                     <div class="caption-banner">Me in the cockpit of an Airbus A320!</div>
                 </div>
             </div>
-
-            <!-- Full-width What I can bring section below the grid -->
-            <div class="body-p" style="margin-top: 24px;">
-                <h3 class="item-h3 pt-4" style="color: var(--ink);">What I can bring to your team</h3>
-                <div class="space-y-4" style="margin-top: 16px;">
-                    <p>
-                        I am an engineer who works best in fast-paced, dynamic environments. I flourish when I am working on complex cross-functional projects and teams in both start-up and established company environments.
-                    </p>
-                    <p>
-                        When it comes to learning, I always want to know the 'why': Why things work and more importantly, why they don't. Learning the basis of concepts and how they relate to previous knowledge has helped me to solve problems faster and discover solutions I wouldn't have found otherwise. I am also someone who thoroughly enjoys communicating complex technical ideas intuitively and concisely to audiences, whether it be fellow engineers or even non-technical stakeholders.
-                    </p>
-                    <p>
-                        The attributes above, combined with my experience and passion for merging mechanical, electrical and software engineering principles, is what led me to the fields of robotics, mechatronics and control systems. These are fields in which engineers, regardless of their role, must be capable of communicating across disciplines and integrating their work across all three of the aforementioned engineering fields.
-                    </p>
-                </div>
-            </div>
-
-            <div class="flex gap-4" style="margin-top: 48px;">
-                <a href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" target="_blank" class="pill-btn">Open CV in New Tab ↗</a>
-                <a href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" download class="pill-btn" style="background: var(--ink); color: var(--paper);">Download CV (PDF) ↓</a>
-            </div>
         </div>
     </section>
 
-    <!-- 02 — EXPERIENCE Section -->
+    <!-- 02 — EXPERIENCE Section (Teaser) -->
     <section class="section-bleed" id="experience">
         <div class="page-container">
-            <div class="mb-12 border-b pb-6">
-                <div class="mono-accent mb-2">SECTION 02</div>
-                <h2 class="section-title-h2">Experience</h2>
+            <div class="mb-12 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
+                <div>
+                    <div class="mono-accent mb-2">SECTION 02</div>
+                    <h2 class="section-title-h2">Experience</h2>
+                </div>
+                <a href="experience.html" class="mono-label" style="text-decoration: none; color: var(--accent); font-weight: 600;">
+                    VIEW FULL EXPERIENCE →
+                </a>
             </div>
             
-            <!-- Professional Experience -->
-            <div class="mb-16">
-                <h3 class="section-h2 mb-8">
-                    Professional Experience
-                </h3>
-                
-                <div class="p-8 border" style="background-color: var(--paper);">
-                    <div class="exp-header">
-                        <div class="exp-header-left">
-                            <h4 class="item-h3">Systems Engineering Intern</h4>
-                            <p class="body-p font-semibold" style="color: var(--ink);">Leonardo UK</p>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-bottom: 32px;">
+                <!-- Summary Card 1 -->
+                <div class="p-8 exp-card reveal delay-1" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+                            <div>
+                                <h4 class="item-h3">Systems Engineering Intern</h4>
+                                <p class="body-p font-semibold" style="color: var(--ink); margin-top: 2px;">Leonardo UK</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                                <img src="images_general/Leonardo-Logo.png" alt="Leonardo Logo" class="exp-logo" style="height: 28px; max-width: 170px; margin-top: 2px; margin-bottom: 2px;">
+                                <span class="mono-label" style="white-space: nowrap;">Summer 2025 & 2026</span>
+                            </div>
                         </div>
-                        <div class="exp-header-right">
-                            <img src="images_general/Leonardo-Logo.png" alt="Leonardo Logo" class="exp-logo" style="height: 64px; max-width: 260px; margin-top: -12px; margin-bottom: -18px;">
-                            <span class="mono-label">Summer 2025 & 2026</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-6 body-p">
-                        <p class="mb-4">
-                            During this 9 week internship, I operated as a systems engineer, coordinating 10 other interns to seamlessly integrate antenna, firmware, hardware and software components into a continuous live RF signal processing pipeline. During this role, we as interns had full ownership and responsibility over our project, with full control over how we wanted the design process to be carried out. The project was built from the ground up, starting at requirements identification and ending at verification and testing. Giving us a brief but full experience of early stage design, similar to that in a startup environment. Below are some of my key successes as an engineer:
+                        <p class="body-p mb-6" style="color: var(--muted); font-size: 14px; line-height: 1.6;">
+                            Coordinated a team of 10 interns building an RF signal processing pipeline. Implemented FPGA spectrum pipelines and reduced FFT data bandwidth by over <strong>2500×</strong>.
                         </p>
-                        <ul class="bullet-list">
-                            <li class="bullet-item">Implemented HDL-compatible signal processing pipelines in Simulink and successfully deployed them on an RFSoC FPGA board to produce high-resolution spectra.</li>
-                            <li class="bullet-item">Developed a highly optimised compression algorithm that reduced FFT data bandwidth requirements by over <strong>2500×</strong>, minimising network utilization while preserving critical telemetry.</li>
-                            <li class="bullet-item">Directed the integration of upstream and downstream sub-systems to deliver a unified, high-performance system despite initial incompatibilities.</li>
-                            <li class="bullet-item">Coordinated with software teams to implement a robust data exchange protocol using TCP, enabling results to be monitored via a web-based server.</li>
-                            <li class="bullet-item">Architected a signal integrity self-test diagnostics algorithm to verify RF signal paths, significantly cutting troubleshooting and maintenance downtime.</li>
-                            <li class="bullet-item">Optimised graph max-hold algorithms in MATLAB, reducing execution latency by <strong>99.3%</strong> to boost overall system performance.</li>
-                        </ul>
                     </div>
-                    
-                    <!-- Increased vertical space before skills used -->
-                    <div class="exp-skills-row">
-                        <span class="mono-label mr-2">SKILLS USED:</span>
+                    <div class="exp-skills-row" style="margin-top: 0; padding-top: 16px; border-top: 1px solid var(--line);">
                         <span class="pill-chip">MATLAB</span>
                         <span class="pill-chip">Simulink</span>
-                        <span class="pill-chip">Git</span>
+                        <span class="pill-chip">FPGA</span>
                     </div>
                 </div>
-            </div>
 
-            <!-- Academic & Extracurricular Experience -->
-            <div>
-                <h3 class="section-h2 mb-8">
-                    Academic & Extracurricular Experience
-                </h3>
-                
-                <div class="p-8 border" style="background-color: var(--paper);">
-                    <div class="exp-header">
-                        <div class="exp-header-left">
-                            <h4 class="item-h3">Technical Lead & Drone Controls Engineer</h4>
-                            <p class="body-p font-semibold" style="color: var(--ink);">UCL Rover Team</p>
+                <!-- Summary Card 2 -->
+                <div class="p-8 exp-card reveal delay-2" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px;">
+                            <div>
+                                <h4 class="item-h3">Technical Lead & Controls</h4>
+                                <p class="body-p font-semibold" style="color: var(--ink); margin-top: 2px;">UCL Rover Team</p>
+                            </div>
+                            <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 4px;">
+                                <img src="images_general/UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="exp-logo" style="height: 36px; max-width: 140px;">
+                                <span class="mono-label" style="white-space: nowrap;">2025 – Present</span>
+                            </div>
                         </div>
-                        <div class="exp-header-right">
-                            <img src="images_general/UCL_Logo_Landscape_2C_DarkPurple_RGB.png" alt="UCL Logo" class="exp-logo">
-                            <span class="mono-label">January 2025 – Present</span>
-                        </div>
-                    </div>
-                    
-                    <div class="mt-6 body-p">
-                        <p class="mb-4">
-                            My role at UCL's Rover Team has been ongoing since January 2025, and has seen significiant added responsibilties. I started as a controls engineer for the team, working on firmware for the rover's remote control system. As my second year at the team began, this advanced to more complex algorithms, mainly developed in Python and Simulink to provide autonomy for our Rover's mobile drone platform. Most recently, I have been selected to lead the Technical side of the entire team from the 2026/27 academic year.
+                        <p class="body-p mb-6" style="color: var(--muted); font-size: 14px; line-height: 1.6;">
+                            Leading technical architecture for UCL's Rover Team. Programmed autonomous vision tracking algorithms and Simulink drone flight controllers.
                         </p>
-                        <ul class="bullet-list">
-                            <li class="bullet-item">Led the development of the drone's autonomous navigation features, and selected to transition into the overall <strong>Team Technical Lead</strong> role for the upcoming academic year.</li>
-                            <li class="bullet-item">Programmed an edge-computing vision pipeline in Python and OpenCV on a Raspberry Pi to track ArUco markers in real-time.</li>
-                            <li class="bullet-item">Established a robust UDP telemetry link to stream positional coordinate data seamlessly from the edge device to a high-level MATLAB/Simulink control model.</li>
-                            <li class="bullet-item">Interfaced the Simulink control architecture directly with an Aero Selfie H743 flight controller to achieve an autonomous, end-to-end vision-to-flight pipeline.</li>
-                        </ul>
                     </div>
-                    
-                    <!-- Increased vertical space before skills used -->
-                    <div class="exp-skills-row">
-                        <span class="mono-label mr-2">SKILLS USED:</span>
+                    <div class="exp-skills-row" style="margin-top: 0; padding-top: 16px; border-top: 1px solid var(--line);">
                         <span class="pill-chip">Python</span>
-                        <span class="pill-chip">MATLAB</span>
                         <span class="pill-chip">Simulink</span>
+                        <span class="pill-chip">OpenCV</span>
                     </div>
                 </div>
             </div>
 
+            <div class="flex justify-center reveal delay-3">
+                <a href="experience.html" class="btn-solid">View Detailed Experience <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
         </div>
     </section>
 
     <!-- 03 — SELECTED WORK Section -->
-    <section class="section-bleed" id="work">
+    <section class="section-bleed section-alt" id="work">
         <div class="page-container">
-            <div class="mb-12 border-b pb-6 flex justify-between items-end flex-wrap gap-4">
+            <div class="mb-12 border-b pb-6 flex justify-between items-end flex-wrap gap-4 reveal">
                 <div>
                     <div class="mono-accent mb-2">SECTION 03</div>
                     <h2 class="section-title-h2">Selected Work & Projects</h2>
@@ -223,74 +167,109 @@
                 <div class="mono-label">2023 — 2026</div>
             </div>
             
-            <div class="work-list">
+            <div class="project-card-grid">
                 <!-- Project 1 -->
-                <a href="projects/digital-sign-in-kiosk.html" class="work-row">
-                    <div class="work-num">001</div>
-                    <div>
-                        <div class="work-title">Digital Sign-In & Locker Kiosk</div>
-                        <div class="work-meta">Industrial Cadets Gold Project (2022-23) · C++ · Python · Fusion 360</div>
+                <a href="projects/digital-sign-in-kiosk.html" class="project-card reveal delay-1">
+                    <div class="project-card-img-wrap">
+                        <img src="images_kiosk/kiosk-cad-render-processed.png" alt="Digital Sign-In & Locker Kiosk">
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="images_kiosk/kiosk-cad-render-processed.png" class="work-row-thumb" alt="Kiosk CAD model">
-                        <span class="work-link-label mono-label">Click to see more</span>
-                        <div class="work-arrow">→</div>
+                    <div class="project-card-body">
+                        <div class="project-card-header">
+                            <h3 class="project-card-title">Digital Sign-In & Locker Kiosk</h3>
+                            <span class="project-card-date">2022 — 2023</span>
+                        </div>
+                        <p class="project-card-desc">
+                            Industrial Cadets Gold Project — Automated sign-in and locker control kiosk.
+                        </p>
+                    </div>
+                    <div class="project-card-skills-bar pastel-terracotta">
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">Python</span>
+                        <span class="pill-chip">Fusion 360</span>
                     </div>
                 </a>
 
                 <!-- Project 2 -->
-                <a href="projects/desktop-multimeter.html" class="work-row">
-                    <div class="work-num">002</div>
-                    <div>
-                        <div class="work-title">Electronics Prototyping Station</div>
-                        <div class="work-meta">A level Project (2023-24) · C++ · EasyEDA · Fusion 360</div>
+                <a href="projects/desktop-multimeter.html" class="project-card reveal delay-1">
+                    <div class="project-card-img-wrap">
+                        <img src="images_NEA/extracted_293_processed.png" alt="Electronics Prototyping Station">
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="images_NEA/extracted_293_processed.png" class="work-row-thumb" alt="Prototyping Station CAD model">
-                        <span class="work-link-label mono-label">Click to see more</span>
-                        <div class="work-arrow">→</div>
+                    <div class="project-card-body">
+                        <div class="project-card-header">
+                            <h3 class="project-card-title">Electronics Prototyping Station</h3>
+                            <span class="project-card-date">2023 — 2024</span>
+                        </div>
+                        <p class="project-card-desc">
+                            A-Level Electronics Project — Multi-function benchtop metering & power device.
+                        </p>
+                    </div>
+                    <div class="project-card-skills-bar pastel-sage">
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">EasyEDA</span>
+                        <span class="pill-chip">Fusion 360</span>
                     </div>
                 </a>
 
                 <!-- Project 3 -->
-                <a href="projects/imeche-rover.html" class="work-row">
-                    <div class="work-num">003</div>
-                    <div>
-                        <div class="work-title">Analog Robotic Device</div>
-                        <div class="work-meta">IMechE Design Challenge (2025) · EasyEDA · Fusion 360 · PCB Assembly</div>
+                <a href="projects/imeche-rover.html" class="project-card reveal delay-2">
+                    <div class="project-card-img-wrap">
+                        <img src="images_imeche/CAD Render_processed.png" alt="Analog Robotic Device">
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="images_imeche/CAD Render_processed.png" class="work-row-thumb" alt="Rover CAD model">
-                        <span class="work-link-label mono-label">Click to see more</span>
-                        <div class="work-arrow">→</div>
+                    <div class="project-card-body">
+                        <div class="project-card-header">
+                            <h3 class="project-card-title">Analog Robotic Device</h3>
+                            <span class="project-card-date">2025</span>
+                        </div>
+                        <p class="project-card-desc">
+                            IMechE Design Challenge — Autonomous wall-climbing & obstacle navigating device.
+                        </p>
+                    </div>
+                    <div class="project-card-skills-bar pastel-sandstone">
+                        <span class="pill-chip">EasyEDA</span>
+                        <span class="pill-chip">Fusion 360</span>
+                        <span class="pill-chip">PCB Assembly</span>
                     </div>
                 </a>
 
                 <!-- Project 4 -->
-                <a href="projects/smart-pet-feeder.html" class="work-row">
-                    <div class="work-num">004</div>
-                    <div>
-                        <div class="work-title">IoT Integrated Pet Feeder</div>
-                        <div class="work-meta">Open-source design project (2025-26) · C++ · IoT / Bluetooth</div>
+                <a href="projects/smart-pet-feeder.html" class="project-card reveal delay-2">
+                    <div class="project-card-img-wrap">
+                        <img src="images_pet_feeder/extracted_1_processed.png" alt="IoT Integrated Pet Feeder">
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="images_pet_feeder/extracted_1_processed.png" class="work-row-thumb" alt="Pet Feeder CAD model">
-                        <span class="work-link-label mono-label">Click to see more</span>
-                        <div class="work-arrow">→</div>
+                    <div class="project-card-body">
+                        <div class="project-card-header">
+                            <h3 class="project-card-title">IoT Integrated Pet Feeder</h3>
+                            <span class="project-card-date">2025 — 2026</span>
+                        </div>
+                        <p class="project-card-desc">
+                            Open-source Design Project — BLE & Wi-Fi scheduled pet food dispensing system.
+                        </p>
+                    </div>
+                    <div class="project-card-skills-bar pastel-slate">
+                        <span class="pill-chip">C++</span>
+                        <span class="pill-chip">IoT</span>
+                        <span class="pill-chip">Bluetooth</span>
                     </div>
                 </a>
 
                 <!-- Project 5 -->
-                <a href="projects/drone-flight-system.html" class="work-row">
-                    <div class="work-num">005</div>
-                    <div>
-                        <div class="work-title">Drone Flight Control System</div>
-                        <div class="work-meta">UCL Rover Team (Ongoing) · Python · MATLAB · Simulink</div>
+                <a href="projects/drone-flight-system.html" class="project-card reveal delay-3">
+                    <div class="project-card-img-wrap">
+                        <img src="images_UCLR/Simulink Top Level Diagram_processed.png" alt="Drone Flight Control System">
                     </div>
-                    <div class="flex items-center gap-4">
-                        <img src="images_UCLR/Simulink Top Level Diagram_processed.png" class="work-row-thumb" alt="Drone Simulink diagram">
-                        <span class="work-link-label mono-label">Click to see more</span>
-                        <div class="work-arrow">→</div>
+                    <div class="project-card-body">
+                        <div class="project-card-header">
+                            <h3 class="project-card-title">Drone Flight Control System</h3>
+                            <span class="project-card-date">Ongoing</span>
+                        </div>
+                        <p class="project-card-desc">
+                            UCL Rover Team — Edge vision marker tracking & Simulink flight control pipeline.
+                        </p>
+                    </div>
+                    <div class="project-card-skills-bar pastel-clay">
+                        <span class="pill-chip">Python</span>
+                        <span class="pill-chip">MATLAB</span>
+                        <span class="pill-chip">Simulink</span>
                     </div>
                 </a>
             </div>
@@ -300,7 +279,7 @@
     <!-- 04 — SKILLS & TOOLS Section -->
     <section class="section-bleed" id="skills">
         <div class="page-container">
-            <div class="mb-12 border-b pb-6">
+            <div class="mb-12 border-b pb-6 reveal">
                 <div class="mono-accent mb-2">SECTION 04</div>
                 <h2 class="section-title-h2">Skills & Tools</h2>
             </div>
@@ -308,11 +287,11 @@
             <!-- Categorized Skills Grid matching page background color -->
             <div class="grid-3col">
                 <!-- Programming Languages -->
-                <div class="skills-box">
-                    <div class="mono-accent mb-6">
+                <div class="skills-box reveal delay-1">
+                    <h3 class="skills-box-title">
                         Programming Languages
-                    </div>
-                    <div class="flex flex-wrap gap-3">
+                    </h3>
+                    <div class="skills-box-chips">
                         <span class="pill-chip">MATLAB</span>
                         <span class="pill-chip">C++</span>
                         <span class="pill-chip">Python</span>
@@ -320,11 +299,11 @@
                 </div>
 
                 <!-- Software & Tools -->
-                <div class="skills-box">
-                    <div class="mono-accent mb-6">
+                <div class="skills-box reveal delay-2">
+                    <h3 class="skills-box-title">
                         Software & Tools
-                    </div>
-                    <div class="flex flex-wrap gap-3">
+                    </h3>
+                    <div class="skills-box-chips">
                         <span class="pill-chip">Simulink</span>
                         <span class="pill-chip">Fusion 360</span>
                         <span class="pill-chip">EasyEDA</span>
@@ -334,14 +313,14 @@
                 </div>
 
                 <!-- Manufacturing -->
-                <div class="skills-box">
-                    <div class="mono-accent mb-6">
+                <div class="skills-box reveal delay-3">
+                    <h3 class="skills-box-title">
                         Manufacturing & Hardware
-                    </div>
-                    <div class="flex flex-wrap gap-3">
-                        <span class="pill-chip">PCB Assembly & Soldering</span>
-                        <span class="pill-chip">3D Printing / Rapid Manufacturing</span>
-                        <span class="pill-chip">Workshop Equipment</span>
+                    </h3>
+                    <div class="skills-box-chips">
+                        <span class="pill-chip">PCB Assembly</span>
+                        <span class="pill-chip">3D Printing</span>
+                        <span class="pill-chip">Workshop Tools</span>
                     </div>
                 </div>
             </div>
@@ -351,7 +330,7 @@
     <!-- 05 — CONTACT Section -->
     <section class="section-bleed" id="contact">
         <div class="page-container">
-            <div class="contact-block">
+            <div class="contact-block reveal">
                 <div>
                     <div class="mono-accent mb-4" style="color: #FF6B4A;">SECTION 05 · CONTACT</div>
                     <h2 class="hero-h1 mb-6" style="color: var(--paper);">Check out my socials!</h2>
@@ -380,10 +359,32 @@
         <div class="page-container">
             <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
                 <span>© 2026 AMIT CHANDRAN</span>
-                <span>V2.25 - Last Edited: 13/07/26</span>
+                <span>V3.00 - Last Edited: 05/08/26</span>
             </div>
         </div>
     </footer>
+
+    <!-- Scroll Reveal Observer Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px 0px -30px 0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('active');
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 
 </body>
 </html>

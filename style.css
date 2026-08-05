@@ -360,11 +360,49 @@ img {
   border-top: 1px solid var(--line);
 }
 
-/* Skills & Tools Background Matching Page Background */
+/* Skills & Tools Boxes (Short & Compact, matching Experience Cards) */
 .skills-box {
-  padding: clamp(17px, 2.5vw, 24px);
+  padding: 20px;
   border: 1px solid var(--line);
-  background-color: var(--paper); /* Matches page background exactly */
+  border-radius: 14px;
+  background-color: #D8D0BE; /* Matches Experience card background (#D8D0BE) */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-box:hover {
+  transform: translateY(-3px);
+  border-color: rgba(23, 21, 15, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+.skills-box-title {
+  font-family: var(--font-headline);
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--ink);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.skills-box-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  width: 100%;
+}
+
+.skills-box .pill-chip {
+  background-color: rgba(255, 255, 255, 0.65);
+  border: 1px solid rgba(23, 21, 15, 0.14);
+  font-size: 11.5px;
+  padding: 4px 10px;
+  font-weight: 600;
 }
 
 /* ==========================================================================
@@ -844,5 +882,194 @@ img {
 .profile-photo-container:hover .caption-banner {
   transform: translateY(0);
   opacity: 1;
+}
+
+/* Scroll Reveal Animations (elibanchik style) */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.delay-1 { transition-delay: 100ms; }
+.delay-2 { transition-delay: 200ms; }
+.delay-3 { transition-delay: 300ms; }
+.delay-4 { transition-delay: 400ms; }
+
+/* Alternating Section Background Hue (subtle & noticeable) */
+.section-alt {
+  background-color: #D5CBB7;
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+}
+
+/* Prominent Sticky Top Navigation Header */
+.top-nav-bar {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(221, 213, 195, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+  padding: 12px var(--pad-x);
+}
+
+.nav-brand {
+  font-weight: 700;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Featured Project Cards Grid (elibanchik card design style) */
+.project-card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+  gap: 24px;
+  margin-top: 32px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(23, 21, 15, 0.3);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.project-card-img-wrap {
+  aspect-ratio: 16 / 10;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #D5CBB7;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+  overflow: hidden;
+}
+
+.project-card-img-wrap img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:hover .project-card-img-wrap img {
+  transform: scale(1.06);
+}
+
+.project-card-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.project-card-header {
+  margin-bottom: 10px;
+}
+
+.project-card-title {
+  font-family: var(--font-headline);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.25;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.project-card-desc {
+  font-family: var(--font-sans);
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+/* Dedicated Light Pastel Skills Bar across Card Bottom */
+.project-card-skills-bar {
+  padding: 14px 20px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+  white-space: nowrap;
+  overflow-x: hidden;
+}
+
+.project-card-skills-bar .pill-chip {
+  font-size: 11px;
+  font-weight: 600;
+  padding: 4px 10px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  background-color: rgba(255, 255, 255, 0.88);
+  border: 1px solid rgba(23, 21, 15, 0.12);
+  color: var(--ink);
+}
+
+/* Warm-toned solid muted pastel hues harmonized with stone paper */
+.pastel-terracotta { background-color: #EAD5C3; }
+.pastel-sage       { background-color: #D2DBC9; }
+.pastel-sandstone  { background-color: #E6D8BA; }
+.pastel-slate      { background-color: #CCD5DC; }
+.pastel-clay       { background-color: #E5D3CD; }
+
+/* Experience Cards with ultra-subtle, soft warm contrast */
+.exp-card {
+  background-color: #D8D0BE; /* Soft, subtle warm stone tone (~2% deeper than #DDD5C3, zero brightness/glare) */
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.exp-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(23, 21, 15, 0.3);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.04);
+}
+
+/* Prominent Date Label in Project Cards */
+.project-card-date {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--accent);
+  margin-top: 4px;
 }
 
