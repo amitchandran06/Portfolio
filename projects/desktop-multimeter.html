@@ -3,208 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desktop Multimeter — Amit Chandran Portfolio</title>
-    
-    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <title>Electronics Prototyping Station — Amit Chandran</title>
+    <meta name="description" content="Electronics Prototyping Station — project case study by Amit Chandran.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.26">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=4.0">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Mobile Warning Banner -->
-    <div class="mobile-warning-banner" id="mobile-banner">
-        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
-            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
-            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+    <header class="nav">
+        <div class="wrap nav-in">
+            <a class="nav-brand" href="../index.html">AMIT CHANDRAN / PORTFOLIO</a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../experience.html">Experience</a>
+                <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="nav-cv" href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" target="_blank" rel="noopener">View CV ↗</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Case Study Header -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
-            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
-            <div class="mono-accent mb-4">PROJECT 002 · ELECTRONICS & EMBEDDED SYSTEMS</div>
-            <h1 class="hero-h1 mb-6">Electronics Prototyping Station</h1>
-            <p class="lead-p mb-8" style="max-width: 100%;">
-                A-level Project (2023/24) — A comprehensive user-oriented design, integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station. 
-            </p>
-            
-            <!-- Meta Grid -->
-            <div class="meta-grid">
-                <div>
-                    <div class="mono-label mb-1">ROLE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">End-to-end Design</div>
+    <main id="main">
+        <section class="page-top">
+            <div class="wrap">
+                <div class="frame">
+                    <div class="case-strip">
+                        <span class="mono mono-accent">Project 2 · Electronics &amp; Embedded Systems</span>
+                        <a class="mono" href="../index.html#work">← Back to work</a>
+                    </div>
+                    <div class="page-head">
+                        <h1 class="case-title">Electronics Prototyping Station</h1>
+                        <p class="case-lead">A-level Project (2023/24) — A comprehensive user-oriented design, integrating an Arduino MEGA, custom PCB, and 3D printed DFMA enclosure into an all-in-one testing station.</p>
+                <div class="btn-row">
+                    <a class="btn" href="../images_NEA/Electronics Project 2024.pdf" target="_blank" rel="noopener">View NEA Document (226 Pages) ↗</a>
                 </div>
-                <div>
-                    <div class="mono-label mb-1">TIMELINE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">2023 - 2024</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">STACK</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">C++ · EasyEDA · Fusion 360</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">OUTCOME</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">Fully functional, to scale prototype</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
-        <div class="page-container">
-            <img src="../images_NEA/extracted_205.png" alt="Final PCB Layout" class="case-hero-img" onclick="window.open(this.src, '_blank')">
-        </div>
-    </div>
-
-    <!-- Case Study Content -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
-            
-            <!-- 01 — THE BRIEF -->
-            <div class="grid-brief pb-16 border-b">
-                <div class="mono-label">01 — THE BRIEF</div>
-                <div>
-                    <p class="body-p mb-4">
-                        This was an open design project, with the only goals being to develop a unique product, that would solve a real-world problem for a tangible target market and end user. Much of early stages of the project was spent analysing the market and identifying a problem that could be solved within the scope of the time and budget. 
-                    </p>
-                   
-                    <div class="pt-4">
-                        <a href="../images_NEA/Electronics Project 2024.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
-                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View NEA Document (226 Pages) ↗
-                        </a>
+                    </div>
+                    <div class="title-block" style="--cols: 4">
+                    <div><div class="mono">Role</div><div class="val">End-to-end Design</div></div>
+                    <div><div class="mono">Timeline</div><div class="val">2023 - 2024</div></div>
+                    <div><div class="mono">Stack</div><div class="val">C++ · EasyEDA · Fusion 360</div></div>
+                    <div><div class="mono">Outcome</div><div class="val">Fully functional, to scale prototype</div></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 02 — DESIGN PHILOSOPHY -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
-                <div>
-                    <p class="body-p mb-4">
-                        Being an avid hobbyist in DIY electronics, one of the first things that came to mind was just how complex and uninuitive the process of DIYing can be for beginners. It was hardly a welcoming space, and with IoT and consumer AI taking off, it was a time where DIY IoT was gaining more traction than ever. This led me to developing what I called : The Electronics Prototyping Station. An 'All-in-one' product that would allow user to easily test and develop their own hobby level circuits, aiming at the very avid but amateur audience. 
-                    </p>
+                <div class="stage case-hero">
+                    <img src="../images_NEA/extracted_205.png" alt="Final PCB Layout">
                 </div>
             </div>
+        </section>
 
-            <!-- 03 — TECHNICAL DEPTH & ACHIEVEMENTS -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
-                <div>
-                    <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Custom PCB Architecture:</strong> The development of the electornics followed a systems engineering 'V' model. With subsystems (each measurement mode) being developed individually and verified. Then after fine tuning each sub-system, I moved onto integrating each one into one unified system. This would involve converting breadboard designs into a PCB layout</li>
-                        <li class="bullet-item"><strong>Onboard UI:</strong> Having been powered by a microcontroller, the onboard UI was very simple. It feature a 128x128 1.8inch TFT display. This allowed for simple but intutive UIs for each mode, including a graphing mode for voltage which I developed from scratch (see PDF for details). Modes were changed via the use of simple SPST buttons, which then triggered hardware interrupts in the program, as to not disrupt the logic.</li>
-                        <li class="bullet-item"><strong> Autoranging Measurements </strong> One of the best feature of this product was its auto-ranging feature. Unlike many entry level multimeters, my product was capable automatically adjusting the measurement range. Allowing for accurate readings across 3-9 orders of magnitude depending on the mode. This included measurements of capactiance, which most entry-level multimeters omit completely. 
-                            The circuit made use of the exponential curve that capacitor charge sequences follow, allowing the program to choose <strong> different resistors </strong> to charge through. This ensured the charge time for the capacitor was in the range of maximum resolution for the Arduino, providing more accurate results </li>
-                        <li class="bullet-item"><strong>DfMA Principles and User-friendliness:</strong> One of the core principles for the design was for it to be beginner friendly. This meant ensuring that assembly was intutive and did not require advanced tools. The operation of the product was also to be simple, using minimal proprietary components as possible. To ensure this, I designed the enclosure to only feature one screw size, and slots where possible. This allowed for the station to be highly modular, with components easily able to be hot-swapped to specific needs. The station also featured USB ports for powering your own circuits, as well as USB C power to be as universal as possible.</li>
-                    </ul>
+        <div class="wrap doc">
+            <nav class="toc" aria-label="On this page">
+                <a href="#brief">01 Brief</a>
+                <a href="#philosophy">02 Design philosophy</a>
+                <a href="#technical">03 Technical depth</a>
+                <a href="#outcome">04 Outcome</a>
+                <a href="#media">05 Media</a>
+            </nav>
+            <div>
+                <section id="brief" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">01</span>The Brief</h2>
+                    <p>This was an open design project, with the only goals being to develop a unique product, that would solve a real-world problem for a tangible target market and end user. Much of early stages of the project was spent analysing the market and identifying a problem that could be solved within the scope of the time and budget.</p>
+                </section>
 
-                    <!-- Skills Used Chips -->
-                    <div class="project-skills-row flex-wrap gap-2">
-                        <span class="mono-label mr-2">SKILLS USED:</span>
-                        <span class="pill-chip">C++</span>
-                        <span class="pill-chip">EasyEDA</span>
-                        <span class="pill-chip">Fusion 360</span>
-                        <span class="pill-chip">PCB Assembly & Soldering</span>
-                        <span class="pill-chip">3D Printing / Rapid Manufacturing</span>
-                        <span class="pill-chip">Workshop Equipment</span>
+                <section id="philosophy" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">02</span>Design Philosophy</h2>
+                    <p>Being an avid hobbyist in DIY electronics, one of the first things that came to mind was just how complex and unintuitive the process of DIYing can be for beginners. It was hardly a welcoming space, and with IoT and consumer AI taking off, it was a time where DIY IoT was gaining more traction than ever. This led me to developing what I called : The Electronics Prototyping Station. An 'All-in-one' product that would allow user to easily test and develop their own hobby level circuits, aiming at the very avid but amateur audience.</p>
+                </section>
+
+                <section id="technical" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">03</span>Technical Depth &amp; Achievements</h2>
+                    <div class="points">
+                        <div><span class="mono">a</span><div><strong>Custom PCB Architecture</strong>The development of the electronics followed a systems engineering 'V' model. With subsystems (each measurement mode) being developed individually and verified. Then after fine tuning each sub-system, I moved onto integrating each one into one unified system. This would involve converting breadboard designs into a PCB layout</div></div>
+                        <div><span class="mono">b</span><div><strong>Onboard UI</strong>Having been powered by a microcontroller, the onboard UI was very simple. It feature a 128x128 1.8inch TFT display. This allowed for simple but intuitive UIs for each mode, including a graphing mode for voltage which I developed from scratch (see PDF for details). Modes were changed via the use of simple SPST buttons, which then triggered hardware interrupts in the program, as to not disrupt the logic.</div></div>
+                        <div><span class="mono">c</span><div><strong>Autoranging Measurements</strong>One of the best feature of this product was its auto-ranging feature. Unlike many entry level multimeters, my product was capable automatically adjusting the measurement range. Allowing for accurate readings across 3-9 orders of magnitude depending on the mode. This included measurements of capacitance, which most entry-level multimeters omit completely. The circuit made use of the exponential curve that capacitor charge sequences follow, allowing the program to choose <strong>different resistors</strong> to charge through. This ensured the charge time for the capacitor was in the range of maximum resolution for the Arduino, providing more accurate results</div></div>
+                        <div><span class="mono">d</span><div><strong>DfMA Principles and User-friendliness</strong>One of the core principles for the design was for it to be beginner friendly. This meant ensuring that assembly was intuitive and did not require advanced tools. The operation of the product was also to be simple, using minimal proprietary components as possible. To ensure this, I designed the enclosure to only feature one screw size, and slots where possible. This allowed for the station to be highly modular, with components easily able to be hot-swapped to specific needs. The station also featured USB ports for powering your own circuits, as well as USB C power to be as universal as possible.</div></div>
+                    </div>
+                    <div class="skills-used">
+                        <span class="mono">Skills used</span>
+                        <span class="tag">C++</span><span class="tag">EasyEDA</span><span class="tag">Fusion 360</span><span class="tag">PCB Assembly &amp; Soldering</span><span class="tag">3D Printing / Rapid Manufacturing</span><span class="tag">Workshop Equipment</span>
+                    </div>
+                </section>
+
+                <section id="outcome" class="outcome">
+                    <div class="outcome-stats">
+                        <div><div class="num">100/100</div><div class="mono">Final mark</div></div>
+                        <div><div class="num">5 modes</div><div class="mono">V · R · C · I · Continuity</div></div>
+                    </div>
+                    <div class="outcome-text">
+                        <div class="mono">04 — Outcome</div>
+                        <p>Delivered a fully functional, high-accuracy desktop testing station with accurate measurement capabilities for : Voltage, Resistance , Capacitance, Current and Continuity. Successfully satisfied vast majority end user requirements, scoring 100/100.</p>
+                    </div>
+                </section>
+
+                <section id="media">
+                    <h2 class="block-title"><span class="mono mono-accent">05</span>Project Resources &amp; Media</h2>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-stage stage">
+                        <img src="../images_NEA/extracted_196.png" alt="Final Circuit Schematic">
+                        <button class="carousel-btn prev" type="button" aria-label="Previous image">←</button>
+                        <button class="carousel-btn next" type="button" aria-label="Next image">→</button>
+                    </div>
+                    <div class="carousel-bar">
+                        <span class="mono carousel-count">01 / 04</span>
+                        <span class="carousel-cap">Final Circuit Schematic</span>
+                        <a class="mono carousel-full" href="../images_NEA/extracted_196.png" target="_blank" rel="noopener">Full size ↗</a>
+                    </div>
+                    <div class="carousel-thumbs">
+                        <button class="carousel-thumb is-current" type="button" data-src="../images_NEA/extracted_196.png" data-caption="Final Circuit Schematic" aria-label="Show image 1: Final Circuit Schematic" aria-current="true"><img src="../images_NEA/extracted_196.png" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_NEA/extracted_206.jpeg" data-caption="3D PCB Render in EasyEDA" aria-label="Show image 2: 3D PCB Render in EasyEDA" aria-current="false"><img src="../images_NEA/extracted_206.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_NEA/extracted_293.jpeg" data-caption="Full Enclosure Assembly in Fusion360" aria-label="Show image 3: Full Enclosure Assembly in Fusion360" aria-current="false"><img src="../images_NEA/extracted_293.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_NEA/extracted_394.jpeg" data-caption="Full Prototype Assembly" aria-label="Show image 4: Full Prototype Assembly" aria-current="false"><img src="../images_NEA/extracted_394.jpeg" alt="" loading="lazy"></button>
                     </div>
                 </div>
-            </div>
+                </section>
 
-            <!-- 04 — OUTCOME -->
-            <div class="py-16 border-b">
-                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
-                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        Delivered a fully functional, high-accuracy desktop testing station with accurate measurement capabilites for : Voltage, Resistance , Capacitance, Current and Continuity. Succesfully satisfied vast majority end user requirements, scoring 100/100.
-                    </p>
-                </div>
+                <nav class="pager" aria-label="More projects">
+                    <a href="digital-sign-in-kiosk.html"><div class="mono">← Previous · Project 1</div><div class="name">Digital Sign-In &amp; Locker Kiosk</div></a>
+                    <a class="next" href="imeche-rover.html"><div class="mono">Next · Project 3 →</div><div class="name">Analog Robotic Device</div></a>
+                </nav>
             </div>
-
-            <!-- 05 — PROJECT RESOURCES & MEDIA -->
-            <div class="py-16 border-b">
-                <div class="mono-label mb-6">05 — PROJECT RESOURCES & MEDIA</div>
-                
-                <div class="slider-container" id="media-slider">
-                    <div class="slider-slides">
-                        <div class="slide active">
-                            <img src="../images_NEA/extracted_196.png" alt="Final Circuit Schematic">
-                            <div class="caption-banner">Final Circuit Schematic</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_NEA/extracted_206.jpeg" alt="3D PCB Render in EasyEDA">
-                            <div class="caption-banner">3D PCB Render in EasyEDA</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_NEA/extracted_293.jpeg" alt="Full Enclosure Assembly in Fusion360">
-                            <div class="caption-banner">Full Enclosure Assembly in Fusion360</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_NEA/extracted_394.jpeg" alt="Full Prototype Assembly">
-                            <div class="caption-banner">Full Prototype Assembly</div>
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
-                        <button class="slider-btn next" aria-label="Next Slide">→</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Centered Bottom Navigation -->
-            <div class="project-nav-row">
-                <a href="../index.html#work" class="btn-solid">← All projects</a>
-                <a href="digital-sign-in-kiosk.html" class="pill-btn">← Previous: Digital Sign-In & Kiosk</a>
-                <a href="imeche-rover.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Analog Robotic Device →</a>
-            </div>
-
+            <div class="doc-spacer" aria-hidden="true"></div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
-        <div class="page-container">
-            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <span>© 2026 AMIT CHANDRAN</span>
-                <span>V3.1 - Last Edited: 22/09/26</span>
-            </div>
+    <footer class="wrap">
+        <div class="footer mono footer-rule">
+            <span>© 2026 Amit Chandran</span>
+            <span>Rev. 4.0 · Last edited 22/10/26</span>
         </div>
     </footer>
-
-    <script>
-    function initSlider(sliderId) {
-        const container = document.getElementById(sliderId);
-        if (!container) return;
-        const slides = container.querySelectorAll('.slide');
-        const prevBtn = container.querySelector('.slider-btn.prev');
-        const nextBtn = container.querySelector('.slider-btn.next');
-        let current = 0;
-        
-        function showSlide(index) {
-            slides.forEach((s, i) => {
-                s.classList.toggle('active', i === index);
-            });
-        }
-        
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-                current = (current - 1 + slides.length) % slides.length;
-                showSlide(current);
-            });
-            nextBtn.addEventListener('click', () => {
-                current = (current + 1) % slides.length;
-                showSlide(current);
-            });
-        }
-    }
-    initSlider('media-slider');
-    </script>
+    <script src="../script.js?v=4.0"></script>
 </body>
 </html>

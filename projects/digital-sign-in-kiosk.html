@@ -3,219 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digital Sign-In & Locker Kiosk — Amit Chandran Portfolio</title>
-    
-    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <title>Digital Sign-In & Locker Kiosk — Amit Chandran</title>
+    <meta name="description" content="Digital Sign-In & Locker Kiosk — project case study by Amit Chandran.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.26">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=4.0">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Mobile Warning Banner -->
-    <div class="mobile-warning-banner" id="mobile-banner">
-        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
-            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
-            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+    <header class="nav">
+        <div class="wrap nav-in">
+            <a class="nav-brand" href="../index.html">AMIT CHANDRAN / PORTFOLIO</a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../experience.html">Experience</a>
+                <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="nav-cv" href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" target="_blank" rel="noopener">View CV ↗</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Case Study Header -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
-            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
-            <div class="mono-accent mb-4">PROJECT 001 · MECHATRONICS & SYSTEMS INTEGRATION</div>
-            <h1 class="hero-h1 mb-6">Digital Sign-In & Locker Kiosk</h1>
-            <p class="lead-p mb-8" style="max-width: 100%;">
-                Industrial Cadets Gold Award (2022/23) — A smart, modular safety kiosk featuring automatic locker locking, LED occupancy status, and an interactive touchscreen program.
-            </p>
-            
-            <!-- Meta Grid -->
-            <div class="meta-grid">
-                <div>
-                    <div class="mono-label mb-1">ROLE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">Mechatronics & Systems</div>
+    <main id="main">
+        <section class="page-top">
+            <div class="wrap">
+                <div class="frame">
+                    <div class="case-strip">
+                        <span class="mono mono-accent">Project 1 · Mechatronics &amp; Systems Integration</span>
+                        <a class="mono" href="../index.html#work">← Back to work</a>
+                    </div>
+                    <div class="page-head">
+                        <h1 class="case-title">Digital Sign-In &amp; Locker Kiosk</h1>
+                        <p class="case-lead">Industrial Cadets Gold Award (2022/23) — A smart, modular safety kiosk featuring automatic locker locking, LED occupancy status, and an interactive touchscreen program.</p>
+                <div class="btn-row">
+                    <a class="btn" href="../images_kiosk/Severn Trent IC Gold DSEAR Final Report.pdf" target="_blank" rel="noopener">View Full Report PDF ↗</a>
                 </div>
-                <div>
-                    <div class="mono-label mb-1">TIMELINE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">2022 - 2023</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">STACK</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">C++ · Python · Fusion 360</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">OUTCOME</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">3D Printed Operational Prototype</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
-        <div class="page-container">
-            <img src="../images_kiosk/kiosk-hero.png" alt="Completed Physical Prototype Kiosk" class="case-hero-img" onclick="window.open(this.src, '_blank')">
-        </div>
-    </div>
-
-    <!-- Case Study Content -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
-            
-            <!-- 01 — THE BRIEF -->
-            <div class="grid-brief pb-16 border-b">
-                <div class="mono-label">01 — THE BRIEF</div>
-                <div>
-                    <p class="body-p mb-4">
-                        As part of the industrial cadets award, our team of 6 were tasked with designing a digital replacement for existing paper-based sign in systems at Severn Trent Water treatment plants. The brief highlighted key customer requirements (see full report below),
-                        including storage for ignition hazards as well as a 3D site information. The company also requested the ability to log employee and contractor sign-in via an inbuilt digital database.
-                    </p>
-                    <div class="pt-4">
-                        <a href="../images_kiosk/Severn Trent IC Gold DSEAR Final Report.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
-                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Full Report PDF ↗
-                        </a>
+                    </div>
+                    <div class="title-block" style="--cols: 4">
+                    <div><div class="mono">Role</div><div class="val">Mechatronics &amp; Systems</div></div>
+                    <div><div class="mono">Timeline</div><div class="val">2022 - 2023</div></div>
+                    <div><div class="mono">Stack</div><div class="val">C++ · Python · Fusion 360</div></div>
+                    <div><div class="mono">Outcome</div><div class="val">3D Printed Operational Prototype</div></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 02 — DESIGN PHILOSOPHY -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
-                <div>
-                    <p class="body-p mb-4">
-                        When drafting our ideas for the prototype, we chose to split the project into three components: The enclosure, the electronics, and the software. A key design principle was modularity and DfMA (Design for Manufacturing and Assembly), which would feature throughout the enclosure design. Every component of the enclosure was to be assembled with minimal permanent fasteners, instead focusing on slots grooves and screws.
-                    </p>
-                    <p class="body-p mb-4">
-                        In terms of the software and microcontroller framework, we opted for a 2 fronted approach. The front end would be written in Python (using Kivy for GUI), providing users with a simple but aesthetic GUI to convey key info. This program would also perform all the high level logic (such as file handling) and locker reservation. However, control over the physical components (LEDs and Servos) would be done through a microcontroller
-                        (Arduino Mega) to ensure there were enough GPIO pins and most importantly PWM control for servos. The front end would then transmit instructions to the microcontroller when specific actions were needed to reflect user requests.
-                    </p>
+                <div class="stage case-hero">
+                    <img src="../images_kiosk/kiosk-hero.png" alt="Completed Physical Prototype Kiosk">
                 </div>
             </div>
+        </section>
 
-            <!-- 03 — TECHNICAL DEPTH & ACHIEVEMENTS -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
-                <div>
-                    <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Firmware Development:</strong> I was solely respomnsible for the development of the C++ firmware on an Arduino Mega 2560 to control locker servos, RGB status LEDs, and LDR light sensing. Whilst the arduino directly interfaced with electronics, instructions for when certain actions were to be executed came from the front-end, hosted on the Raspberry Pi. 
-                            To communicate between the two, I programmed Serial parsing logic to decode incoming instructions from the Raspberry Pi via USB.</li>
-                        <li class="bullet-item"><strong>Kivy-Arduino Serial Integration:</strong> The frontend was developed in Kivy (a Python framework). Users of the kiosk would interact with the program via a 7 inch touch screen. Allowing them to verify their indentity and select a locker to store their items. 
-                            My specific role was to find a way to communicate between the front and backend of the system. Several options, both wireless and wired were explored, I eventually settled on using serial over USB. The data exchange protocol settled on is based of a simple 2-3 integer code system. With each digit representing a specific locker, action and state This enabled us to easily control actions for all 4 lockers and indicator LEDs in a manner that was efficient as well as intutive to decode for debugging</li>
-                        <li class="bullet-item"><strong>Modular CAD Design:</strong> The physical design for the kiosk was modelled from the ground up to be easily manufactured and assembled (using Fusion360). Slots and grooves were used for structural stacking, dedicated cavities for servo and LED integration, and tolerance cutouts for USB charging ports. This allowed
-                        Severn Trent to modify the kiosk design to fit the needs of each local site. It also allowed for the hot swappability of components that need to replaced without disrupting daily operation</li>
-                        <li class="bullet-item"><strong>Automated Lighting:</strong> The kiosk was also equipped with a scaled down lighting strip. This was controlled by a simple transistor-based circuit as to not impede the main firmware code. Allowed for operation despite usage in darker winters. </li>
-                    </ul>
+        <div class="wrap doc">
+            <nav class="toc" aria-label="On this page">
+                <a href="#brief">01 Brief</a>
+                <a href="#philosophy">02 Design philosophy</a>
+                <a href="#technical">03 Technical depth</a>
+                <a href="#outcome">04 Outcome</a>
+                <a href="#media">05 Media</a>
+            </nav>
+            <div>
+                <section id="brief" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">01</span>The Brief</h2>
+                    <p>As part of the industrial cadets award, our team of 6 were tasked with designing a digital replacement for existing paper-based sign in systems at Severn Trent Water treatment plants. The brief highlighted key customer requirements (see full report below), including storage for ignition hazards as well as a 3D site information. The company also requested the ability to log employee and contractor sign-in via an inbuilt digital database.</p>
+                </section>
 
-                    <!-- Skills Used Chips -->
-                    <div class="project-skills-row flex-wrap gap-2">
-                        <span class="mono-label mr-2">SKILLS USED:</span>
-                        <span class="pill-chip">C++</span>
-                        <span class="pill-chip">Python</span>
-                        <span class="pill-chip">Fusion 360</span>
+                <section id="philosophy" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">02</span>Design Philosophy</h2>
+                    <p>When drafting our ideas for the prototype, we chose to split the project into three components: The enclosure, the electronics, and the software. A key design principle was modularity and DfMA (Design for Manufacturing and Assembly), which would feature throughout the enclosure design. Every component of the enclosure was to be assembled with minimal permanent fasteners, instead focusing on slots grooves and screws.</p>
+                    <p>In terms of the software and microcontroller framework, we opted for a 2 fronted approach. The front end would be written in Python (using Kivy for GUI), providing users with a simple but aesthetic GUI to convey key info. This program would also perform all the high level logic (such as file handling) and locker reservation. However, control over the physical components (LEDs and Servos) would be done through a microcontroller (Arduino Mega) to ensure there were enough GPIO pins and most importantly PWM control for servos. The front end would then transmit instructions to the microcontroller when specific actions were needed to reflect user requests.</p>
+                </section>
+
+                <section id="technical" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">03</span>Technical Depth &amp; Achievements</h2>
+                    <div class="points">
+                        <div><span class="mono">a</span><div><strong>Firmware Development</strong>I was solely responsible for the development of the C++ firmware on an Arduino Mega 2560 to control locker servos, RGB status LEDs, and LDR light sensing. Whilst the arduino directly interfaced with electronics, instructions for when certain actions were to be executed came from the front-end, hosted on the Raspberry Pi. To communicate between the two, I programmed Serial parsing logic to decode incoming instructions from the Raspberry Pi via USB.</div></div>
+                        <div><span class="mono">b</span><div><strong>Kivy-Arduino Serial Integration</strong>The frontend was developed in Kivy (a Python framework). Users of the kiosk would interact with the program via a 7 inch touch screen. Allowing them to verify their identity and select a locker to store their items. My specific role was to find a way to communicate between the front and backend of the system. Several options, both wireless and wired were explored, I eventually settled on using serial over USB. The data exchange protocol settled on is based of a simple 2-3 integer code system. With each digit representing a specific locker, action and state This enabled us to easily control actions for all 4 lockers and indicator LEDs in a manner that was efficient as well as intuitive to decode for debugging</div></div>
+                        <div><span class="mono">c</span><div><strong>Modular CAD Design</strong>The physical design for the kiosk was modelled from the ground up to be easily manufactured and assembled (using Fusion360). Slots and grooves were used for structural stacking, dedicated cavities for servo and LED integration, and tolerance cutouts for USB charging ports. This allowed Severn Trent to modify the kiosk design to fit the needs of each local site. It also allowed for the hot swappability of components that need to replaced without disrupting daily operation</div></div>
+                        <div><span class="mono">d</span><div><strong>Automated Lighting</strong>The kiosk was also equipped with a scaled down lighting strip. This was controlled by a simple transistor-based circuit as to not impede the main firmware code. Allowed for operation despite usage in darker winters.</div></div>
+                    </div>
+                    <div class="skills-used">
+                        <span class="mono">Skills used</span>
+                        <span class="tag">C++</span><span class="tag">Python</span><span class="tag">Fusion 360</span>
+                    </div>
+                </section>
+
+                <section id="outcome" class="outcome">
+                    <div class="outcome-stats">
+                        <div><div class="num">Best Teamwork</div><div class="mono">Award · Industrial Cadets Gold</div></div>
+                        <div><div class="num">4 lockers</div><div class="mono">Servo-locked, LED status</div></div>
+                    </div>
+                    <div class="outcome-text">
+                        <div class="mono">04 — Outcome</div>
+                        <p>Successfully built and verified a scaled kiosk prototype with automatic locker locks, real-time occupancy status indicators, and an interactive safety map. At the award ceremony, we were awarded the 'Best Teamwork' award for our prototype and presentation. This was a testament to the coordination and synchronicity that our team displayed throughout the planning, design and execution of the project.</p>
+                    </div>
+                </section>
+
+                <section id="media">
+                    <h2 class="block-title"><span class="mono mono-accent">05</span>Project Resources &amp; Media</h2>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-stage stage">
+                        <img src="../images_kiosk/kiosk-cad-render.jpeg" alt="Full 3D CAD Render of the Safety Kiosk">
+                        <button class="carousel-btn prev" type="button" aria-label="Previous image">←</button>
+                        <button class="carousel-btn next" type="button" aria-label="Next image">→</button>
+                    </div>
+                    <div class="carousel-bar">
+                        <span class="mono carousel-count">01 / 06</span>
+                        <span class="carousel-cap">Full 3D CAD Render of the Safety Kiosk</span>
+                        <a class="mono carousel-full" href="../images_kiosk/kiosk-cad-render.jpeg" target="_blank" rel="noopener">Full size ↗</a>
+                    </div>
+                    <div class="carousel-thumbs">
+                        <button class="carousel-thumb is-current" type="button" data-src="../images_kiosk/kiosk-cad-render.jpeg" data-caption="Full 3D CAD Render of the Safety Kiosk" aria-label="Show image 1: Full 3D CAD Render of the Safety Kiosk" aria-current="true"><img src="../images_kiosk/kiosk-cad-render.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_kiosk/kiosk-completed-irl.jpeg" data-caption="Completed Kiosk Livery" aria-label="Show image 2: Completed Kiosk Livery" aria-current="false"><img src="../images_kiosk/kiosk-completed-irl.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_kiosk/kiosk-schematic.jpeg" data-caption="Kiosk 2D Technical Schematic" aria-label="Show image 3: Kiosk 2D Technical Schematic" aria-current="false"><img src="../images_kiosk/kiosk-schematic.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_kiosk/extracted_52.jpeg" data-caption="Locker Design" aria-label="Show image 4: Locker Design" aria-current="false"><img src="../images_kiosk/extracted_52.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_kiosk/extracted_112.jpeg" data-caption="UI of sign in page" aria-label="Show image 5: UI of sign in page" aria-current="false"><img src="../images_kiosk/extracted_112.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_kiosk/extracted_201.png" data-caption="UI of Locker select page, showing available spaces" aria-label="Show image 6: UI of Locker select page, showing available spaces" aria-current="false"><img src="../images_kiosk/extracted_201.png" alt="" loading="lazy"></button>
                     </div>
                 </div>
-            </div>
+                </section>
 
-            <!-- 04 — OUTCOME -->
-            <div class="py-16 border-b">
-                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
-                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        Successfully built and verified a scaled kiosk prototype with automatic locker locks, real-time occupancy status indicators, and an interactive safety map. At the award ceremony, we were awarded the 'Best Teamwork' award for our prototype and presentation. This was a testement to the
-                        coordination and synchronicity that our team displayed throughout the planning, design and execution of the project.
-                    </p>
-                </div>
+                <nav class="pager" aria-label="More projects">
+                    <a href="../index.html#work"><div class="mono">← Back</div><div class="name">All projects</div></a>
+                    <a class="next" href="desktop-multimeter.html"><div class="mono">Next · Project 2 →</div><div class="name">Electronics Prototyping Station</div></a>
+                </nav>
             </div>
-
-            <!-- 05 — PROJECT RESOURCES & MEDIA -->
-            <div class="py-16 border-b">
-                <div class="mono-label mb-6">05 — PROJECT RESOURCES & MEDIA</div>
-                
-                <div class="slider-container" id="media-slider">
-                    <div class="slider-slides">
-                        <div class="slide active">
-                            <img src="../images_kiosk/kiosk-cad-render.jpeg" alt="Full 3D CAD Render of the Safety Kiosk">
-                            <div class="caption-banner">Full 3D CAD Render of the Safety Kiosk</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_kiosk/kiosk-completed-irl.jpeg" alt="Completed Kiosk Livery IRL">
-                            <div class="caption-banner">Completed Kiosk Livery</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_kiosk/kiosk-schematic.jpeg" alt="Kiosk 2D Technical Schematic">
-                            <div class="caption-banner">Kiosk 2D Technical Schematic</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_kiosk/extracted_52.jpeg" alt="Kiosk Touchscreen User Interface Mockup">
-                            <div class="caption-banner">Locker Design</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_kiosk/extracted_112.jpeg" alt="Embedded Electronics & Wiring Architecture">
-                            <div class="caption-banner">UI of sign in page</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_kiosk/extracted_201.png" alt="Detailed 3D CAD view of the Locker System">
-                            <div class="caption-banner">UI of Locker select page, showing available spaces</div>
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
-                        <button class="slider-btn next" aria-label="Next Slide">→</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Centered Bottom Navigation -->
-            <div class="project-nav-row">
-                <a href="../index.html#work" class="btn-solid">← All projects</a>
-                <a href="desktop-multimeter.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Electronics Prototyping Station →</a>
-            </div>
-
+            <div class="doc-spacer" aria-hidden="true"></div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
-        <div class="page-container">
-            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <span>© 2026 AMIT CHANDRAN</span>
-                <span>V3.1 - Last Edited: 22/09/26</span>
-            </div>
+    <footer class="wrap">
+        <div class="footer mono footer-rule">
+            <span>© 2026 Amit Chandran</span>
+            <span>Rev. 4.0 · Last edited 22/10/26</span>
         </div>
     </footer>
-
-    <script>
-    function initSlider(sliderId) {
-        const container = document.getElementById(sliderId);
-        if (!container) return;
-        const slides = container.querySelectorAll('.slide');
-        const prevBtn = container.querySelector('.slider-btn.prev');
-        const nextBtn = container.querySelector('.slider-btn.next');
-        let current = 0;
-        
-        function showSlide(index) {
-            slides.forEach((s, i) => {
-                s.classList.toggle('active', i === index);
-            });
-        }
-        
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-                current = (current - 1 + slides.length) % slides.length;
-                showSlide(current);
-            });
-            nextBtn.addEventListener('click', () => {
-                current = (current + 1) % slides.length;
-                showSlide(current);
-            });
-        }
-    }
-    initSlider('media-slider');
-    </script>
+    <script src="../script.js?v=4.0"></script>
 </body>
 </html>

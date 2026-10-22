@@ -3,217 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Smart Pet Feeder — Amit Chandran Portfolio</title>
-    
-    <!-- Google Fonts for Archivo, Newsreader & JetBrains Mono -->
+    <title>IoT Integrated Pet Feeder — Amit Chandran</title>
+    <meta name="description" content="IoT Integrated Pet Feeder — project case study by Amit Chandran.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=Newsreader:ital,opsz@1,6..72&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Shared Swiss Editorial Stylesheet -->
-    <link rel="stylesheet" href="../style.css?v=2.26">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=IBM+Plex+Sans:wght@400;500;600&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css?v=4.0">
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
 
-    <!-- Mobile Warning Banner -->
-    <div class="mobile-warning-banner" id="mobile-banner">
-        <div class="page-container" style="display: flex; justify-content: space-between; align-items: center; gap: 12px; padding: 12px 0;">
-            <span>Hi, it appears you are on mobile. This page is best viewed on larger screens, or at least on desktop mode. Thank you!</span>
-            <button onclick="document.getElementById('mobile-banner').style.display='none'" style="background: none; border: none; color: inherit; cursor: pointer; font-size: 16px; font-weight: bold; padding: 0 4px;">×</button>
+    <header class="nav">
+        <div class="wrap nav-in">
+            <a class="nav-brand" href="../index.html">AMIT CHANDRAN / PORTFOLIO</a>
+            <nav class="nav-links" aria-label="Main">
+                <a href="../index.html">Home</a>
+                <a href="../about.html">About</a>
+                <a href="../experience.html">Experience</a>
+                <a href="../index.html#work" class="is-current" aria-current="page">Work</a>
+                <a href="../index.html#contact">Contact</a>
+            </nav>
+            <a class="nav-cv" href="https://amitchandran06.github.io/Resumes/AmitChandran_MainResume.pdf" target="_blank" rel="noopener">View CV ↗</a>
         </div>
-    </div>
+    </header>
 
-    <!-- Case Study Header -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(24px, 5vw, 48px) 0;">
-            <a href="../index.html#work" class="mono-label mb-6 inline-block hover:text-ink">← Back to work</a>
-            <div class="mono-accent mb-4">PROJECT 004 · IOT & EMBEDDED SYSTEMS</div>
-            <h1 class="hero-h1 mb-6">IoT Integrated Pet Feeder</h1>
-            <p class="lead-p mb-8" style="max-width: 100%;">
-                Open Source Design Project — A complete IoT ecosystem featuring , real time dispensing scheduling, precise mass control and bluetooth meal programming via an Android client.
-            </p>
-            
-            <!-- Meta Grid -->
-            <div class="meta-grid">
-                <div>
-                    <div class="mono-label mb-1">ROLE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">Firmware & Hardware Co-Design</div>
+    <main id="main">
+        <section class="page-top">
+            <div class="wrap">
+                <div class="frame">
+                    <div class="case-strip">
+                        <span class="mono mono-accent">Project 4 · IoT &amp; Embedded Systems</span>
+                        <a class="mono" href="../index.html#work">← Back to work</a>
+                    </div>
+                    <div class="page-head">
+                        <h1 class="case-title">IoT Integrated Pet Feeder</h1>
+                        <p class="case-lead">Open Source Design Project — A complete IoT ecosystem featuring real time dispensing scheduling, precise mass control and bluetooth meal programming via an Android client.</p>
+                <div class="btn-row">
+                    <a class="btn" href="../images_pet_feeder/Final Scenarios PPT - pet feeder.pdf" target="_blank" rel="noopener">View Scenarios PDF ↗</a>
+                    <a class="btn" href="../images_pet_feeder/Pet Feeder Manual.pdf" target="_blank" rel="noopener">View Product Manual PDF ↗</a>
+                    <a class="btn" href="https://github.com/amitchandran06/pet-feeder.git" target="_blank" rel="noopener">View GitHub Repository ↗</a>
                 </div>
-                <div>
-                    <div class="mono-label mb-1">TIMELINE</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">2025 / 2026</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">STACK</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">C++ · EasyEDA</div>
-                </div>
-                <div>
-                    <div class="mono-label mb-1">OUTCOME</div>
-                    <div class="body-p font-semibold" style="color: var(--ink);">Working IoT Ecosystem</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Initial Hero Image (Sleeker and smaller) -->
-    <div style="background-color: #CFC6B2; border-bottom: 1px solid var(--line); padding: 16px 0;">
-        <div class="page-container">
-            <img src="../images_pet_feeder/extracted_1.jpeg" alt="Full CAD Render of the Pet Feeder" class="case-hero-img" onclick="window.open(this.src, '_blank')">
-        </div>
-    </div>
-
-    <!-- Case Study Content -->
-    <section class="section-bleed">
-        <div class="page-container" style="padding: clamp(32px, 5vw, 64px) 0;">
-            
-            <!-- 01 — THE BRIEF -->
-            <div class="grid-brief pb-16 border-b">
-                <div class="mono-label">01 — THE BRIEF</div>
-                <div>
-                    <p class="body-p mb-4">
-                        The brief of this project was to develop an open-source product for a distinct target market. The product must also focus on a being part of the 'circular economy' principle, ensuring recylability and repairability. As a group, we settled on pet feeding as our context, the problem statement is defined in the PDF below.
-                    </p>
-                    <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="../images_pet_feeder/Final Scenarios PPT - pet feeder.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
-                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Scenarios PDF ↗
-                        </a>
-                        <a href="../images_pet_feeder/Pet Feeder Manual.pdf" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
-                            <i class="fa-solid fa-file-pdf" style="color: var(--accent);"></i> View Product Manual PDF ↗
-                        </a>
-                        <a href="https://github.com/amitchandran06/pet-feeder.git" target="_blank" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">
-                            <i class="fa-brands fa-github" style="color: var(--accent);"></i> View GitHub Repository ↗
-                        </a>
+                    </div>
+                    <div class="title-block" style="--cols: 4">
+                    <div><div class="mono">Role</div><div class="val">Firmware &amp; Hardware Co-Design</div></div>
+                    <div><div class="mono">Timeline</div><div class="val">2025 / 2026</div></div>
+                    <div><div class="mono">Stack</div><div class="val">C++ · EasyEDA</div></div>
+                    <div><div class="mono">Outcome</div><div class="val">Working IoT Ecosystem</div></div>
                     </div>
                 </div>
-            </div>
-
-            <!-- 02 — DESIGN PHILOSOPHY -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">02 — DESIGN PHILOSOPHY</div>
-                <div>
-                    <p class="body-p mb-4">
-                        The design philosphy was centered around a very intuitive and open-source design process. Every component and layout was chosen with the intent of the end user either producing it or assembling it themselves (see assembly manual PDF). This prompted us to opt for a breadboard design rather than a PCB due to it being more practical for users to build. 
-                    </p>
-                    <p class="body-p mb-4">
-                        The software and firmware were also developed in a totally open-source fashion. With all code available on GitHub, allowing for user to adjust parameters as appropriate.
-                        Another key aspect to the pet-feeder was use of no onboard controls or inbuilt screens, instead making use of the user's mobile phone to program meals. This minimises the e-waste produced.
-                    </p>
+                <div class="stage case-hero">
+                    <img src="../images_pet_feeder/extracted_1_cutout.png" alt="Full CAD Render of the Pet Feeder">
                 </div>
             </div>
+        </section>
 
-            <!-- 03 — TECHNICAL DEPTH & ACHIEVEMENTS -->
-            <div class="grid-brief py-16 border-b">
-                <div class="mono-label">03 — TECHNICAL DEPTH & ACHIEVEMENTS</div>
-                <div>
-                    <ul class="bullet-list">
-                        <li class="bullet-item"><strong>Electronics Architecture:</strong> The electronics for the pet feeder is centralised around an ESP32-S3 microcontroller. The ESP32 is responsible for controlling / interfacing with a NEMA17 stepper motor, as well as HX711 strain gauge amplifer. My role focused on programming the ESP32, allowing for precise mass measuring as well as accurate portion control</li>
-                        <li class="bullet-item"><strong>Event-Driven BLE Communication:</strong> The user interfaces with the pet feeder settings via BLE (Bluetooth Low Energy) on an Android client. Users can program specific meal times and masses for their pets. Communication was handled on the ESP32 side via a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for lowest latencies.</li>
-                         <li class="bullet-item"><strong>RTC Syncing:</strong> Instead of adding a dedicated RTC unit, we opted to sync the onboard ESP32 clock with real time whenever a bluetooth message is tramsitted from the phone. This saved money and space and makes use of exisitng hardware (the user's phone) instead of introducing new components</li>
-                         <li class="bullet-item"><strong>Power Distrubtion:</strong> Since the product usecase was very dynamic, it was important that the product could take in a range of power supplies. To accomodate this, I developed an intutive and logical power distrubtion layout using buck-boosts. This set up made assembly simple and also made it easier to debug systems by isolating different power levels (Motor and ESP32). </li>
-                    </ul>
+        <div class="wrap doc">
+            <nav class="toc" aria-label="On this page">
+                <a href="#brief">01 Brief</a>
+                <a href="#philosophy">02 Design philosophy</a>
+                <a href="#technical">03 Technical depth</a>
+                <a href="#outcome">04 Outcome</a>
+                <a href="#media">05 Media</a>
+            </nav>
+            <div>
+                <section id="brief" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">01</span>The Brief</h2>
+                    <p>The brief of this project was to develop an open-source product for a distinct target market. The product must also focus on a being part of the 'circular economy' principle, ensuring recyclability and repairability. As a group, we settled on pet feeding as our context, the problem statement is defined in the PDF below.</p>
+                </section>
 
-                    <!-- Skills Used Chips -->
-                    <div class="project-skills-row flex-wrap gap-2">
-                        <span class="mono-label mr-2">SKILLS USED:</span>
-                        <span class="pill-chip">C++</span>
-                        <span class="pill-chip">EasyEDA</span>
-                        <span class="pill-chip">PCB Assembly & Soldering</span>
+                <section id="philosophy" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">02</span>Design Philosophy</h2>
+                    <p>The design philosophy was centered around a very intuitive and open-source design process. Every component and layout was chosen with the intent of the end user either producing it or assembling it themselves (see assembly manual PDF). This prompted us to opt for a breadboard design rather than a PCB due to it being more practical for users to build.</p>
+                    <p>The software and firmware were also developed in a totally open-source fashion. With all code available on GitHub, allowing for user to adjust parameters as appropriate. Another key aspect to the pet-feeder was use of no onboard controls or inbuilt screens, instead making use of the user's mobile phone to program meals. This minimises the e-waste produced.</p>
+                </section>
+
+                <section id="technical" class="block">
+                    <h2 class="block-title"><span class="mono mono-accent">03</span>Technical Depth &amp; Achievements</h2>
+                    <div class="points">
+                        <div><span class="mono">a</span><div><strong>Electronics Architecture</strong>The electronics for the pet feeder is centralised around an ESP32-S3 microcontroller. The ESP32 is responsible for controlling / interfacing with a NEMA17 stepper motor, as well as HX711 strain gauge amplifier. My role focused on programming the ESP32, allowing for precise mass measuring as well as accurate portion control</div></div>
+                        <div><span class="mono">b</span><div><strong>Event-Driven BLE Communication</strong>The user interfaces with the pet feeder settings via BLE (Bluetooth Low Energy) on an Android client. Users can program specific meal times and masses for their pets. Communication was handled on the ESP32 side via a GATT server using the Nordic UART Service (NUS) with event-driven callback handlers (onWrite, onConnect, onSubscribe) for lowest latencies.</div></div>
+                        <div><span class="mono">c</span><div><strong>RTC Syncing</strong>Instead of adding a dedicated RTC unit, we opted to sync the onboard ESP32 clock with real time whenever a bluetooth message is transmitted from the phone. This saved money and space and makes use of existing hardware (the user's phone) instead of introducing new components</div></div>
+                        <div><span class="mono">d</span><div><strong>Power Distribution</strong>Since the product usecase was very dynamic, it was important that the product could take in a range of power supplies. To accommodate this, I developed an intuitive and logical power distribution layout using buck-boosts. This set up made assembly simple and also made it easier to debug systems by isolating different power levels (Motor and ESP32).</div></div>
+                    </div>
+                    <div class="skills-used">
+                        <span class="mono">Skills used</span>
+                        <span class="tag">C++</span><span class="tag">EasyEDA</span><span class="tag">PCB Assembly &amp; Soldering</span>
+                    </div>
+                </section>
+
+                <section id="outcome" class="outcome">
+                    <div class="outcome-stats">
+                        <div><div class="num">±2%</div><div class="mono">Portion accuracy · 20–100 g</div></div>
+                        <div><div class="num">≤2 s</div><div class="mono">Max timing delay</div></div>
+                    </div>
+                    <div class="outcome-text">
+                        <div class="mono">04 — Outcome</div>
+                        <p>We produced a fully functional prototype, with a functional Android app client companion. Portion control was accurate up to 2% of masses in  range 20-100g. Timing was accurate with a maximum delay of 2 seconds with minimal drift. The product was tested using real pet food substitutes (skittles!).</p>
+                    </div>
+                </section>
+
+                <section id="media">
+                    <h2 class="block-title"><span class="mono mono-accent">05</span>Project Resources &amp; Media</h2>
+                <div class="carousel" data-carousel>
+                    <div class="carousel-stage stage">
+                        <img src="../images_pet_feeder/manual_front_page.png" alt="Pet Feeder Assembly &amp; User Manual Front Page">
+                        <button class="carousel-btn prev" type="button" aria-label="Previous image">←</button>
+                        <button class="carousel-btn next" type="button" aria-label="Next image">→</button>
+                    </div>
+                    <div class="carousel-bar">
+                        <span class="mono carousel-count">01 / 05</span>
+                        <span class="carousel-cap">Pet Feeder Assembly &amp; User Manual Front Page</span>
+                        <a class="mono carousel-full" href="../images_pet_feeder/manual_front_page.png" target="_blank" rel="noopener">Full size ↗</a>
+                    </div>
+                    <div class="carousel-thumbs">
+                        <button class="carousel-thumb is-current" type="button" data-src="../images_pet_feeder/manual_front_page.png" data-caption="Pet Feeder Assembly &amp; User Manual Front Page" aria-label="Show image 1: Pet Feeder Assembly &amp; User Manual Front Page" aria-current="true"><img src="../images_pet_feeder/manual_front_page.png" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_pet_feeder/extracted_166.jpeg" data-caption="Exploded view of dispensing mechanism" aria-label="Show image 2: Exploded view of dispensing mechanism" aria-current="false"><img src="../images_pet_feeder/extracted_166.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_pet_feeder/extracted_204.jpeg" data-caption="Circuitry Rendering" aria-label="Show image 3: Circuitry Rendering" aria-current="false"><img src="../images_pet_feeder/extracted_204.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_pet_feeder/extracted_219.jpeg" data-caption="Electronics Verification with External Power Source" aria-label="Show image 4: Electronics Verification with External Power Source" aria-current="false"><img src="../images_pet_feeder/extracted_219.jpeg" alt="" loading="lazy"></button>
+                        <button class="carousel-thumb" type="button" data-src="../images_pet_feeder/extracted_262.jpeg" data-caption="BLE Verification" aria-label="Show image 5: BLE Verification" aria-current="false"><img src="../images_pet_feeder/extracted_262.jpeg" alt="" loading="lazy"></button>
                     </div>
                 </div>
-            </div>
+                </section>
 
-            <!-- 04 — OUTCOME -->
-            <div class="py-16 border-b">
-                <div class="p-8 border" style="background-color: rgba(216, 69, 43, 0.05); border-color: rgba(216, 69, 43, 0.25); border-radius: 4px;">
-                    <div class="mono-accent mb-3" style="color: var(--accent);">04 — OUTCOME</div>
-                    <p class="lead-p" style="color: var(--ink); font-weight: 600;">
-                        We produced a fully functional prototype, with a functional Android app client companion. Portion control was accurate up to 2% of masses in  range 20-100g. Timing was accurate with a maximum delay of 2 seconds with minimal drift. The product was tested using real pet food substitutes (skittles!).
-                    </p>
-                </div>
+                <nav class="pager" aria-label="More projects">
+                    <a href="imeche-rover.html"><div class="mono">← Previous · Project 3</div><div class="name">Analog Robotic Device</div></a>
+                    <a class="next" href="drone-flight-system.html"><div class="mono">Next · Project 5 →</div><div class="name">Drone Flight Control System</div></a>
+                </nav>
             </div>
-
-            <!-- 05 — PROJECT RESOURCES & MEDIA -->
-            <div class="py-16 border-b">
-                <div class="mono-label mb-6">05 — PROJECT RESOURCES & MEDIA</div>
-                
-                <div class="slider-container" id="media-slider">
-                    <div class="slider-slides">
-                        <div class="slide active">
-                            <img src="../images_pet_feeder/manual_front_page.png" alt="Pet Feeder Assembly & User Manual Front Page">
-                            <div class="caption-banner">Pet Feeder Assembly & User Manual Front Page</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_pet_feeder/extracted_166.jpeg" alt="Mobile App UI Mockup">
-                            <div class="caption-banner">Exploded view of dispensing mechanism</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_pet_feeder/extracted_204.jpeg" alt="Circuitry Rendering">
-                            <div class="caption-banner">Circuitry Rendering</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_pet_feeder/extracted_219.jpeg" alt="Electronics Verification with External Power Source">
-                            <div class="caption-banner">Electronics Verification with External Power Source</div>
-                        </div>
-                        <div class="slide">
-                            <img src="../images_pet_feeder/extracted_262.jpeg" alt="BLE Verification">
-                            <div class="caption-banner">BLE Verification</div>
-                        </div>
-                        <button class="slider-btn prev" aria-label="Previous Slide">←</button>
-                        <button class="slider-btn next" aria-label="Next Slide">→</button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Centered Bottom Navigation -->
-            <div class="project-nav-row">
-                <a href="../index.html#work" class="btn-solid">← All projects</a>
-                <a href="imeche-rover.html" class="pill-btn">← Previous: Analog Robotic Device</a>
-                <a href="drone-flight-system.html" class="pill-btn" style="border-color: var(--ink); font-weight: 600;">Next: Drone Flight Control System →</a>
-            </div>
-
+            <div class="doc-spacer" aria-hidden="true"></div>
         </div>
-    </section>
+    </main>
 
-    <!-- Footer -->
-    <footer style="padding: 32px var(--pad-x); border-top: 2px solid var(--line);">
-        <div class="page-container">
-            <div class="mono-label" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;">
-                <span>© 2026 AMIT CHANDRAN</span>
-                <span>V3.1 - Last Edited: 22/09/26</span>
-            </div>
+    <footer class="wrap">
+        <div class="footer mono footer-rule">
+            <span>© 2026 Amit Chandran</span>
+            <span>Rev. 4.0 · Last edited 22/10/26</span>
         </div>
     </footer>
-
-    <script>
-    function initSlider(sliderId) {
-        const container = document.getElementById(sliderId);
-        if (!container) return;
-        const slides = container.querySelectorAll('.slide');
-        const prevBtn = container.querySelector('.slider-btn.prev');
-        const nextBtn = container.querySelector('.slider-btn.next');
-        let current = 0;
-        
-        function showSlide(index) {
-            slides.forEach((s, i) => {
-                s.classList.toggle('active', i === index);
-            });
-        }
-        
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', () => {
-                current = (current - 1 + slides.length) % slides.length;
-                showSlide(current);
-            });
-            nextBtn.addEventListener('click', () => {
-                current = (current + 1) % slides.length;
-                showSlide(current);
-            });
-        }
-    }
-    initSlider('media-slider');
-    </script>
+    <script src="../script.js?v=4.0"></script>
 </body>
 </html>
